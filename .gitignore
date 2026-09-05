@@ -14,3 +14,4 @@ uygulamalar/web/prisma/*.db
 uygulamalar/web/prisma/*.db-journal
 uygulamalar/web/.env
 *.pem
+sofra-qr-menu.bundle
