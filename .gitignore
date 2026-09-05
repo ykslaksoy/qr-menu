@@ -1,0 +1,16 @@
+node_modules
+.pnpm-store
+dist
+.next
+.turbo
+.env
+.env.local
+*.log
+.DS_Store
+*.db
+*.db-journal
+# ekstra güvenlik
+uygulamalar/web/prisma/*.db
+uygulamalar/web/prisma/*.db-journal
+uygulamalar/web/.env
+*.pem

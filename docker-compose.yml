@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: sofra
+      POSTGRES_PASSWORD: sofra
+      POSTGRES_DB: sofra
+    ports:
+      - "5432:5432"
+    volumes:
+      - sofra_pg:/var/lib/postgresql/data
+
+volumes:
+  sofra_pg:

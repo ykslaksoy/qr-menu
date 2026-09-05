@@ -1,0 +1,10 @@
+{
+  "name": "sofra",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @sofra/web dev",
+    "build": "pnpm --filter @sofra/web build",
+    "lint": "pnpm --filter @sofra/web lint"
+  },
+  "packageManager": "pnpm@10.33.3"
+}

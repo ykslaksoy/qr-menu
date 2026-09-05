@@ -1,0 +1,65 @@
+{
+  "aktif": true,
+  "baslik": "Arkadaşını getir, ikiniz de kazanın",
+  "ozet": "Referans indirimi yalnızca referans olan yerin menü QR kodu ile kayıt olunduğunda geçerlidir. Yıllık planda ikiniz de 3 ay %15.",
+  "terimler": {
+    "referansOlanYer": "Sizi davet eden mevcut Sofra işletmesi (menü QR kodunu paylaşan)",
+    "referansOlanYerinQr": "Referans olan yerin masa menü QR kodu — müşteri menüsü ile aynı QR"
+  },
+  "indirimAlan": "referansVeren",
+  "indirimOrani": 0.15,
+  "referansBasinaAy": 3,
+  "yillikUyelikZorunlu": {
+    "referansVeren": true,
+    "davetEdilen": true
+  },
+  "referansQr": {
+    "zorunlu": true,
+    "kaynakDegeri": "menu-qr",
+    "isletmeParametresi": "from",
+    "kaynakParametresi": "kaynak",
+    "menuYolu": "/m/{slug}",
+    "ornekUrl": "https://sofra.app/m/cafe-ada?masa=1"
+  },
+  "aktifReferansTanimi": "Referans olan yerin menü QR kodu ile kayıt olup yıllık ücretli plan satın alan ve ilk yıllık dönemini ödeyen işletme",
+  "indirimUygulama": "Menü QR okutulur (/m/slug), ardından kayıt tamamlanır. Elle kod geçersiz. Referans olan yer: her aktif yıllık referans için 3 ay %15. Gelen işletme: yıllık planda ilk 3 ay %15.",
+  "referansKoduOnek": "SOFRA",
+  "ornekKod": "SOFRA-cafe-ada",
+  "yeniUyelikIndirimi": {
+    "aktif": true,
+    "indirimOrani": 0.15,
+    "sureAy": 3,
+    "yillikZorunlu": true,
+    "qrZorunlu": true,
+    "aciklama": "Referans olan yerin menü QR kodu ile gelip yıllık plan alan işletme, ilk 3 ay %15 indirim alır."
+  },
+  "ornekSenaryolar": [
+    {
+      "aciklama": "Menü QR okutup kayıt + yıllık plan",
+      "sonucAy": 3,
+      "sonucOrani": 0.15,
+      "kim": "davetEdilen"
+    },
+    {
+      "aciklama": "Elle kod yazdı, menü QR kullanmadı",
+      "sonucAy": 0,
+      "sonucOrani": 0,
+      "kim": "davetEdilen",
+      "not": "Geçersiz — menü QR şart"
+    },
+    {
+      "aciklama": "1 menü QR referans, referans olan yer yıllık",
+      "referansSayisi": 1,
+      "sonucAy": 3,
+      "sonucOrani": 0.15,
+      "kim": "referansVeren"
+    },
+    {
+      "aciklama": "2 menü QR referans",
+      "referansSayisi": 2,
+      "sonucAy": 6,
+      "sonucOrani": 0.15,
+      "kim": "referansVeren"
+    }
+  ]
+}

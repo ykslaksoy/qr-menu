@@ -1,0 +1,16 @@
+{
+  "aktif": true,
+  "aylikSiparisLimiti": 50,
+  "hediyePlan": "menu-adisyon",
+  "sayim": "iptal_haric",
+  "siparisReddet": false,
+  "baslik": "Ayda 50 siparişe kadar ücretsiz",
+  "ozet": "Takvim ayı içinde 50 QR siparişine kadar Menü + Adisyon bedava. Limit aşılınca sipariş kesilmez; panelde yöneticiye otomatik uyarı çıkar.",
+  "limitAsimiUyari": "Bu ay ücretsiz kotayı aştınız. Panelde otomatik uyarı gösterilir; siparişler devam eder.",
+  "notlar": [
+    "Küçük kafe varsayımı: günde ~1 QR sipariş ≈ ayda 30; ücretsiz taban 50.",
+    "İptal edilen siparişler sayıma dahil değildir.",
+    "Limit aşımında sipariş reddedilmez; yalnızca yöneticiye uyarı gösterilir.",
+    "Ödenen ücretli plan varsa limit uyarısı uygulanmaz."
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "paraBirimi": "TRY",
+  "kdvNotu": "Fiyatlara KDV dahil değildir (taslak).",
+  "planlar": [
+    {
+      "id": "ucretsiz",
+      "ad": "Ücretsiz",
+      "aylik": 0,
+      "yillik": 0,
+      "ozellikler": [
+        "1 şube",
+        "Her tarzdan 1 şablon (5 şablon)",
+        "Sınırlı özelleştirme (ana renk + logo)",
+        "QR indir",
+        "Filigran / Powered by açık",
+        "Ayda 50 siparişe kadar ücretsiz; aşınca uyarı (sipariş kesilmez)"
+      ]
+    },
+    {
+      "id": "menu",
+      "ad": "Menü",
+      "aylik": 399,
+      "yillik": 3990,
+      "ozellikler": [
+        "Dijital menü",
+        "PDF / elle menü",
+        "Tüm 25 şablon",
+        "Font / renk / çerçeve / zemin",
+        "Masa QR + baskı PDF",
+        "Filigran kapalı"
+      ]
+    },
+    {
+      "id": "menu-adisyon",
+      "ad": "Menü + Adisyon",
+      "aylik": 699,
+      "yillik": 6990,
+      "oneCikan": true,
+      "ozellikler": [
+        "Menü planındaki her şey",
+        "Masadan sipariş",
+        "Basit adisyon",
+        "Garson / mutfak ekranı",
+        "Komisyon yok"
+      ]
+    },
+    {
+      "id": "tam",
+      "ad": "Tam Paket",
+      "aylik": 899,
+      "yillik": 8990,
+      "ozellikler": [
+        "Menü + Adisyon planındaki her şey",
+        "Öncelikli destek",
+        "Gelişmiş analitik",
+        "Kurulum yardımı"
+      ]
+    }
+  ],
+  "tekSeferlik": [
+    {
+      "id": "kurulum-seti",
+      "ad": "Kurulum baskı seti",
+      "aciklama": "Masa kartı + sticker, basılı kargo (faz 2)",
+      "fiyatAraligi": "1500-4000"
+    },
+    {
+      "id": "menu-yukleme",
+      "ad": "Menüyü biz yükleyelim",
+      "aciklama": "PDF’den menü aktarımı ve kontrol",
+      "fiyat": 1500
+    }
+  ],
+  "yillikIndirimOrani": 0.17
+}
