@@ -15,7 +15,7 @@ Yerel veya tünel URL’sinde çalıştırın.
 
 ## 3. Müşteri + canlı
 - [ ] `/m/demo` menü açılır
-- [ ] `GET /api/m/demo/canli` SSE (`text/event-stream`)
+- [ ] `GET /api/m/demo/canli` SSE (`text/event-stream`) — personel oturumu gerekir (önce demo garson/yönetici)
 
 ## Hesaplar
 `demo1234` — `demo@sofra.app` / `garson@demo.sofra.app` / `mutfak@demo.sofra.app`

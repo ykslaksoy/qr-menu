@@ -63,11 +63,20 @@ pnpm --filter @sofra/web dev
 ## Dışarı açma (tünel)
 
 ```bash
-# örnek: cloudflared / trycloudflare
 npx --yes cloudflared tunnel --url http://localhost:3000
 ```
 
-Canlı demo URL’sini yalnızca tünel ayaktayken paylaşın.
+Canlı demo (bu agent oturumu; tünel kapanınca ölür):
+
+**https://lucas-employment-modular-elements.trycloudflare.com**
+
+- Menü: `/m/demo`
+- Yönetici: `/api/auth/demo/yonetici`
+- Garson: `/api/auth/demo/garson` → `/g`
+- Mutfak: `/api/auth/demo/mutfak` → `/k`
+- Kurulum: `/panel/kurulum`
+
+Checklist: `belgeler/DEMO_CHECKLIST.md`
 
 ## Marka
 
