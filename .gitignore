@@ -15,3 +15,15 @@ uygulamalar/web/prisma/*.db-journal
 uygulamalar/web/.env
 *.pem
 sofra-qr-menu.bundle
+sofra-kaynak.zip
+**/public/sofra-kaynak.zip
+*.bundle
+.env
+.env.*
+!.env.ornek
+!.env.example
+uygulamalar/web/.env
+*.db
+*.db-journal
+node_modules/
+.next/
