@@ -3,7 +3,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   transpilePackages: ["@sofra/tema"],
   outputFileTracingIncludes: {
-    "/**": ["./prisma/seed.db"],
+    "/**": [
+      "./prisma/seed.db",
+      "./prisma/schema.prisma",
+      "./node_modules/.prisma/**/*",
+      "./node_modules/@prisma/client/**/*",
+    ],
   },
   async redirects() {
     return [

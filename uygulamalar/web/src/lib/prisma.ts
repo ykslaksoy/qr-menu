@@ -16,17 +16,24 @@ function vercelSqliteHazirla() {
   if (!vercelMi() || globalForPrisma.sofraDbHazir) return;
 
   const hedef = "/tmp/sofra.db";
+  const cwd = process.cwd();
+  const adaylar = [
+    path.join(cwd, "prisma", "seed.db"),
+    path.join(cwd, "seed.db"),
+    path.join(cwd, ".next", "server", "prisma", "seed.db"),
+    "/var/task/prisma/seed.db",
+    "/var/task/seed.db",
+  ];
 
   if (!existsSync(hedef)) {
-    const adaylar = [
-      path.join(process.cwd(), "prisma", "seed.db"),
-      path.join(process.cwd(), "seed.db"),
-    ];
     const kaynak = adaylar.find((p) => existsSync(p));
-    if (kaynak) {
-      mkdirSync(path.dirname(hedef), { recursive: true });
-      copyFileSync(kaynak, hedef);
+    if (!kaynak) {
+      throw new Error(
+        `Sofra seed.db bulunamadı (cwd=${cwd}). Aranan: ${adaylar.join(", ")}`,
+      );
     }
+    mkdirSync(path.dirname(hedef), { recursive: true });
+    copyFileSync(kaynak, hedef);
   }
 
   process.env.DATABASE_URL = `file:${hedef}`;
