@@ -43,3 +43,5 @@ next-env.d.ts
 # sqlite
 /prisma/dev.db
 /prisma/dev.db-journal
+# seed.db is shipped for Vercel /tmp bootstrap
+!/prisma/seed.db

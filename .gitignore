@@ -27,3 +27,4 @@ uygulamalar/web/.env
 *.db-journal
 node_modules/
 .next/
+.vercel
