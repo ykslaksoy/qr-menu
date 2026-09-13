@@ -11,7 +11,7 @@ import {
 
 const SESSION_COOKIE = "sofra_session";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (!korunanYolMu(pathname)) {
