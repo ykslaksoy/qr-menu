@@ -72,7 +72,7 @@ Canlı demo (güncel — Cursor `main` @ `22148fb` + `sofra-src.tgz`):
 
 Kalıcı proje (SSO açık olabilir): **https://sofra-qr-menu-yuksel2.vercel.app**
 
-Tünel (VM ayakta kaldıkça): **https://accounting-training-asset-commodities.trycloudflare.com**
+Tünel (VM ayakta kaldıkça): **https://guides-paths-promise-electro.trycloudflare.com**
 
 - Menü: `/m/demo`
 - Yönetici: `/api/auth/demo/yonetici`
