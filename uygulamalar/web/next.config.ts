@@ -2,6 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   transpilePackages: ["@sofra/tema"],
+  outputFileTracingIncludes: {
+    "/**": [
+      "./prisma/seed.db",
+      "./prisma/schema.prisma",
+      "./node_modules/.prisma/**/*",
+      "./node_modules/@prisma/client/**/*",
+    ],
+  },
   async redirects() {
     return [
       { source: "/demo", destination: "/m/demo?masa=1&siparis=1", permanent: false },

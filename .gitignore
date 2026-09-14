@@ -25,5 +25,7 @@ sofra-kaynak.zip
 uygulamalar/web/.env
 *.db
 *.db-journal
+!uygulamalar/web/prisma/seed.db
 node_modules/
 .next/
+.vercel
