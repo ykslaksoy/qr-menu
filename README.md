@@ -66,9 +66,13 @@ pnpm --filter @sofra/web dev
 npx --yes cloudflared tunnel --url http://localhost:3000
 ```
 
-Canlı demo (bu agent oturumu; tünel kapanınca ölür):
+Canlı demo (güncel — Cursor `main` @ `22148fb` + `sofra-src.tgz`):
 
-**https://lucas-employment-modular-elements.trycloudflare.com**
+**https://temporary-instant-walnut-pd09imj.vercel.app**
+
+Kalıcı proje (SSO açık olabilir): **https://sofra-qr-menu-yuksel2.vercel.app**
+
+Tünel (VM ayakta kaldıkça): **https://accounting-training-asset-commodities.trycloudflare.com**
 
 - Menü: `/m/demo`
 - Yönetici: `/api/auth/demo/yonetici`
