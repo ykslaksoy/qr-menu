@@ -1,0 +1,25 @@
+{
+  "name": "@sofra/tema",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "katalog:uret": "node scripts/urun-katalogu-uret.mjs",
+    "gorsel:svg": "node scripts/gorsel-svg-uret.mjs",
+    "gorsel:id": "node scripts/gorsel-id-guncelle.mjs",
+    "gazli:ekle": "node scripts/gazli-icecek-ekle.mjs"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./katalog.json": "./src/katalog.json",
+    "./fiyatlar.json": "./src/fiyatlar.json",
+    "./paket-servisler.json": "./src/paket-servisler.json",
+    "./referans.json": "./src/referans.json",
+    "./plan-kilitleri.json": "./src/plan-kilitleri.json",
+    "./adet-alti-ucretsiz.json": "./src/adet-alti-ucretsiz.json",
+    "./toplam-urun-listesi.json": "./src/toplam-urun-listesi.json",
+    "./isletme-menuleri.json": "./src/isletme-menuleri.json"
+  }
+}

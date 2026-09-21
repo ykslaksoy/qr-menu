@@ -1,0 +1,609 @@
+{
+  "baslik": "SüperQr karşılaştırma",
+  "aciklama": "Her özellikte Top 10 max (SüperQr)+kaynak; Sofra. Sıra 1…n.",
+  "uygulamalar": [
+    {
+      "id": "adisyo",
+      "ad": "Adisyo",
+      "kisaltma": "AD",
+      "grup": "POS",
+      "sira": 1
+    },
+    {
+      "id": "menulux",
+      "ad": "Menulux",
+      "kisaltma": "MX",
+      "grup": "POS",
+      "sira": 2
+    },
+    {
+      "id": "karekodgarson",
+      "ad": "KarekodGarson",
+      "kisaltma": "KG",
+      "grup": "POS",
+      "sira": 3
+    },
+    {
+      "id": "simpra",
+      "ad": "Simpra",
+      "kisaltma": "SP",
+      "grup": "POS",
+      "sira": 4
+    },
+    {
+      "id": "adysso",
+      "ad": "Adysso",
+      "kisaltma": "AY",
+      "grup": "AI menü",
+      "sira": 5
+    },
+    {
+      "id": "digimenu",
+      "ad": "Digimenü",
+      "kisaltma": "DG",
+      "grup": "QR menü",
+      "sira": 6
+    },
+    {
+      "id": "qrmenum",
+      "ad": "QrMenum",
+      "kisaltma": "QM",
+      "grup": "QR menü",
+      "sira": 7
+    },
+    {
+      "id": "vrest",
+      "ad": "vRest",
+      "kisaltma": "VR",
+      "grup": "POS+QR",
+      "sira": 8
+    },
+    {
+      "id": "gopos",
+      "ad": "GoPOS",
+      "kisaltma": "GP",
+      "grup": "POS",
+      "sira": 9
+    },
+    {
+      "id": "monu",
+      "ad": "MONU",
+      "kisaltma": "MN",
+      "grup": "QR menü",
+      "sira": 10
+    }
+  ],
+  "sutunlar": [
+    "sira",
+    "ozellik",
+    "enIyi",
+    "sofra"
+  ],
+  "satirlar": [
+    {
+      "sira": 1,
+      "id": "qr-menu",
+      "kategori": "A",
+      "ozellik": "QR dijital menü",
+      "enIyi": 96,
+      "kaynak": "MONU",
+      "kaynakId": null,
+      "sofra": 88,
+      "delta": -8
+    },
+    {
+      "sira": 2,
+      "id": "menu-tasarim",
+      "kategori": "A",
+      "ozellik": "Menü tasarım / şablon",
+      "enIyi": 94,
+      "kaynak": "MONU",
+      "kaynakId": null,
+      "sofra": 86,
+      "delta": -8
+    },
+    {
+      "sira": 3,
+      "id": "hazir-katalog",
+      "kategori": "A",
+      "ozellik": "Hazır ürün kataloğu / hızlı kurulum",
+      "enIyi": 60,
+      "kaynak": "Digimenü",
+      "kaynakId": null,
+      "sofra": 94,
+      "delta": 34
+    },
+    {
+      "sira": 4,
+      "id": "gorsel-urun",
+      "kategori": "A",
+      "ozellik": "Ürün görselleri",
+      "enIyi": 92,
+      "kaynak": "MONU",
+      "kaynakId": null,
+      "sofra": 85,
+      "delta": -7
+    },
+    {
+      "sira": 5,
+      "id": "varyant-ekstra",
+      "kategori": "A",
+      "ozellik": "Varyant / ekstra seçenek",
+      "enIyi": 92,
+      "kaynak": "QrMenum",
+      "kaynakId": null,
+      "sofra": 78,
+      "delta": -14
+    },
+    {
+      "sira": 6,
+      "id": "cok-dil",
+      "kategori": "A",
+      "ozellik": "Çoklu dil menü",
+      "enIyi": 96,
+      "kaynak": "MONU",
+      "kaynakId": null,
+      "sofra": 62,
+      "delta": -34
+    },
+    {
+      "sira": 7,
+      "id": "alerjen",
+      "kategori": "A",
+      "ozellik": "Alerjen / kalori",
+      "enIyi": 88,
+      "kaynak": "MONU",
+      "kaynakId": null,
+      "sofra": 70,
+      "delta": -18
+    },
+    {
+      "sira": 8,
+      "id": "masa-qr-siparis",
+      "kategori": "A",
+      "ozellik": "Masadan QR sipariş",
+      "enIyi": 94,
+      "kaynak": "Digimenü",
+      "kaynakId": null,
+      "sofra": 88,
+      "delta": -6
+    },
+    {
+      "sira": 9,
+      "id": "online-odeme",
+      "kategori": "A",
+      "ozellik": "Masada online ödeme",
+      "enIyi": 90,
+      "kaynak": "MONU",
+      "kaynakId": null,
+      "sofra": 28,
+      "delta": -62
+    },
+    {
+      "sira": 10,
+      "id": "garson-cagir",
+      "kategori": "A",
+      "ozellik": "Garson çağır / hesap iste",
+      "enIyi": 92,
+      "kaynak": "Digimenü",
+      "kaynakId": null,
+      "sofra": 82,
+      "delta": -10
+    },
+    {
+      "sira": 11,
+      "id": "bulut-pos",
+      "kategori": "B",
+      "ozellik": "Bulut adisyon / POS olgunluğu",
+      "enIyi": 92,
+      "kaynak": "Menulux",
+      "kaynakId": null,
+      "sofra": 68,
+      "delta": -24
+    },
+    {
+      "sira": 12,
+      "id": "garson-ekran",
+      "kategori": "B",
+      "ozellik": "Garson ekranı",
+      "enIyi": 92,
+      "kaynak": "KarekodGarson",
+      "kaynakId": null,
+      "sofra": 90,
+      "delta": -2
+    },
+    {
+      "sira": 13,
+      "id": "mutfak-ekran",
+      "kategori": "B",
+      "ozellik": "Mutfak / KDS ekranı",
+      "enIyi": 92,
+      "kaynak": "vRest",
+      "kaynakId": null,
+      "sofra": 88,
+      "delta": -4
+    },
+    {
+      "sira": 14,
+      "id": "sesli-siparis",
+      "kategori": "B",
+      "ozellik": "Garson sesli sipariş",
+      "enIyi": 35,
+      "kaynak": "Adysso",
+      "kaynakId": null,
+      "sofra": 92,
+      "delta": 57
+    },
+    {
+      "sira": 15,
+      "id": "stok-alternatif",
+      "kategori": "B",
+      "ozellik": "Stok yok → alternatif öner",
+      "enIyi": 30,
+      "kaynak": "vRest",
+      "kaynakId": null,
+      "sofra": 90,
+      "delta": 60
+    },
+    {
+      "sira": 16,
+      "id": "dort-kanal",
+      "kategori": "B",
+      "ozellik": "Çok kanal → tek adisyon",
+      "enIyi": 70,
+      "kaynak": "KarekodGarson",
+      "kaynakId": null,
+      "sofra": 93,
+      "delta": 23
+    },
+    {
+      "sira": 17,
+      "id": "serbest-kalem",
+      "kategori": "B",
+      "ozellik": "Serbest kalem",
+      "enIyi": 85,
+      "kaynak": "KarekodGarson",
+      "kaynakId": null,
+      "sofra": 88,
+      "delta": 3
+    },
+    {
+      "sira": 18,
+      "id": "adisyon-pdf",
+      "kategori": "B",
+      "ozellik": "Canlı adisyon PDF / fiş",
+      "enIyi": 55,
+      "kaynak": "vRest",
+      "kaynakId": null,
+      "sofra": 90,
+      "delta": 35
+    },
+    {
+      "sira": 19,
+      "id": "roller",
+      "kategori": "B",
+      "ozellik": "Rol ekranları (yönetici/garson/mutfak)",
+      "enIyi": 95,
+      "kaynak": "KarekodGarson",
+      "kaynakId": null,
+      "sofra": 86,
+      "delta": -9
+    },
+    {
+      "sira": 20,
+      "id": "stok",
+      "kategori": "B",
+      "ozellik": "Stok takibi",
+      "enIyi": 92,
+      "kaynak": "Simpra",
+      "kaynakId": null,
+      "sofra": 55,
+      "delta": -37
+    },
+    {
+      "sira": 21,
+      "id": "bildirim",
+      "kategori": "B",
+      "ozellik": "Anlık sipariş bildirimi",
+      "enIyi": 88,
+      "kaynak": "QrMenum",
+      "kaynakId": null,
+      "sofra": 68,
+      "delta": -20
+    },
+    {
+      "sira": 22,
+      "id": "rapor",
+      "kategori": "B",
+      "ozellik": "Satış / masa analitikleri",
+      "enIyi": 90,
+      "kaynak": "Simpra",
+      "kaynakId": null,
+      "sofra": 72,
+      "delta": -18
+    },
+    {
+      "sira": 23,
+      "id": "okc",
+      "kategori": "C",
+      "ozellik": "ÖKC / yazarkasa",
+      "enIyi": 96,
+      "kaynak": "Menulux",
+      "kaynakId": null,
+      "sofra": 5,
+      "delta": -91
+    },
+    {
+      "sira": 24,
+      "id": "efatura",
+      "kategori": "C",
+      "ozellik": "E-fatura / yasal",
+      "enIyi": 95,
+      "kaynak": "Menulux",
+      "kaynakId": null,
+      "sofra": 5,
+      "delta": -90
+    },
+    {
+      "sira": 25,
+      "id": "offline",
+      "kategori": "C",
+      "ozellik": "Offline çalışma",
+      "enIyi": 92,
+      "kaynak": "Menulux",
+      "kaynakId": null,
+      "sofra": 8,
+      "delta": -84
+    },
+    {
+      "sira": 26,
+      "id": "el-terminali",
+      "kategori": "C",
+      "ozellik": "Garson el terminali (native)",
+      "enIyi": 94,
+      "kaynak": "Menulux",
+      "kaynakId": null,
+      "sofra": 25,
+      "delta": -69
+    },
+    {
+      "sira": 27,
+      "id": "cok-sube",
+      "kategori": "C",
+      "ozellik": "Merkezi çok şube",
+      "enIyi": 95,
+      "kaynak": "Simpra",
+      "kaynakId": null,
+      "sofra": 55,
+      "delta": -40
+    },
+    {
+      "sira": 28,
+      "id": "platform",
+      "kategori": "C",
+      "ozellik": "Getir / Yemeksepeti entegrasyonu",
+      "enIyi": 94,
+      "kaynak": "Simpra",
+      "kaynakId": null,
+      "sofra": 5,
+      "delta": -89
+    },
+    {
+      "sira": 29,
+      "id": "kiosk",
+      "kategori": "C",
+      "ozellik": "Kiosk sipariş",
+      "enIyi": 92,
+      "kaynak": "Simpra",
+      "kaynakId": null,
+      "sofra": 5,
+      "delta": -87
+    },
+    {
+      "sira": 30,
+      "id": "modul-genislik",
+      "kategori": "C",
+      "ozellik": "Modül genişliği (İK vb.)",
+      "enIyi": 96,
+      "kaynak": "KarekodGarson",
+      "kaynakId": null,
+      "sofra": 30,
+      "delta": -66
+    },
+    {
+      "sira": 31,
+      "id": "fiyat-giris",
+      "kategori": "C",
+      "ozellik": "Giriş fiyatı / F/P",
+      "enIyi": 95,
+      "kaynak": "GoPOS",
+      "kaynakId": null,
+      "sofra": 92,
+      "delta": -3
+    },
+    {
+      "sira": 32,
+      "id": "ucretsiz-kota",
+      "kategori": "C",
+      "ozellik": "Ücretsiz / adet-altı hediye",
+      "enIyi": 55,
+      "kaynak": "Digimenü",
+      "kaynakId": null,
+      "sofra": 95,
+      "delta": 40
+    },
+    {
+      "sira": 33,
+      "id": "komisyon",
+      "kategori": "C",
+      "ozellik": "Komisyonsuz model",
+      "enIyi": 90,
+      "kaynak": "GoPOS",
+      "kaynakId": null,
+      "sofra": 98,
+      "delta": 8
+    },
+    {
+      "sira": 34,
+      "id": "kurulum-hizi",
+      "kategori": "C",
+      "ozellik": "Kurulum hızı (dakika–saat)",
+      "enIyi": 92,
+      "kaynak": "Adisyo",
+      "kaynakId": null,
+      "sofra": 94,
+      "delta": 2
+    }
+  ],
+  "ozet": {
+    "enIyiBasit": 85.5,
+    "enIyiAgirlikli": 84.7,
+    "sofraBasit": 66.9,
+    "sofraAgirlikli": 68.6,
+    "kategori": {
+      "A": {
+        "enIyi": 90,
+        "sofra": 76.6
+      },
+      "B": {
+        "enIyi": 76.3,
+        "sofra": 81.7
+      },
+      "C": {
+        "enIyi": 90.5,
+        "sofra": 43.1
+      }
+    }
+  },
+  "uygulamaOrtalamalari": [
+    {
+      "id": "vrest",
+      "ad": "vRest",
+      "kisaltma": "VR",
+      "basit": 74,
+      "agirlikli": 73.8,
+      "A": 76.6,
+      "B": 71.3,
+      "C": 74.2,
+      "n": 35
+    },
+    {
+      "id": "simpra",
+      "ad": "Simpra",
+      "kisaltma": "SP",
+      "basit": 73.2,
+      "agirlikli": 73,
+      "A": 77,
+      "B": 69.7,
+      "C": 73.3,
+      "n": 35
+    },
+    {
+      "id": "karekodgarson",
+      "ad": "KarekodGarson",
+      "kisaltma": "KG",
+      "basit": 72.2,
+      "agirlikli": 72.4,
+      "A": 78.6,
+      "B": 72.6,
+      "C": 65.9,
+      "n": 35
+    },
+    {
+      "id": "menulux",
+      "ad": "Menulux",
+      "kisaltma": "MX",
+      "basit": 70.4,
+      "agirlikli": 70.2,
+      "A": 73.4,
+      "B": 67.3,
+      "C": 70.8,
+      "n": 35
+    },
+    {
+      "id": "sofra",
+      "ad": "Sofra",
+      "kisaltma": "Vox",
+      "basit": 66.9,
+      "agirlikli": 68.6,
+      "A": 76.6,
+      "B": 81.7,
+      "C": 43.1
+    },
+    {
+      "id": "qrmenum",
+      "ad": "QrMenum",
+      "kisaltma": "QM",
+      "basit": 66.5,
+      "agirlikli": 66.4,
+      "A": 84.8,
+      "B": 61.2,
+      "C": 55,
+      "n": 35
+    },
+    {
+      "id": "adisyo",
+      "ad": "Adisyo",
+      "kisaltma": "AD",
+      "basit": 63,
+      "agirlikli": 63,
+      "A": 68.2,
+      "B": 61.9,
+      "C": 59.3,
+      "n": 35
+    },
+    {
+      "id": "digimenu",
+      "ad": "Digimenü",
+      "kisaltma": "DG",
+      "basit": 62.9,
+      "agirlikli": 62.6,
+      "A": 87,
+      "B": 53.8,
+      "C": 49.8,
+      "n": 35
+    },
+    {
+      "id": "adysso",
+      "ad": "Adysso",
+      "kisaltma": "AY",
+      "basit": 61.1,
+      "agirlikli": 61.2,
+      "A": 75,
+      "B": 57.9,
+      "C": 51.7,
+      "n": 35
+    },
+    {
+      "id": "monu",
+      "ad": "MONU",
+      "kisaltma": "MN",
+      "basit": 58.2,
+      "agirlikli": 57.4,
+      "A": 87.3,
+      "B": 43.8,
+      "C": 45.8,
+      "n": 35
+    },
+    {
+      "id": "gopos",
+      "ad": "GoPOS",
+      "kisaltma": "GP",
+      "basit": 54.4,
+      "agirlikli": 54.5,
+      "A": 38,
+      "B": 59.2,
+      "C": 64.6,
+      "n": 35
+    }
+  ],
+  "superQr": {
+    "basit": 85.5,
+    "agirlikli": 84.7,
+    "kategori": {
+      "A": 90,
+      "B": 76.3,
+      "C": 90.5
+    }
+  }
+}

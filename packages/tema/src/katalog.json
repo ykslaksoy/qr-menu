@@ -1,0 +1,667 @@
+{
+  "surum": "1.0.0",
+  "notlar": "Nihai ilk katalog. Sonradan mevcut id alanları üzerinden güncellenir; id değerleri kırılmasın.",
+  "kategoriler": [
+    {
+      "id": "sade",
+      "ad": "Sade",
+      "aciklama": "Temiz, hızlı okunan, az süs",
+      "sira": 1
+    },
+    {
+      "id": "dinamik",
+      "ad": "Dinamik",
+      "aciklama": "Fotoğraf ve renk vurgulu, enerjik",
+      "sira": 2
+    },
+    {
+      "id": "sicak",
+      "ad": "Sıcak",
+      "aciklama": "Samimi, yumuşak, iştah açan",
+      "sira": 3
+    },
+    {
+      "id": "premium",
+      "ad": "Seçkin",
+      "aciklama": "Sakin, kaliteli, ferah boşluk",
+      "sira": 4
+    },
+    {
+      "id": "gece",
+      "ad": "Gece",
+      "aciklama": "Koyu zemin, bar ve gece işletmeleri",
+      "sira": 5
+    }
+  ],
+  "fontPaketleri": [
+    {
+      "id": "modern",
+      "etiket": "Modern",
+      "baslik": "DM Sans",
+      "govde": "DM Sans"
+    },
+    {
+      "id": "sicak",
+      "etiket": "Sıcak",
+      "baslik": "Fraunces",
+      "govde": "Source Sans 3"
+    },
+    {
+      "id": "sert",
+      "etiket": "Sert",
+      "baslik": "Bebas Neue",
+      "govde": "Nunito Sans"
+    },
+    {
+      "id": "klasik",
+      "etiket": "Klasik",
+      "baslik": "Libre Baskerville",
+      "govde": "Karla"
+    },
+    {
+      "id": "gece",
+      "etiket": "Gece",
+      "baslik": "Outfit",
+      "govde": "Outfit"
+    },
+    {
+      "id": "editorial",
+      "etiket": "Dergi",
+      "baslik": "Playfair Display",
+      "govde": "Source Sans 3"
+    }
+  ],
+  "cerceveler": [
+    { "id": "none", "etiket": "Yok" },
+    { "id": "thin", "etiket": "İnce" },
+    { "id": "bold", "etiket": "Kalın" },
+    { "id": "double", "etiket": "Çift çizgi" },
+    { "id": "soft", "etiket": "Yumuşak" }
+  ],
+  "koseYuvarlaklari": [
+    { "id": 0, "etiket": "Keskin" },
+    { "id": 8, "etiket": "Hafif yuvarlak" },
+    { "id": 16, "etiket": "Yuvarlak" }
+  ],
+  "zeminStilleri": [
+    { "id": "solid-light", "etiket": "Açık düz" },
+    { "id": "solid-warm", "etiket": "Sıcak düz" },
+    { "id": "solid-cool", "etiket": "Soğuk düz" },
+    { "id": "solid-dark", "etiket": "Koyu düz" },
+    { "id": "grad-soft", "etiket": "Yumuşak geçiş" },
+    { "id": "grad-mist", "etiket": "Sis geçiş" }
+  ],
+  "desenler": [
+    { "id": "pat-none", "etiket": "Desensiz" },
+    { "id": "pat-dots", "etiket": "Nokta" },
+    { "id": "pat-grid", "etiket": "Izgara" },
+    { "id": "pat-lines", "etiket": "Çizgi" },
+    { "id": "pat-linen", "etiket": "Keten doku" },
+    { "id": "pat-terrazzo", "etiket": "Terrazzo" },
+    { "id": "pat-leaf", "etiket": "Yaprak" },
+    { "id": "pat-wave", "etiket": "Dalga" },
+    { "id": "pat-geo", "etiket": "Geometrik" },
+    { "id": "pat-noise", "etiket": "Gren" }
+  ],
+  "duzenEtiketleri": {
+    "list": "Liste",
+    "compact-list": "Kompakt liste",
+    "price-list": "Fiyat listesi",
+    "photo-grid": "Fotoğraf ızgarası",
+    "photo-hero": "Büyük görsel",
+    "editorial": "Dergi düzeni"
+  },
+  "qrCerceveEtiketleri": {
+    "square": "Kare",
+    "rounded": "Yuvarlak köşe",
+    "brand": "Marka renkli"
+  },
+  "planErisimi": {
+    "ucretsiz": {
+      "kategoriler": ["sade", "dinamik", "sicak", "premium", "gece"],
+      "kategoriBasinaSablon": 1,
+      "fontPaketleri": ["modern", "sicak"],
+      "cerceveler": ["none", "thin"],
+      "desenler": ["pat-none", "pat-dots", "pat-linen"],
+      "ozellestir": ["primary", "logo"],
+      "poweredByGoster": true
+    },
+    "pro": {
+      "kategoriler": ["sade", "dinamik", "sicak", "premium", "gece"],
+      "kategoriBasinaSablon": 5,
+      "fontPaketleri": "hepsi",
+      "cerceveler": "hepsi",
+      "desenler": "hepsi",
+      "ozellestir": [
+        "primary",
+        "background",
+        "text",
+        "accent",
+        "fontPack",
+        "frame",
+        "radius",
+        "backgroundStyle",
+        "pattern",
+        "logo"
+      ],
+      "poweredByGoster": false
+    }
+  },
+  "sablonlar": [
+    {
+      "id": "sade-acik",
+      "kategoriId": "sade",
+      "ad": "Sade Açık",
+      "duzen": "list",
+      "ucretsiz": true,
+      "varsayilanlar": {
+        "fontPaketi": "modern",
+        "anaRenk": "#1F6F5B",
+        "zeminRengi": "#FAFAF8",
+        "metinRengi": "#1A1A1A",
+        "vurguRengi": "#1F6F5B",
+        "cerceve": "none",
+        "kose": 8,
+        "zeminStili": "solid-light",
+        "desen": "pat-none",
+        "qrCerceve": "rounded"
+      }
+    },
+    {
+      "id": "sade-compact",
+      "kategoriId": "sade",
+      "ad": "Sade Kompakt",
+      "duzen": "compact-list",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "modern",
+        "anaRenk": "#2C3E50",
+        "zeminRengi": "#FFFFFF",
+        "metinRengi": "#1A1A1A",
+        "vurguRengi": "#2C3E50",
+        "cerceve": "thin",
+        "kose": 0,
+        "zeminStili": "solid-light",
+        "desen": "pat-none",
+        "qrCerceve": "square"
+      }
+    },
+    {
+      "id": "kahve-minimal",
+      "kategoriId": "sade",
+      "ad": "Kahve Minimal",
+      "duzen": "list",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "modern",
+        "anaRenk": "#6F4E37",
+        "zeminRengi": "#F7F3EE",
+        "metinRengi": "#2B2118",
+        "vurguRengi": "#6F4E37",
+        "cerceve": "none",
+        "kose": 8,
+        "zeminStili": "solid-warm",
+        "desen": "pat-dots",
+        "qrCerceve": "rounded"
+      }
+    },
+    {
+      "id": "liste-klasik",
+      "kategoriId": "sade",
+      "ad": "Liste Klasik",
+      "duzen": "price-list",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "klasik",
+        "anaRenk": "#3D2914",
+        "zeminRengi": "#FFFDF8",
+        "metinRengi": "#1A1A1A",
+        "vurguRengi": "#8B5A2B",
+        "cerceve": "thin",
+        "kose": 0,
+        "zeminStili": "solid-warm",
+        "desen": "pat-none",
+        "qrCerceve": "square"
+      }
+    },
+    {
+      "id": "liste-ince",
+      "kategoriId": "sade",
+      "ad": "Liste İnce",
+      "duzen": "price-list",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "modern",
+        "anaRenk": "#44403C",
+        "zeminRengi": "#FFFFFF",
+        "metinRengi": "#292524",
+        "vurguRengi": "#78716C",
+        "cerceve": "none",
+        "kose": 0,
+        "zeminStili": "solid-cool",
+        "desen": "pat-lines",
+        "qrCerceve": "square"
+      }
+    },
+    {
+      "id": "gorsel-grid",
+      "kategoriId": "dinamik",
+      "ad": "Görsel Izgara",
+      "duzen": "photo-grid",
+      "ucretsiz": true,
+      "varsayilanlar": {
+        "fontPaketi": "sert",
+        "anaRenk": "#E11D48",
+        "zeminRengi": "#FFF7F5",
+        "metinRengi": "#1C1917",
+        "vurguRengi": "#F97316",
+        "cerceve": "soft",
+        "kose": 16,
+        "zeminStili": "solid-light",
+        "desen": "pat-none",
+        "qrCerceve": "brand"
+      }
+    },
+    {
+      "id": "gorsel-buyuk",
+      "kategoriId": "dinamik",
+      "ad": "Görsel Büyük",
+      "duzen": "photo-hero",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "sert",
+        "anaRenk": "#DC2626",
+        "zeminRengi": "#FAFAFA",
+        "metinRengi": "#0A0A0A",
+        "vurguRengi": "#EA580C",
+        "cerceve": "none",
+        "kose": 16,
+        "zeminStili": "solid-light",
+        "desen": "pat-none",
+        "qrCerceve": "rounded"
+      }
+    },
+    {
+      "id": "burger-sert",
+      "kategoriId": "dinamik",
+      "ad": "Burger Sert",
+      "duzen": "photo-grid",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "sert",
+        "anaRenk": "#B45309",
+        "zeminRengi": "#1C1917",
+        "metinRengi": "#FAFAF9",
+        "vurguRengi": "#F59E0B",
+        "cerceve": "bold",
+        "kose": 8,
+        "zeminStili": "solid-dark",
+        "desen": "pat-noise",
+        "qrCerceve": "brand"
+      }
+    },
+    {
+      "id": "street-food",
+      "kategoriId": "dinamik",
+      "ad": "Sokak Lezzeti",
+      "duzen": "photo-grid",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "sert",
+        "anaRenk": "#CA8A04",
+        "zeminRengi": "#FFFBEB",
+        "metinRengi": "#1C1917",
+        "vurguRengi": "#E11D48",
+        "cerceve": "bold",
+        "kose": 8,
+        "zeminStili": "solid-warm",
+        "desen": "pat-geo",
+        "qrCerceve": "square"
+      }
+    },
+    {
+      "id": "pizza-italyan",
+      "kategoriId": "dinamik",
+      "ad": "Pizza İtalyan",
+      "duzen": "photo-hero",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "editorial",
+        "anaRenk": "#B91C1C",
+        "zeminRengi": "#FFF8F1",
+        "metinRengi": "#1C1917",
+        "vurguRengi": "#15803D",
+        "cerceve": "thin",
+        "kose": 8,
+        "zeminStili": "solid-warm",
+        "desen": "pat-none",
+        "qrCerceve": "rounded"
+      }
+    },
+    {
+      "id": "kahve-sicak",
+      "kategoriId": "sicak",
+      "ad": "Kahve Sıcak",
+      "duzen": "list",
+      "ucretsiz": true,
+      "varsayilanlar": {
+        "fontPaketi": "sicak",
+        "anaRenk": "#9A3412",
+        "zeminRengi": "#F5EDE4",
+        "metinRengi": "#2B2118",
+        "vurguRengi": "#C2410C",
+        "cerceve": "soft",
+        "kose": 16,
+        "zeminStili": "solid-warm",
+        "desen": "pat-linen",
+        "qrCerceve": "rounded"
+      }
+    },
+    {
+      "id": "pastane-tatli",
+      "kategoriId": "sicak",
+      "ad": "Pastane",
+      "duzen": "photo-grid",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "sicak",
+        "anaRenk": "#BE185D",
+        "zeminRengi": "#FFF1F2",
+        "metinRengi": "#4C0519",
+        "vurguRengi": "#DB2777",
+        "cerceve": "soft",
+        "kose": 16,
+        "zeminStili": "grad-mist",
+        "desen": "pat-dots",
+        "qrCerceve": "rounded"
+      }
+    },
+    {
+      "id": "liste-cizgili",
+      "kategoriId": "sicak",
+      "ad": "Liste Çizgili",
+      "duzen": "price-list",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "sicak",
+        "anaRenk": "#92400E",
+        "zeminRengi": "#FFF7ED",
+        "metinRengi": "#1C1917",
+        "vurguRengi": "#B45309",
+        "cerceve": "double",
+        "kose": 0,
+        "zeminStili": "solid-warm",
+        "desen": "pat-lines",
+        "qrCerceve": "square"
+      }
+    },
+    {
+      "id": "vegan-yaprak",
+      "kategoriId": "sicak",
+      "ad": "Yeşil Vegan",
+      "duzen": "list",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "modern",
+        "anaRenk": "#166534",
+        "zeminRengi": "#F0FDF4",
+        "metinRengi": "#14532D",
+        "vurguRengi": "#16A34A",
+        "cerceve": "soft",
+        "kose": 16,
+        "zeminStili": "solid-light",
+        "desen": "pat-leaf",
+        "qrCerceve": "brand"
+      }
+    },
+    {
+      "id": "deniz-sahil",
+      "kategoriId": "sicak",
+      "ad": "Deniz Sahil",
+      "duzen": "photo-grid",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "modern",
+        "anaRenk": "#0369A1",
+        "zeminRengi": "#F0F9FF",
+        "metinRengi": "#0C4A6E",
+        "vurguRengi": "#0284C7",
+        "cerceve": "thin",
+        "kose": 8,
+        "zeminStili": "grad-soft",
+        "desen": "pat-wave",
+        "qrCerceve": "rounded"
+      }
+    },
+    {
+      "id": "magazin",
+      "kategoriId": "premium",
+      "ad": "Magazin",
+      "duzen": "editorial",
+      "ucretsiz": true,
+      "varsayilanlar": {
+        "fontPaketi": "editorial",
+        "anaRenk": "#1C1917",
+        "zeminRengi": "#FAFAF9",
+        "metinRengi": "#1C1917",
+        "vurguRengi": "#A8A29E",
+        "cerceve": "none",
+        "kose": 0,
+        "zeminStili": "solid-light",
+        "desen": "pat-none",
+        "qrCerceve": "square"
+      }
+    },
+    {
+      "id": "magazin-serif",
+      "kategoriId": "premium",
+      "ad": "Magazin Serif",
+      "duzen": "editorial",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "klasik",
+        "anaRenk": "#292524",
+        "zeminRengi": "#F5F5F4",
+        "metinRengi": "#1C1917",
+        "vurguRengi": "#78716C",
+        "cerceve": "thin",
+        "kose": 0,
+        "zeminStili": "solid-cool",
+        "desen": "pat-none",
+        "qrCerceve": "square"
+      }
+    },
+    {
+      "id": "otel-spa",
+      "kategoriId": "premium",
+      "ad": "Otel",
+      "duzen": "editorial",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "klasik",
+        "anaRenk": "#44403C",
+        "zeminRengi": "#FAF8F5",
+        "metinRengi": "#1C1917",
+        "vurguRengi": "#A8A29E",
+        "cerceve": "thin",
+        "kose": 8,
+        "zeminStili": "solid-warm",
+        "desen": "pat-linen",
+        "qrCerceve": "rounded"
+      }
+    },
+    {
+      "id": "fine-line",
+      "kategoriId": "premium",
+      "ad": "İnce Çizgi",
+      "duzen": "price-list",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "editorial",
+        "anaRenk": "#171717",
+        "zeminRengi": "#FFFFFF",
+        "metinRengi": "#171717",
+        "vurguRengi": "#737373",
+        "cerceve": "thin",
+        "kose": 0,
+        "zeminStili": "solid-light",
+        "desen": "pat-none",
+        "qrCerceve": "square"
+      }
+    },
+    {
+      "id": "luxury-soft",
+      "kategoriId": "premium",
+      "ad": "Yumuşak Lüks",
+      "duzen": "editorial",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "klasik",
+        "anaRenk": "#57534E",
+        "zeminRengi": "#F8F5F0",
+        "metinRengi": "#1C1917",
+        "vurguRengi": "#A8A29E",
+        "cerceve": "soft",
+        "kose": 16,
+        "zeminStili": "grad-mist",
+        "desen": "pat-dots",
+        "qrCerceve": "rounded"
+      }
+    },
+    {
+      "id": "bar-gece",
+      "kategoriId": "gece",
+      "ad": "Bar Gece",
+      "duzen": "list",
+      "ucretsiz": true,
+      "varsayilanlar": {
+        "fontPaketi": "gece",
+        "anaRenk": "#A78BFA",
+        "zeminRengi": "#0C0A09",
+        "metinRengi": "#FAFAF9",
+        "vurguRengi": "#C4B5FD",
+        "cerceve": "thin",
+        "kose": 8,
+        "zeminStili": "solid-dark",
+        "desen": "pat-noise",
+        "qrCerceve": "brand"
+      }
+    },
+    {
+      "id": "bar-neon",
+      "kategoriId": "gece",
+      "ad": "Bar Neon",
+      "duzen": "photo-grid",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "gece",
+        "anaRenk": "#22D3EE",
+        "zeminRengi": "#09090B",
+        "metinRengi": "#F8FAFC",
+        "vurguRengi": "#F472B6",
+        "cerceve": "bold",
+        "kose": 8,
+        "zeminStili": "solid-dark",
+        "desen": "pat-grid",
+        "qrCerceve": "brand"
+      }
+    },
+    {
+      "id": "luxury-dark",
+      "kategoriId": "gece",
+      "ad": "Koyu Lüks",
+      "duzen": "editorial",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "editorial",
+        "anaRenk": "#D6D3D1",
+        "zeminRengi": "#0C0A09",
+        "metinRengi": "#FAFAF9",
+        "vurguRengi": "#A8A29E",
+        "cerceve": "thin",
+        "kose": 0,
+        "zeminStili": "solid-dark",
+        "desen": "pat-none",
+        "qrCerceve": "square"
+      }
+    },
+    {
+      "id": "kompakt-koyu",
+      "kategoriId": "gece",
+      "ad": "Kompakt Koyu",
+      "duzen": "compact-list",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "gece",
+        "anaRenk": "#E7E5E4",
+        "zeminRengi": "#18181B",
+        "metinRengi": "#FAFAFA",
+        "vurguRengi": "#A1A1AA",
+        "cerceve": "none",
+        "kose": 0,
+        "zeminStili": "solid-dark",
+        "desen": "pat-dots",
+        "qrCerceve": "square"
+      }
+    },
+    {
+      "id": "kokteyl",
+      "kategoriId": "gece",
+      "ad": "Kokteyl",
+      "duzen": "photo-hero",
+      "ucretsiz": false,
+      "varsayilanlar": {
+        "fontPaketi": "gece",
+        "anaRenk": "#F472B6",
+        "zeminRengi": "#1A0B14",
+        "metinRengi": "#FDF2F8",
+        "vurguRengi": "#FB7185",
+        "cerceve": "soft",
+        "kose": 16,
+        "zeminStili": "solid-dark",
+        "desen": "pat-noise",
+        "qrCerceve": "rounded"
+      }
+    }
+  ],
+  "kullanimAkisi": [
+    "Kategori seçin (Sade / Dinamik / Sıcak / Seçkin / Gece)",
+    "Beş şablondan birini seçin",
+    "İsterseniz özelleştirin: yazı tipi, renk, çerçeve, zemin, logo",
+    "Şablona sıfırla ile varsayılanlara dönün",
+    "Web menü ve baskı PDF aynı tema ayarlarını kullanır"
+  ],
+  "ozellestirmeKurallari": {
+    "duzenSablonaKilitli": true,
+    "degistirilebilir": [
+      "fontPaketi",
+      "anaRenk",
+      "zeminRengi",
+      "metinRengi",
+      "vurguRengi",
+      "cerceve",
+      "kose",
+      "zeminStili",
+      "desen",
+      "logoUrl",
+      "qrCerceve"
+    ],
+    "desenOpaklikKademeleri": [0.04, 0.06, 0.08],
+    "urunKartiHerZamanDuz": true,
+    "qrGuvenliAlanHerZamanDuz": true
+  },
+  "panelEtiketleri": {
+    "kategoriSec": "Tarz seçin",
+    "sablonSec": "Şablon seçin",
+    "ozellestir": "Özelleştir",
+    "sifirla": "Şablona sıfırla",
+    "font": "Yazı tipi",
+    "renkler": "Renkler",
+    "cerceve": "Çerçeve",
+    "zemin": "Zemin",
+    "desen": "Desen",
+    "logo": "Logo",
+    "onizleme": "Canlı önizleme",
+    "kaydet": "Kaydet"
+  }
+}

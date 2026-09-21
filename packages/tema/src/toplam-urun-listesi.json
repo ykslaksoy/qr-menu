@@ -1,0 +1,2289 @@
+{
+  "aciklama": "Tüm dükkan tiplerindeki birleşik ürün kataloğu",
+  "urunSayisi": 199,
+  "urunler": [
+    {
+      "id": "1-kilo",
+      "ad": "1 Kilo",
+      "fiyat": 320,
+      "aciklama": "",
+      "gorselId": "salata",
+      "kategoriEtiket": "cigkofte",
+      "tipler": [
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "acili-burger",
+      "ad": "Acılı Burger",
+      "fiyat": 250,
+      "aciklama": "",
+      "gorselId": "burger",
+      "kategoriEtiket": "burger",
+      "tipler": [
+        "burger"
+      ]
+    },
+    {
+      "id": "acili-durum",
+      "ad": "Acılı Dürüm",
+      "fiyat": 110,
+      "aciklama": "",
+      "gorselId": "burger",
+      "kategoriEtiket": "cigkofte",
+      "tipler": [
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "acili-pizza",
+      "ad": "Acılı Pizza",
+      "fiyat": 300,
+      "aciklama": "Jalapeno",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pizza",
+      "tipler": [
+        "pizzaci"
+      ]
+    },
+    {
+      "id": "adana-kebap",
+      "ad": "Adana Kebap",
+      "fiyat": 320,
+      "aciklama": "Porsiyon",
+      "gorselId": "genel",
+      "kategoriEtiket": "kebap",
+      "tipler": [
+        "kebapci"
+      ]
+    },
+    {
+      "id": "aile-paketi",
+      "ad": "Aile Paketi",
+      "fiyat": 450,
+      "aciklama": "1 kg + ekmek + ayran",
+      "gorselId": "salata",
+      "kategoriEtiket": "cigkofte",
+      "tipler": [
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "ali-nazik",
+      "ad": "Ali Nazik",
+      "fiyat": 380,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "kebap",
+      "tipler": [
+        "kebapci"
+      ]
+    },
+    {
+      "id": "americano",
+      "ad": "Americano",
+      "fiyat": 95,
+      "aciklama": "",
+      "gorselId": "kahve",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "kafe"
+      ]
+    },
+    {
+      "id": "avokado-toast",
+      "ad": "Avokado Toast",
+      "fiyat": 220,
+      "aciklama": "",
+      "gorselId": "salata",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "kahvaltici"
+      ]
+    },
+    {
+      "id": "ayran",
+      "ad": "Ayran",
+      "fiyat": 45,
+      "aciklama": "",
+      "gorselId": "su",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "kahvaltici",
+        "restoran",
+        "donerci",
+        "pideci",
+        "pizzaci",
+        "borekci",
+        "burger",
+        "kebapci",
+        "corbaci",
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "acma",
+      "ad": "Açma",
+      "fiyat": 35,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "pogaca",
+      "tipler": [
+        "borekci"
+      ]
+    },
+    {
+      "id": "bacon-burger",
+      "ad": "Bacon Burger",
+      "fiyat": 280,
+      "aciklama": "",
+      "gorselId": "burger",
+      "kategoriEtiket": "burger",
+      "tipler": [
+        "burger"
+      ]
+    },
+    {
+      "id": "baklava",
+      "ad": "Baklava",
+      "fiyat": 180,
+      "aciklama": "3 dilim",
+      "gorselId": "tatli",
+      "kategoriEtiket": "tatli",
+      "tipler": [
+        "restoran",
+        "pastane"
+      ]
+    },
+    {
+      "id": "bal-tereyag",
+      "ad": "Bal Tereyağ",
+      "fiyat": 90,
+      "aciklama": "Porsiyon",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "kahvaltici"
+      ]
+    },
+    {
+      "id": "bbq-burger",
+      "ad": "BBQ Burger",
+      "fiyat": 270,
+      "aciklama": "",
+      "gorselId": "burger",
+      "kategoriEtiket": "burger",
+      "tipler": [
+        "burger"
+      ]
+    },
+    {
+      "id": "beyti",
+      "ad": "Beyti",
+      "fiyat": 360,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "kebap",
+      "tipler": [
+        "kebapci"
+      ]
+    },
+    {
+      "id": "brownie",
+      "ad": "Brownie",
+      "fiyat": 130,
+      "aciklama": "Sıcak servis",
+      "gorselId": "tatli",
+      "kategoriEtiket": "tatli",
+      "tipler": [
+        "kafe",
+        "pastane"
+      ]
+    },
+    {
+      "id": "bulgur-pilavi",
+      "ad": "Bulgur Pilavı",
+      "fiyat": 70,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "kebapci"
+      ]
+    },
+    {
+      "id": "borek-sepeti",
+      "ad": "Börek Sepeti",
+      "fiyat": 150,
+      "aciklama": "Karışık",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "kahvaltici"
+      ]
+    },
+    {
+      "id": "buyuk-ayran",
+      "ad": "Büyük Ayran",
+      "fiyat": 55,
+      "aciklama": "",
+      "gorselId": "su",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "buyuk-karisik",
+      "ad": "Büyük Karışık",
+      "fiyat": 420,
+      "aciklama": "Aile boyu",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pizza",
+      "tipler": [
+        "pizzaci"
+      ]
+    },
+    {
+      "id": "cacik",
+      "ad": "Cacık",
+      "fiyat": 60,
+      "aciklama": "",
+      "gorselId": "salata",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "donerci"
+      ]
+    },
+    {
+      "id": "cappuccino",
+      "ad": "Cappuccino",
+      "fiyat": 115,
+      "aciklama": "",
+      "gorselId": "kahve",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "kafe"
+      ]
+    },
+    {
+      "id": "cheeseburger",
+      "ad": "Cheeseburger",
+      "fiyat": 240,
+      "aciklama": "",
+      "gorselId": "burger",
+      "kategoriEtiket": "burger",
+      "tipler": [
+        "burger"
+      ]
+    },
+    {
+      "id": "cheesecake",
+      "ad": "Cheesecake",
+      "fiyat": 160,
+      "aciklama": "Frambuaz",
+      "gorselId": "tatli",
+      "kategoriEtiket": "tatli",
+      "tipler": [
+        "kafe",
+        "pastane"
+      ]
+    },
+    {
+      "id": "ciger",
+      "ad": "Ciğer",
+      "fiyat": 290,
+      "aciklama": "Arnavut",
+      "gorselId": "genel",
+      "kategoriEtiket": "izgara",
+      "tipler": [
+        "kebapci"
+      ]
+    },
+    {
+      "id": "cookie",
+      "ad": "Cookie",
+      "fiyat": 70,
+      "aciklama": "Çikolatalı",
+      "gorselId": "tatli",
+      "kategoriEtiket": "tatli",
+      "tipler": [
+        "kafe"
+      ]
+    },
+    {
+      "id": "demlik-cay",
+      "ad": "Demlik Çay",
+      "fiyat": 90,
+      "aciklama": "",
+      "gorselId": "cay",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "kahvaltici",
+        "borekci"
+      ]
+    },
+    {
+      "id": "dilims-pasta",
+      "ad": "Dilims Pasta",
+      "fiyat": 160,
+      "aciklama": "Günün pastası",
+      "gorselId": "tatli",
+      "kategoriEtiket": "pasta",
+      "tipler": [
+        "pastane"
+      ]
+    },
+    {
+      "id": "domates-kebap",
+      "ad": "Domates Kebap",
+      "fiyat": 330,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "kebap",
+      "tipler": [
+        "kebapci"
+      ]
+    },
+    {
+      "id": "domates-corbasi",
+      "ad": "Domates Çorbası",
+      "fiyat": 80,
+      "aciklama": "",
+      "gorselId": "corba",
+      "kategoriEtiket": "corba",
+      "tipler": [
+        "corbaci"
+      ]
+    },
+    {
+      "id": "dondurma",
+      "ad": "Dondurma",
+      "fiyat": 80,
+      "aciklama": "2 top",
+      "gorselId": "dondurma",
+      "kategoriEtiket": "tatli",
+      "tipler": [
+        "kafe",
+        "pastane"
+      ]
+    },
+    {
+      "id": "double-burger",
+      "ad": "Double Burger",
+      "fiyat": 310,
+      "aciklama": "Çift köfte",
+      "gorselId": "burger",
+      "kategoriEtiket": "burger",
+      "tipler": [
+        "burger"
+      ]
+    },
+    {
+      "id": "double-durum",
+      "ad": "Double Dürüm",
+      "fiyat": 300,
+      "aciklama": "Bol et",
+      "gorselId": "burger",
+      "kategoriEtiket": "doner",
+      "tipler": [
+        "donerci"
+      ]
+    },
+    {
+      "id": "doner-tost",
+      "ad": "Döner Tost",
+      "fiyat": 160,
+      "aciklama": "",
+      "gorselId": "burger",
+      "kategoriEtiket": "doner",
+      "tipler": [
+        "donerci"
+      ]
+    },
+    {
+      "id": "dort-peynir",
+      "ad": "Dört Peynir",
+      "fiyat": 330,
+      "aciklama": "",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pizza",
+      "tipler": [
+        "pizzaci"
+      ]
+    },
+    {
+      "id": "dugun-corbasi",
+      "ad": "Düğün Çorbası",
+      "fiyat": 95,
+      "aciklama": "",
+      "gorselId": "corba",
+      "kategoriEtiket": "corba",
+      "tipler": [
+        "corbaci"
+      ]
+    },
+    {
+      "id": "ekler",
+      "ad": "Ekler",
+      "fiyat": 80,
+      "aciklama": "Adet",
+      "gorselId": "tatli",
+      "kategoriEtiket": "pasta",
+      "tipler": [
+        "pastane"
+      ]
+    },
+    {
+      "id": "ekmek",
+      "ad": "Ekmek",
+      "fiyat": 15,
+      "aciklama": "Sepet",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "corbaci"
+      ]
+    },
+    {
+      "id": "eko-kahvalti",
+      "ad": "Eko Kahvaltı",
+      "fiyat": 250,
+      "aciklama": "Sade tabak",
+      "gorselId": "kahvalti",
+      "kategoriEtiket": "kahvalti",
+      "tipler": [
+        "kahvaltici"
+      ]
+    },
+    {
+      "id": "espresso",
+      "ad": "Espresso",
+      "fiyat": 70,
+      "aciklama": "Tek shot",
+      "gorselId": "kahve",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "kafe"
+      ]
+    },
+    {
+      "id": "et-doner-durum",
+      "ad": "Et Döner Dürüm",
+      "fiyat": 220,
+      "aciklama": "",
+      "gorselId": "burger",
+      "kategoriEtiket": "doner",
+      "tipler": [
+        "donerci"
+      ]
+    },
+    {
+      "id": "et-doner-porsiyon",
+      "ad": "Et Döner Porsiyon",
+      "fiyat": 280,
+      "aciklama": "Pilavlı",
+      "gorselId": "genel",
+      "kategoriEtiket": "doner",
+      "tipler": [
+        "donerci"
+      ]
+    },
+    {
+      "id": "extra-ekmek",
+      "ad": "Extra Ekmek",
+      "fiyat": 15,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "extra-et",
+      "ad": "Extra Et",
+      "fiyat": 80,
+      "aciklama": "Ekstra porsiyon",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "donerci"
+      ]
+    },
+    {
+      "id": "extra-kofte",
+      "ad": "Extra Köfte",
+      "fiyat": 70,
+      "aciklama": "",
+      "gorselId": "burger",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "burger"
+      ]
+    },
+    {
+      "id": "extra-limon",
+      "ad": "Extra Limon",
+      "fiyat": 10,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "extra-marul",
+      "ad": "Extra Marul",
+      "fiyat": 20,
+      "aciklama": "",
+      "gorselId": "salata",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "extra-peynir",
+      "ad": "Extra Peynir",
+      "fiyat": 40,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "pizzaci",
+        "burger"
+      ]
+    },
+    {
+      "id": "extra-sucuk",
+      "ad": "Extra Sucuk",
+      "fiyat": 50,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "pizzaci"
+      ]
+    },
+    {
+      "id": "ezogelin",
+      "ad": "Ezogelin",
+      "fiyat": 95,
+      "aciklama": "",
+      "gorselId": "corba",
+      "kategoriEtiket": "corba",
+      "tipler": [
+        "restoran",
+        "corbaci"
+      ]
+    },
+    {
+      "id": "family-box",
+      "ad": "Family Box",
+      "fiyat": 650,
+      "aciklama": "4 burger + patates",
+      "gorselId": "burger",
+      "kategoriEtiket": "menu",
+      "tipler": [
+        "burger"
+      ]
+    },
+    {
+      "id": "fasulye-pilaki",
+      "ad": "Fasulye Pilaki",
+      "fiyat": 180,
+      "aciklama": "Zeytinyağlı",
+      "gorselId": "genel",
+      "kategoriEtiket": "ana",
+      "tipler": [
+        "restoran"
+      ]
+    },
+    {
+      "id": "filtre-kahve",
+      "ad": "Filtre Kahve",
+      "fiyat": 90,
+      "aciklama": "Günlük çekirdek",
+      "gorselId": "kahve",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "kafe",
+        "kahvaltici",
+        "pastane"
+      ]
+    },
+    {
+      "id": "findik-lahmacun",
+      "ad": "Fındık Lahmacun",
+      "fiyat": 70,
+      "aciklama": "Küçük",
+      "gorselId": "pizza",
+      "kategoriEtiket": "lahmacun",
+      "tipler": [
+        "pideci"
+      ]
+    },
+    {
+      "id": "granola-bowl",
+      "ad": "Granola Bowl",
+      "fiyat": 170,
+      "aciklama": "Yoğurt & meyve",
+      "gorselId": "salata",
+      "kategoriEtiket": "yemek",
+      "tipler": [
+        "kafe",
+        "kahvaltici"
+      ]
+    },
+    {
+      "id": "gul-boregi",
+      "ad": "Gül Böreği",
+      "fiyat": 85,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "borek",
+      "tipler": [
+        "borekci"
+      ]
+    },
+    {
+      "id": "gunun-menusu",
+      "ad": "Günün Menüsü",
+      "fiyat": 350,
+      "aciklama": "Çorba + ana + salata",
+      "gorselId": "genel",
+      "kategoriEtiket": "ana",
+      "tipler": [
+        "restoran"
+      ]
+    },
+    {
+      "id": "gunun-corbasi",
+      "ad": "Günün Çorbası",
+      "fiyat": 75,
+      "aciklama": "Şef seçimi",
+      "gorselId": "corba",
+      "kategoriEtiket": "corba",
+      "tipler": [
+        "corbaci"
+      ]
+    },
+    {
+      "id": "hatay-usulu-durum",
+      "ad": "Hatay Usulü Dürüm",
+      "fiyat": 200,
+      "aciklama": "Acılı",
+      "gorselId": "burger",
+      "kategoriEtiket": "doner",
+      "tipler": [
+        "donerci"
+      ]
+    },
+    {
+      "id": "ice-tea",
+      "ad": "Ice Tea",
+      "fiyat": 50,
+      "aciklama": "",
+      "gorselId": "smoothie",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "ispanakli-borek",
+      "ad": "Ispanaklı Börek",
+      "fiyat": 85,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "borek",
+      "tipler": [
+        "borekci"
+      ]
+    },
+    {
+      "id": "izgara-kofte",
+      "ad": "Izgara Köfte",
+      "fiyat": 320,
+      "aciklama": "Pilav & salata",
+      "gorselId": "genel",
+      "kategoriEtiket": "ana",
+      "tipler": [
+        "restoran"
+      ]
+    },
+    {
+      "id": "izgara-somon",
+      "ad": "Izgara Somon",
+      "fiyat": 520,
+      "aciklama": "Sebze garnitür",
+      "gorselId": "genel",
+      "kategoriEtiket": "ana",
+      "tipler": [
+        "restoran"
+      ]
+    },
+    {
+      "id": "iskender",
+      "ad": "İskender",
+      "fiyat": 340,
+      "aciklama": "Tereyağlı",
+      "gorselId": "genel",
+      "kategoriEtiket": "doner",
+      "tipler": [
+        "donerci"
+      ]
+    },
+    {
+      "id": "icli-kofte",
+      "ad": "İçli Köfte",
+      "fiyat": 160,
+      "aciklama": "2 adet",
+      "gorselId": "genel",
+      "kategoriEtiket": "ana",
+      "tipler": [
+        "restoran"
+      ]
+    },
+    {
+      "id": "iskembe",
+      "ad": "İşkembe",
+      "fiyat": 140,
+      "aciklama": "",
+      "gorselId": "corba",
+      "kategoriEtiket": "corba",
+      "tipler": [
+        "corbaci"
+      ]
+    },
+    {
+      "id": "kapali-kiymali",
+      "ad": "Kapalı Kıymalı",
+      "fiyat": 240,
+      "aciklama": "Kapalı pide",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pide",
+      "tipler": [
+        "pideci"
+      ]
+    },
+    {
+      "id": "karniyarik",
+      "ad": "Karnıyarık",
+      "fiyat": 260,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "ana",
+      "tipler": [
+        "restoran"
+      ]
+    },
+    {
+      "id": "karisik-doner",
+      "ad": "Karışık Döner",
+      "fiyat": 250,
+      "aciklama": "Et + tavuk",
+      "gorselId": "burger",
+      "kategoriEtiket": "doner",
+      "tipler": [
+        "donerci"
+      ]
+    },
+    {
+      "id": "karisik-izgara",
+      "ad": "Karışık Izgara",
+      "fiyat": 520,
+      "aciklama": "2 kişilik",
+      "gorselId": "genel",
+      "kategoriEtiket": "izgara",
+      "tipler": [
+        "kebapci"
+      ]
+    },
+    {
+      "id": "karisik-pide",
+      "ad": "Karışık Pide",
+      "fiyat": 260,
+      "aciklama": "",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pide",
+      "tipler": [
+        "pideci"
+      ]
+    },
+    {
+      "id": "karisik-pizza",
+      "ad": "Karışık Pizza",
+      "fiyat": 320,
+      "aciklama": "",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pizza",
+      "tipler": [
+        "pizzaci"
+      ]
+    },
+    {
+      "id": "kavurmali-pide",
+      "ad": "Kavurmalı Pide",
+      "fiyat": 290,
+      "aciklama": "",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pide",
+      "tipler": [
+        "pideci"
+      ]
+    },
+    {
+      "id": "kazandibi",
+      "ad": "Kazandibi",
+      "fiyat": 110,
+      "aciklama": "",
+      "gorselId": "tatli",
+      "kategoriEtiket": "tatli",
+      "tipler": [
+        "borekci",
+        "pastane"
+      ]
+    },
+    {
+      "id": "kasarli-pide",
+      "ad": "Kaşarlı Pide",
+      "fiyat": 200,
+      "aciklama": "",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pide",
+      "tipler": [
+        "pideci"
+      ]
+    },
+    {
+      "id": "kasarli-tost",
+      "ad": "Kaşarlı Tost",
+      "fiyat": 130,
+      "aciklama": "",
+      "gorselId": "burger",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "kahvaltici"
+      ]
+    },
+    {
+      "id": "kelle-paca",
+      "ad": "Kelle Paça",
+      "fiyat": 160,
+      "aciklama": "",
+      "gorselId": "corba",
+      "kategoriEtiket": "corba",
+      "tipler": [
+        "corbaci"
+      ]
+    },
+    {
+      "id": "klasik-burger",
+      "ad": "Klasik Burger",
+      "fiyat": 220,
+      "aciklama": "Tek köfte",
+      "gorselId": "burger",
+      "kategoriEtiket": "burger",
+      "tipler": [
+        "burger"
+      ]
+    },
+    {
+      "id": "kol-boregi",
+      "ad": "Kol Böreği",
+      "fiyat": 70,
+      "aciklama": "Adet",
+      "gorselId": "genel",
+      "kategoriEtiket": "borek",
+      "tipler": [
+        "borekci"
+      ]
+    },
+    {
+      "id": "kola",
+      "ad": "Kola",
+      "fiyat": 60,
+      "aciklama": "330 ml",
+      "gorselId": "su",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "restoran",
+        "donerci",
+        "pideci",
+        "pizzaci",
+        "burger",
+        "kebapci",
+        "corbaci",
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "kruvasan",
+      "ad": "Kruvasan",
+      "fiyat": 95,
+      "aciklama": "Tereyağlı",
+      "gorselId": "tatli",
+      "kategoriEtiket": "tatli",
+      "tipler": [
+        "kafe",
+        "borekci",
+        "pastane"
+      ]
+    },
+    {
+      "id": "kurabiye",
+      "ad": "Kurabiye",
+      "fiyat": 60,
+      "aciklama": "3 adet",
+      "gorselId": "tatli",
+      "kategoriEtiket": "pasta",
+      "tipler": [
+        "pastane"
+      ]
+    },
+    {
+      "id": "kuzu-pirzola",
+      "ad": "Kuzu Pirzola",
+      "fiyat": 480,
+      "aciklama": "4 dilim",
+      "gorselId": "genel",
+      "kategoriEtiket": "ana",
+      "tipler": [
+        "restoran"
+      ]
+    },
+    {
+      "id": "kusbasili-pide",
+      "ad": "Kuşbaşılı Pide",
+      "fiyat": 280,
+      "aciklama": "",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pide",
+      "tipler": [
+        "pideci"
+      ]
+    },
+    {
+      "id": "kofte",
+      "ad": "Köfte",
+      "fiyat": 300,
+      "aciklama": "Izgara",
+      "gorselId": "genel",
+      "kategoriEtiket": "izgara",
+      "tipler": [
+        "kebapci"
+      ]
+    },
+    {
+      "id": "koy-kahvaltisi",
+      "ad": "Köy Kahvaltısı",
+      "fiyat": 380,
+      "aciklama": "Bal tereyağ",
+      "gorselId": "kahvalti",
+      "kategoriEtiket": "kahvalti",
+      "tipler": [
+        "kahvaltici"
+      ]
+    },
+    {
+      "id": "kunefe",
+      "ad": "Künefe",
+      "fiyat": 200,
+      "aciklama": "Antep fıstıklı",
+      "gorselId": "tatli",
+      "kategoriEtiket": "tatli",
+      "tipler": [
+        "restoran",
+        "kebapci"
+      ]
+    },
+    {
+      "id": "kucuk-margarita",
+      "ad": "Küçük Margarita",
+      "fiyat": 180,
+      "aciklama": "Kişisel",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pizza",
+      "tipler": [
+        "pizzaci"
+      ]
+    },
+    {
+      "id": "kiymali-borek",
+      "ad": "Kıymalı Börek",
+      "fiyat": 90,
+      "aciklama": "Rulo / dilim",
+      "gorselId": "genel",
+      "kategoriEtiket": "borek",
+      "tipler": [
+        "borekci"
+      ]
+    },
+    {
+      "id": "kiymali-pide",
+      "ad": "Kıymalı Pide",
+      "fiyat": 220,
+      "aciklama": "",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pide",
+      "tipler": [
+        "pideci"
+      ]
+    },
+    {
+      "id": "kiymali-pizza",
+      "ad": "Kıymalı Pizza",
+      "fiyat": 280,
+      "aciklama": "Orta",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pizza",
+      "tipler": [
+        "pizzaci"
+      ]
+    },
+    {
+      "id": "lahmacun",
+      "ad": "Lahmacun",
+      "fiyat": 110,
+      "aciklama": "Adet",
+      "gorselId": "pizza",
+      "kategoriEtiket": "ana",
+      "tipler": [
+        "restoran",
+        "pideci",
+        "kebapci"
+      ]
+    },
+    {
+      "id": "lahmacun-cift",
+      "ad": "Lahmacun (çift)",
+      "fiyat": 180,
+      "aciklama": "2 adet",
+      "gorselId": "pizza",
+      "kategoriEtiket": "lahmacun",
+      "tipler": [
+        "pideci"
+      ]
+    },
+    {
+      "id": "lahmacun-doner",
+      "ad": "Lahmacun + Döner",
+      "fiyat": 190,
+      "aciklama": "Kombo",
+      "gorselId": "pizza",
+      "kategoriEtiket": "doner",
+      "tipler": [
+        "donerci"
+      ]
+    },
+    {
+      "id": "latte",
+      "ad": "Latte",
+      "fiyat": 110,
+      "aciklama": "Sütlü espresso",
+      "gorselId": "kahve",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "kafe",
+        "kahvaltici",
+        "pastane"
+      ]
+    },
+    {
+      "id": "limon",
+      "ad": "Limon",
+      "fiyat": 10,
+      "aciklama": "Dilım",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "corbaci"
+      ]
+    },
+    {
+      "id": "limonata",
+      "ad": "Limonata",
+      "fiyat": 85,
+      "aciklama": "Ev yapımı",
+      "gorselId": "smoothie",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "kafe",
+        "pideci",
+        "pizzaci",
+        "burger"
+      ]
+    },
+    {
+      "id": "magnolia",
+      "ad": "Magnolia",
+      "fiyat": 140,
+      "aciklama": "",
+      "gorselId": "tatli",
+      "kategoriEtiket": "tatli",
+      "tipler": [
+        "pastane"
+      ]
+    },
+    {
+      "id": "manti",
+      "ad": "Mantı",
+      "fiyat": 280,
+      "aciklama": "Yoğurtlu",
+      "gorselId": "genel",
+      "kategoriEtiket": "ana",
+      "tipler": [
+        "restoran"
+      ]
+    },
+    {
+      "id": "margarita",
+      "ad": "Margarita",
+      "fiyat": 250,
+      "aciklama": "Orta",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pizza",
+      "tipler": [
+        "pizzaci"
+      ]
+    },
+    {
+      "id": "mega-durum",
+      "ad": "Mega Dürüm",
+      "fiyat": 140,
+      "aciklama": "Bol malzeme",
+      "gorselId": "burger",
+      "kategoriEtiket": "cigkofte",
+      "tipler": [
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "menemen",
+      "ad": "Menemen",
+      "fiyat": 180,
+      "aciklama": "",
+      "gorselId": "kahvalti",
+      "kategoriEtiket": "omlet",
+      "tipler": [
+        "kahvaltici",
+        "corbaci"
+      ]
+    },
+    {
+      "id": "menemen-pide",
+      "ad": "Menemen Pide",
+      "fiyat": 240,
+      "aciklama": "",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pide",
+      "tipler": [
+        "pideci"
+      ]
+    },
+    {
+      "id": "menu-double",
+      "ad": "Menü Double",
+      "fiyat": 380,
+      "aciklama": "",
+      "gorselId": "burger",
+      "kategoriEtiket": "menu",
+      "tipler": [
+        "burger"
+      ]
+    },
+    {
+      "id": "menu-klasik",
+      "ad": "Menü Klasik",
+      "fiyat": 300,
+      "aciklama": "Burger + patates + içecek",
+      "gorselId": "burger",
+      "kategoriEtiket": "menu",
+      "tipler": [
+        "burger"
+      ]
+    },
+    {
+      "id": "menu-pizza",
+      "ad": "Menü Pizza",
+      "fiyat": 340,
+      "aciklama": "Orta pizza + içecek",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pizza",
+      "tipler": [
+        "pizzaci"
+      ]
+    },
+    {
+      "id": "menu-tavuk",
+      "ad": "Menü Tavuk",
+      "fiyat": 280,
+      "aciklama": "",
+      "gorselId": "burger",
+      "kategoriEtiket": "menu",
+      "tipler": [
+        "burger"
+      ]
+    },
+    {
+      "id": "mercimek-corbasi",
+      "ad": "Mercimek Çorbası",
+      "fiyat": 90,
+      "aciklama": "",
+      "gorselId": "corba",
+      "kategoriEtiket": "corba",
+      "tipler": [
+        "restoran",
+        "pideci",
+        "kebapci",
+        "corbaci"
+      ]
+    },
+    {
+      "id": "mevsim-salata",
+      "ad": "Mevsim Salata",
+      "fiyat": 150,
+      "aciklama": "",
+      "gorselId": "salata",
+      "kategoriEtiket": "salata",
+      "tipler": [
+        "restoran"
+      ]
+    },
+    {
+      "id": "meyve-suyu",
+      "ad": "Meyve Suyu",
+      "fiyat": 60,
+      "aciklama": "",
+      "gorselId": "smoothie",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "pastane"
+      ]
+    },
+    {
+      "id": "mezze-tabagi",
+      "ad": "Mezze Tabağı",
+      "fiyat": 180,
+      "aciklama": "",
+      "gorselId": "salata",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "kebapci"
+      ]
+    },
+    {
+      "id": "milkshake",
+      "ad": "Milkshake",
+      "fiyat": 120,
+      "aciklama": "",
+      "gorselId": "smoothie",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "pizzaci",
+        "burger"
+      ]
+    },
+    {
+      "id": "nar-eksisi",
+      "ad": "Nar Ekşisi",
+      "fiyat": 15,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "nugget-6",
+      "ad": "Nugget (6)",
+      "fiyat": 120,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "burger"
+      ]
+    },
+    {
+      "id": "omlet",
+      "ad": "Omlet",
+      "fiyat": 150,
+      "aciklama": "3 yumurta",
+      "gorselId": "kahvalti",
+      "kategoriEtiket": "yemek",
+      "tipler": [
+        "kafe",
+        "kahvaltici"
+      ]
+    },
+    {
+      "id": "onion-burger",
+      "ad": "Onion Burger",
+      "fiyat": 260,
+      "aciklama": "",
+      "gorselId": "burger",
+      "kategoriEtiket": "burger",
+      "tipler": [
+        "burger"
+      ]
+    },
+    {
+      "id": "pastirmali-pide",
+      "ad": "Pastırmalı Pide",
+      "fiyat": 300,
+      "aciklama": "",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pide",
+      "tipler": [
+        "pideci"
+      ]
+    },
+    {
+      "id": "patates",
+      "ad": "Patates",
+      "fiyat": 85,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "pideci"
+      ]
+    },
+    {
+      "id": "patates-kizartmasi",
+      "ad": "Patates Kızartması",
+      "fiyat": 90,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "donerci",
+        "pizzaci",
+        "burger"
+      ]
+    },
+    {
+      "id": "patatesli-borek",
+      "ad": "Patatesli Börek",
+      "fiyat": 75,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "borek",
+      "tipler": [
+        "borekci"
+      ]
+    },
+    {
+      "id": "patatesli-pogaca",
+      "ad": "Patatesli Poğaça",
+      "fiyat": 45,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "pogaca",
+      "tipler": [
+        "borekci"
+      ]
+    },
+    {
+      "id": "patlican-kebap",
+      "ad": "Patlıcan Kebap",
+      "fiyat": 350,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "kebap",
+      "tipler": [
+        "kebapci"
+      ]
+    },
+    {
+      "id": "pacanga-boregi",
+      "ad": "Paçanga Böreği",
+      "fiyat": 100,
+      "aciklama": "Pastırmalı",
+      "gorselId": "genel",
+      "kategoriEtiket": "borek",
+      "tipler": [
+        "borekci"
+      ]
+    },
+    {
+      "id": "peynirli-borek",
+      "ad": "Peynirli Börek",
+      "fiyat": 80,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "borek",
+      "tipler": [
+        "borekci"
+      ]
+    },
+    {
+      "id": "peynirli-pide",
+      "ad": "Peynirli Pide",
+      "fiyat": 210,
+      "aciklama": "",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pide",
+      "tipler": [
+        "pideci"
+      ]
+    },
+    {
+      "id": "peynirli-pogaca",
+      "ad": "Peynirli Poğaça",
+      "fiyat": 45,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "pogaca",
+      "tipler": [
+        "borekci"
+      ]
+    },
+    {
+      "id": "pide",
+      "ad": "Pide",
+      "fiyat": 240,
+      "aciklama": "Kuşbaşılı",
+      "gorselId": "pizza",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "kebapci"
+      ]
+    },
+    {
+      "id": "pide-karisik",
+      "ad": "Pide Karışık",
+      "fiyat": 250,
+      "aciklama": "",
+      "gorselId": "pizza",
+      "kategoriEtiket": "ana",
+      "tipler": [
+        "restoran"
+      ]
+    },
+    {
+      "id": "pilav",
+      "ad": "Pilav",
+      "fiyat": 60,
+      "aciklama": "Yan",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "corbaci"
+      ]
+    },
+    {
+      "id": "pilav-ustu-doner",
+      "ad": "Pilav Üstü Döner",
+      "fiyat": 260,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "doner",
+      "tipler": [
+        "donerci"
+      ]
+    },
+    {
+      "id": "pirzola",
+      "ad": "Pirzola",
+      "fiyat": 450,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "izgara",
+      "tipler": [
+        "kebapci"
+      ]
+    },
+    {
+      "id": "pizza-dilim",
+      "ad": "Pizza Dilim",
+      "fiyat": 90,
+      "aciklama": "Tek dilim",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pizza",
+      "tipler": [
+        "pizzaci"
+      ]
+    },
+    {
+      "id": "portakal-suyu",
+      "ad": "Portakal Suyu",
+      "fiyat": 100,
+      "aciklama": "Taze sıkım",
+      "gorselId": "smoothie",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "kahvaltici"
+      ]
+    },
+    {
+      "id": "pogaca",
+      "ad": "Poğaça",
+      "fiyat": 45,
+      "aciklama": "Peynirli",
+      "gorselId": "genel",
+      "kategoriEtiket": "borek",
+      "tipler": [
+        "pastane"
+      ]
+    },
+    {
+      "id": "profiterol",
+      "ad": "Profiterol",
+      "fiyat": 150,
+      "aciklama": "",
+      "gorselId": "tatli",
+      "kategoriEtiket": "tatli",
+      "tipler": [
+        "pastane"
+      ]
+    },
+    {
+      "id": "revani",
+      "ad": "Revani",
+      "fiyat": 90,
+      "aciklama": "",
+      "gorselId": "tatli",
+      "kategoriEtiket": "tatli",
+      "tipler": [
+        "borekci"
+      ]
+    },
+    {
+      "id": "sahanda-yumurta",
+      "ad": "Sahanda Yumurta",
+      "fiyat": 140,
+      "aciklama": "",
+      "gorselId": "kahvalti",
+      "kategoriEtiket": "omlet",
+      "tipler": [
+        "kahvaltici"
+      ]
+    },
+    {
+      "id": "salata",
+      "ad": "Salata",
+      "fiyat": 175,
+      "aciklama": "Mevsim",
+      "gorselId": "salata",
+      "kategoriEtiket": "yemek",
+      "tipler": [
+        "kafe",
+        "donerci",
+        "pideci",
+        "pizzaci"
+      ]
+    },
+    {
+      "id": "salep",
+      "ad": "Salep",
+      "fiyat": 85,
+      "aciklama": "Kışlık",
+      "gorselId": "kahve",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "borekci"
+      ]
+    },
+    {
+      "id": "sandvic",
+      "ad": "Sandviç",
+      "fiyat": 160,
+      "aciklama": "Günün sandviçi",
+      "gorselId": "burger",
+      "kategoriEtiket": "yemek",
+      "tipler": [
+        "kafe"
+      ]
+    },
+    {
+      "id": "sarimsakli-ekmek",
+      "ad": "Sarımsaklı Ekmek",
+      "fiyat": 80,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "pizzaci"
+      ]
+    },
+    {
+      "id": "sebze-corbasi",
+      "ad": "Sebze Çorbası",
+      "fiyat": 80,
+      "aciklama": "",
+      "gorselId": "corba",
+      "kategoriEtiket": "corba",
+      "tipler": [
+        "corbaci"
+      ]
+    },
+    {
+      "id": "serpme-kahvalti-2-kisi",
+      "ad": "Serpme Kahvaltı (2 kişi)",
+      "fiyat": 650,
+      "aciklama": "Zengin tabak",
+      "gorselId": "kahvalti",
+      "kategoriEtiket": "kahvalti",
+      "tipler": [
+        "kahvaltici"
+      ]
+    },
+    {
+      "id": "sezar-salata",
+      "ad": "Sezar Salata",
+      "fiyat": 220,
+      "aciklama": "Tavuklu",
+      "gorselId": "salata",
+      "kategoriEtiket": "salata",
+      "tipler": [
+        "restoran"
+      ]
+    },
+    {
+      "id": "sigara-boregi",
+      "ad": "Sigara Böreği",
+      "fiyat": 90,
+      "aciklama": "6 adet",
+      "gorselId": "genel",
+      "kategoriEtiket": "borek",
+      "tipler": [
+        "borekci"
+      ]
+    },
+    {
+      "id": "simit",
+      "ad": "Simit",
+      "fiyat": 30,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "pogaca",
+      "tipler": [
+        "borekci",
+        "pastane"
+      ]
+    },
+    {
+      "id": "simit-tabagi",
+      "ad": "Simit Tabağı",
+      "fiyat": 120,
+      "aciklama": "Peynir & zeytin",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "kahvaltici"
+      ]
+    },
+    {
+      "id": "smoothie",
+      "ad": "Smoothie",
+      "fiyat": 140,
+      "aciklama": "Mevsim meyve",
+      "gorselId": "smoothie",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "kafe"
+      ]
+    },
+    {
+      "id": "soda",
+      "ad": "Soda",
+      "fiyat": 35,
+      "aciklama": "",
+      "gorselId": "su",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "corbaci",
+        "cigkofteci",
+        "kahvaltici",
+        "borekci",
+        "pastane"
+      ]
+    },
+    {
+      "id": "soslu-doner",
+      "ad": "Soslu Döner",
+      "fiyat": 240,
+      "aciklama": "Özel sos",
+      "gorselId": "burger",
+      "kategoriEtiket": "doner",
+      "tipler": [
+        "donerci"
+      ]
+    },
+    {
+      "id": "sogan-halkasi",
+      "ad": "Soğan Halkası",
+      "fiyat": 100,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "pizzaci",
+        "burger"
+      ]
+    },
+    {
+      "id": "soguk-kahve",
+      "ad": "Soğuk Kahve",
+      "fiyat": 120,
+      "aciklama": "Buzlu",
+      "gorselId": "kahve",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "kafe"
+      ]
+    },
+    {
+      "id": "su",
+      "ad": "Su",
+      "fiyat": 25,
+      "aciklama": "0.33 L",
+      "gorselId": "su",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "kafe",
+        "kahvaltici",
+        "restoran",
+        "donerci",
+        "pideci",
+        "pizzaci",
+        "borekci",
+        "burger",
+        "pastane",
+        "kebapci",
+        "corbaci",
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "su-boregi",
+      "ad": "Su Böreği",
+      "fiyat": 140,
+      "aciklama": "Porsiyon",
+      "gorselId": "genel",
+      "kategoriEtiket": "borek",
+      "tipler": [
+        "borekci",
+        "pastane"
+      ]
+    },
+    {
+      "id": "sucuklu-pide",
+      "ad": "Sucuklu Pide",
+      "fiyat": 250,
+      "aciklama": "",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pide",
+      "tipler": [
+        "pideci"
+      ]
+    },
+    {
+      "id": "sucuklu-pizza",
+      "ad": "Sucuklu Pizza",
+      "fiyat": 300,
+      "aciklama": "",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pizza",
+      "tipler": [
+        "pizzaci"
+      ]
+    },
+    {
+      "id": "sucuklu-yumurta",
+      "ad": "Sucuklu Yumurta",
+      "fiyat": 180,
+      "aciklama": "",
+      "gorselId": "kahvalti",
+      "kategoriEtiket": "yemek",
+      "tipler": [
+        "kafe",
+        "kahvaltici"
+      ]
+    },
+    {
+      "id": "sutlac",
+      "ad": "Sütlaç",
+      "fiyat": 120,
+      "aciklama": "Fırın",
+      "gorselId": "tatli",
+      "kategoriEtiket": "tatli",
+      "tipler": [
+        "restoran",
+        "borekci",
+        "pastane"
+      ]
+    },
+    {
+      "id": "sicak-cikolata",
+      "ad": "Sıcak Çikolata",
+      "fiyat": 100,
+      "aciklama": "",
+      "gorselId": "kahve",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "kafe",
+        "kahvaltici",
+        "pastane"
+      ]
+    },
+    {
+      "id": "tabak-cig-kofte",
+      "ad": "Tabak Çiğ Köfte",
+      "fiyat": 150,
+      "aciklama": "Nar ekşili",
+      "gorselId": "salata",
+      "kategoriEtiket": "cigkofte",
+      "tipler": [
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "talas-boregi",
+      "ad": "Talaş Böreği",
+      "fiyat": 95,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "borek",
+      "tipler": [
+        "borekci"
+      ]
+    },
+    {
+      "id": "tarhana",
+      "ad": "Tarhana",
+      "fiyat": 85,
+      "aciklama": "",
+      "gorselId": "corba",
+      "kategoriEtiket": "corba",
+      "tipler": [
+        "corbaci"
+      ]
+    },
+    {
+      "id": "tavuk-burger",
+      "ad": "Tavuk Burger",
+      "fiyat": 200,
+      "aciklama": "",
+      "gorselId": "burger",
+      "kategoriEtiket": "burger",
+      "tipler": [
+        "burger"
+      ]
+    },
+    {
+      "id": "tavuk-doner-durum",
+      "ad": "Tavuk Döner Dürüm",
+      "fiyat": 180,
+      "aciklama": "",
+      "gorselId": "burger",
+      "kategoriEtiket": "doner",
+      "tipler": [
+        "donerci"
+      ]
+    },
+    {
+      "id": "tavuk-doner-porsiyon",
+      "ad": "Tavuk Döner Porsiyon",
+      "fiyat": 230,
+      "aciklama": "Pilavlı",
+      "gorselId": "genel",
+      "kategoriEtiket": "doner",
+      "tipler": [
+        "donerci"
+      ]
+    },
+    {
+      "id": "tavuk-suyu",
+      "ad": "Tavuk Suyu",
+      "fiyat": 90,
+      "aciklama": "",
+      "gorselId": "corba",
+      "kategoriEtiket": "corba",
+      "tipler": [
+        "corbaci"
+      ]
+    },
+    {
+      "id": "tavuk-sis",
+      "ad": "Tavuk Şiş",
+      "fiyat": 290,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "ana",
+      "tipler": [
+        "restoran",
+        "kebapci"
+      ]
+    },
+    {
+      "id": "tavuklu-pizza",
+      "ad": "Tavuklu Pizza",
+      "fiyat": 290,
+      "aciklama": "",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pizza",
+      "tipler": [
+        "pizzaci"
+      ]
+    },
+    {
+      "id": "tek-kisilik-kahvalti",
+      "ad": "Tek Kişilik Kahvaltı",
+      "fiyat": 320,
+      "aciklama": "Tabak",
+      "gorselId": "kahvalti",
+      "kategoriEtiket": "kahvalti",
+      "tipler": [
+        "kahvaltici"
+      ]
+    },
+    {
+      "id": "tereyagli-ekmek",
+      "ad": "Tereyağlı Ekmek",
+      "fiyat": 40,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "corbaci"
+      ]
+    },
+    {
+      "id": "tiramisu",
+      "ad": "Tiramisu",
+      "fiyat": 175,
+      "aciklama": "",
+      "gorselId": "tatli",
+      "kategoriEtiket": "tatli",
+      "tipler": [
+        "pastane"
+      ]
+    },
+    {
+      "id": "ton-balikli",
+      "ad": "Ton Balıklı",
+      "fiyat": 310,
+      "aciklama": "",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pizza",
+      "tipler": [
+        "pizzaci"
+      ]
+    },
+    {
+      "id": "tost",
+      "ad": "Tost",
+      "fiyat": 120,
+      "aciklama": "Kaşarlı",
+      "gorselId": "burger",
+      "kategoriEtiket": "yemek",
+      "tipler": [
+        "kafe"
+      ]
+    },
+    {
+      "id": "tursu",
+      "ad": "Turşu",
+      "fiyat": 30,
+      "aciklama": "",
+      "gorselId": "salata",
+      "kategoriEtiket": "yan",
+      "tipler": [
+        "donerci",
+        "corbaci",
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "turk-kahvesi",
+      "ad": "Türk Kahvesi",
+      "fiyat": 75,
+      "aciklama": "",
+      "gorselId": "kahve",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "kahvaltici",
+        "borekci",
+        "pastane"
+      ]
+    },
+    {
+      "id": "urfa-kebap",
+      "ad": "Urfa Kebap",
+      "fiyat": 320,
+      "aciklama": "Acısız",
+      "gorselId": "genel",
+      "kategoriEtiket": "kebap",
+      "tipler": [
+        "kebapci"
+      ]
+    },
+    {
+      "id": "vejetaryen-burger",
+      "ad": "Vejetaryen Burger",
+      "fiyat": 190,
+      "aciklama": "",
+      "gorselId": "burger",
+      "kategoriEtiket": "burger",
+      "tipler": [
+        "burger"
+      ]
+    },
+    {
+      "id": "vejetaryen-durum",
+      "ad": "Vejetaryen Dürüm",
+      "fiyat": 140,
+      "aciklama": "Falafel",
+      "gorselId": "salata",
+      "kategoriEtiket": "doner",
+      "tipler": [
+        "donerci"
+      ]
+    },
+    {
+      "id": "vejetaryen-pizza",
+      "ad": "Vejetaryen Pizza",
+      "fiyat": 270,
+      "aciklama": "",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pizza",
+      "tipler": [
+        "pizzaci"
+      ]
+    },
+    {
+      "id": "vejetaryen-cig-kofte",
+      "ad": "Vejetaryen Çiğ Köfte",
+      "fiyat": 120,
+      "aciklama": "Bulgursuz alternatif",
+      "gorselId": "salata",
+      "kategoriEtiket": "cigkofte",
+      "tipler": [
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "waffle",
+      "ad": "Waffle",
+      "fiyat": 190,
+      "aciklama": "Muz & çikolata",
+      "gorselId": "tatli",
+      "kategoriEtiket": "tatli",
+      "tipler": [
+        "kafe",
+        "pastane"
+      ]
+    },
+    {
+      "id": "yarim-kilo",
+      "ad": "Yarım Kilo",
+      "fiyat": 180,
+      "aciklama": "Paket / porsiyon",
+      "gorselId": "salata",
+      "kategoriEtiket": "cigkofte",
+      "tipler": [
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "yayla-corbasi",
+      "ad": "Yayla Çorbası",
+      "fiyat": 85,
+      "aciklama": "",
+      "gorselId": "corba",
+      "kategoriEtiket": "corba",
+      "tipler": [
+        "corbaci"
+      ]
+    },
+    {
+      "id": "yumurtali-pide",
+      "ad": "Yumurtalı Pide",
+      "fiyat": 230,
+      "aciklama": "",
+      "gorselId": "pizza",
+      "kategoriEtiket": "pide",
+      "tipler": [
+        "pideci"
+      ]
+    },
+    {
+      "id": "zeytinli-pogaca",
+      "ad": "Zeytinli Poğaça",
+      "fiyat": 45,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "pogaca",
+      "tipler": [
+        "borekci"
+      ]
+    },
+    {
+      "id": "catal",
+      "ad": "Çatal",
+      "fiyat": 40,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "pogaca",
+      "tipler": [
+        "borekci"
+      ]
+    },
+    {
+      "id": "cay",
+      "ad": "Çay",
+      "fiyat": 40,
+      "aciklama": "Demlik",
+      "gorselId": "cay",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "kafe",
+        "kahvaltici",
+        "restoran",
+        "donerci",
+        "pideci",
+        "borekci",
+        "pastane",
+        "kebapci",
+        "corbaci",
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "cift-durum-menu",
+      "ad": "Çift Dürüm Menü",
+      "fiyat": 200,
+      "aciklama": "2 dürüm + ayran",
+      "gorselId": "burger",
+      "kategoriEtiket": "cigkofte",
+      "tipler": [
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "cift-porsiyon",
+      "ad": "Çift Porsiyon",
+      "fiyat": 130,
+      "aciklama": "Mercimek / ezogelin",
+      "gorselId": "corba",
+      "kategoriEtiket": "corba",
+      "tipler": [
+        "corbaci"
+      ]
+    },
+    {
+      "id": "cig-kofte-durum",
+      "ad": "Çiğ Köfte Dürüm",
+      "fiyat": 100,
+      "aciklama": "Adet",
+      "gorselId": "burger",
+      "kategoriEtiket": "cigkofte",
+      "tipler": [
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "cig-kofte-porsiyon",
+      "ad": "Çiğ Köfte Porsiyon",
+      "fiyat": 120,
+      "aciklama": "Marul & ekmek",
+      "gorselId": "salata",
+      "kategoriEtiket": "cigkofte",
+      "tipler": [
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "cig-kofte-salata",
+      "ad": "Çiğ Köfte Salata",
+      "fiyat": 130,
+      "aciklama": "Bol yeşillik",
+      "gorselId": "salata",
+      "kategoriEtiket": "cigkofte",
+      "tipler": [
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "coban-salata",
+      "ad": "Çoban Salata",
+      "fiyat": 140,
+      "aciklama": "",
+      "gorselId": "salata",
+      "kategoriEtiket": "salata",
+      "tipler": [
+        "restoran",
+        "pideci",
+        "kebapci"
+      ]
+    },
+    {
+      "id": "cocuk-menu",
+      "ad": "Çocuk Menü",
+      "fiyat": 150,
+      "aciklama": "Küçük porsiyon + içecek",
+      "gorselId": "genel",
+      "kategoriEtiket": "doner",
+      "tipler": [
+        "donerci",
+        "burger"
+      ]
+    },
+    {
+      "id": "corba",
+      "ad": "Çorba",
+      "fiyat": 90,
+      "aciklama": "Günün çorbası",
+      "gorselId": "corba",
+      "kategoriEtiket": "yemek",
+      "tipler": [
+        "kafe"
+      ]
+    },
+    {
+      "id": "cilbir",
+      "ad": "Çılbır",
+      "fiyat": 190,
+      "aciklama": "Yoğurtlu",
+      "gorselId": "kahvalti",
+      "kategoriEtiket": "omlet",
+      "tipler": [
+        "kahvaltici"
+      ]
+    },
+    {
+      "id": "salgam",
+      "ad": "Şalgam",
+      "fiyat": 50,
+      "aciklama": "",
+      "gorselId": "su",
+      "kategoriEtiket": "icecek",
+      "tipler": [
+        "restoran",
+        "donerci",
+        "pideci",
+        "kebapci",
+        "corbaci",
+        "cigkofteci"
+      ]
+    },
+    {
+      "id": "sis-kebap",
+      "ad": "Şiş Kebap",
+      "fiyat": 340,
+      "aciklama": "",
+      "gorselId": "genel",
+      "kategoriEtiket": "kebap",
+      "tipler": [
+        "kebapci"
+      ]
+    }
+  ]
+}

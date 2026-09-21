@@ -1,0 +1,71 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum IsletmeRol {
+  YONETICI
+  GARSON
+  MUTFAK
+}
+
+model User {
+  id            String       @id @default(cuid())
+  email         String       @unique
+  passwordHash  String
+  platformAdmin Boolean      @default(false)
+  createdAt     DateTime     @default(now())
+  isletmeler    Isletme[]
+  zincir        Zincir?
+  uyelikler     IsletmeUye[]
+  sessions      Session[]
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+/** Marka / zincir — tüm şubelerin yöneticisi. */
+model Zincir {
+  id        String    @id @default(cuid())
+  ad        String
+  userId    String    @unique
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  subeler   Isletme[]
+  createdAt DateTime  @default(now())
+}
+
+model Isletme {
+  id        String       @id @default(cuid())
+  slug      String       @unique
+  kafeAdi   String
+  veri      String
+  userId    String
+  user      User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  zincirId  String?
+  zincir    Zincir?      @relation(fields: [zincirId], references: [id], onDelete: SetNull)
+  uyeler    IsletmeUye[]
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+}
+
+model IsletmeUye {
+  id        String     @id @default(cuid())
+  isletmeId String
+  isletme   Isletme    @relation(fields: [isletmeId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  rol       IsletmeRol
+
+  @@unique([isletmeId, userId])
+}

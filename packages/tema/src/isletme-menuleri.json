@@ -1,0 +1,764 @@
+{
+  "aciklama": "İşletme tipine göre hazır menü havuzu. Boyut seçilince otomatik ürün listesi üretilir.",
+  "boyutlar": [
+    {
+      "id": "8",
+      "ad": "Standart 8",
+      "adet": 8,
+      "aciklama": "Tek sayfa — hızlı başlangıç"
+    },
+    {
+      "id": "on-arka-8",
+      "ad": "Ön–arka 8+8",
+      "adet": 16,
+      "on": 8,
+      "arka": 8,
+      "aciklama": "Çift yüz: ön 8, arka 8 ürün"
+    },
+    {
+      "id": "3x5",
+      "ad": "3×5 (15 ürün)",
+      "adet": 15,
+      "aciklama": "Kart / grid düzeni"
+    },
+    {
+      "id": "12",
+      "ad": "12 ürün",
+      "adet": 12,
+      "aciklama": "Orta menü"
+    },
+    {
+      "id": "24",
+      "ad": "Geniş 24",
+      "adet": 24,
+      "aciklama": "Dolu menü"
+    }
+  ],
+  "tipler": [
+    {
+      "id": "kafe",
+      "ad": "Kafe",
+      "aciklama": "Kahve, tatlı, hafif atıştırmalık",
+      "ikon": "☕",
+      "varsayilanBoyut": "8",
+      "kategoriler": [
+        {
+          "id": "icecek",
+          "ad": "İçecekler"
+        },
+        {
+          "id": "yemek",
+          "ad": "Atıştırmalık"
+        },
+        {
+          "id": "tatli",
+          "ad": "Tatlılar"
+        }
+      ],
+      "urunIds": [
+        "filtre-kahve",
+        "latte",
+        "americano",
+        "cappuccino",
+        "cay",
+        "soguk-kahve",
+        "smoothie",
+        "limonata",
+        "su",
+        "tost",
+        "sandvic",
+        "omlet",
+        "sucuklu-yumurta",
+        "granola-bowl",
+        "cheesecake",
+        "brownie",
+        "kruvasan",
+        "cookie",
+        "dondurma",
+        "waffle",
+        "espresso",
+        "sicak-cikolata",
+        "salata",
+        "corba"
+      ],
+      "varsayilanMenuIds": [
+        "filtre-kahve",
+        "latte",
+        "americano",
+        "cappuccino",
+        "cay",
+        "soguk-kahve",
+        "smoothie",
+        "limonata"
+      ]
+    },
+    {
+      "id": "kahvaltici",
+      "ad": "Kahvaltıcı",
+      "aciklama": "Serpme, tabak kahvaltı, omlet",
+      "ikon": "🍳",
+      "varsayilanBoyut": "8",
+      "kategoriler": [
+        {
+          "id": "kahvalti",
+          "ad": "Kahvaltılar"
+        },
+        {
+          "id": "omlet",
+          "ad": "Yumurta & omlet"
+        },
+        {
+          "id": "yan",
+          "ad": "Yan ürünler"
+        },
+        {
+          "id": "icecek",
+          "ad": "İçecekler"
+        }
+      ],
+      "urunIds": [
+        "serpme-kahvalti-2-kisi",
+        "tek-kisilik-kahvalti",
+        "koy-kahvaltisi",
+        "eko-kahvalti",
+        "menemen",
+        "sucuklu-yumurta",
+        "omlet",
+        "cilbir",
+        "sahanda-yumurta",
+        "kasarli-tost",
+        "simit-tabagi",
+        "bal-tereyag",
+        "borek-sepeti",
+        "granola-bowl",
+        "avokado-toast",
+        "cay",
+        "demlik-cay",
+        "turk-kahvesi",
+        "filtre-kahve",
+        "latte",
+        "portakal-suyu",
+        "ayran",
+        "su",
+        "sicak-cikolata",
+        "soda",
+        "limonlu-soda"
+      ],
+      "varsayilanMenuIds": [
+        "serpme-kahvalti-2-kisi",
+        "tek-kisilik-kahvalti",
+        "koy-kahvaltisi",
+        "eko-kahvalti",
+        "menemen",
+        "sucuklu-yumurta",
+        "omlet",
+        "cilbir"
+      ]
+    },
+    {
+      "id": "restoran",
+      "ad": "Restoran",
+      "aciklama": "Ana yemek, mezeler, içecek",
+      "ikon": "🍽️",
+      "varsayilanBoyut": "8",
+      "kategoriler": [
+        {
+          "id": "corba",
+          "ad": "Çorbalar"
+        },
+        {
+          "id": "ana",
+          "ad": "Ana yemekler"
+        },
+        {
+          "id": "salata",
+          "ad": "Salatalar"
+        },
+        {
+          "id": "icecek",
+          "ad": "İçecekler"
+        },
+        {
+          "id": "tatli",
+          "ad": "Tatlılar"
+        }
+      ],
+      "urunIds": [
+        "mercimek-corbasi",
+        "ezogelin",
+        "izgara-kofte",
+        "tavuk-sis",
+        "kuzu-pirzola",
+        "izgara-somon",
+        "manti",
+        "karniyarik",
+        "fasulye-pilaki",
+        "coban-salata",
+        "mevsim-salata",
+        "sezar-salata",
+        "ayran",
+        "salgam",
+        "kola",
+        "su",
+        "cay",
+        "sutlac",
+        "kunefe",
+        "baklava",
+        "icli-kofte",
+        "lahmacun",
+        "pide-karisik",
+        "gunun-menusu"
+      ],
+      "varsayilanMenuIds": [
+        "mercimek-corbasi",
+        "ezogelin",
+        "izgara-kofte",
+        "tavuk-sis",
+        "kuzu-pirzola",
+        "izgara-somon",
+        "manti",
+        "karniyarik"
+      ]
+    },
+    {
+      "id": "donerci",
+      "ad": "Dönerci",
+      "aciklama": "Döner, dürüm, porsiyon",
+      "ikon": "🥙",
+      "varsayilanBoyut": "8",
+      "kategoriler": [
+        {
+          "id": "doner",
+          "ad": "Döner"
+        },
+        {
+          "id": "yan",
+          "ad": "Yan ürünler"
+        },
+        {
+          "id": "icecek",
+          "ad": "İçecekler"
+        }
+      ],
+      "urunIds": [
+        "et-doner-durum",
+        "tavuk-doner-durum",
+        "et-doner-porsiyon",
+        "tavuk-doner-porsiyon",
+        "iskender",
+        "hatay-usulu-durum",
+        "karisik-doner",
+        "doner-tost",
+        "pilav-ustu-doner",
+        "cocuk-menu",
+        "patates-kizartmasi",
+        "ayran",
+        "salgam",
+        "kola",
+        "su",
+        "cay",
+        "extra-et",
+        "tursu",
+        "salata",
+        "cacik",
+        "lahmacun-doner",
+        "double-durum",
+        "vejetaryen-durum",
+        "soslu-doner"
+      ],
+      "varsayilanMenuIds": [
+        "et-doner-durum",
+        "tavuk-doner-durum",
+        "et-doner-porsiyon",
+        "tavuk-doner-porsiyon",
+        "iskender",
+        "hatay-usulu-durum",
+        "karisik-doner",
+        "doner-tost"
+      ]
+    },
+    {
+      "id": "pideci",
+      "ad": "Pideci",
+      "aciklama": "Pide, lahmacun, açık ekmek",
+      "ikon": "🥖",
+      "varsayilanBoyut": "8",
+      "kategoriler": [
+        {
+          "id": "pide",
+          "ad": "Pideler"
+        },
+        {
+          "id": "lahmacun",
+          "ad": "Lahmacun"
+        },
+        {
+          "id": "yan",
+          "ad": "Yan ürünler"
+        },
+        {
+          "id": "icecek",
+          "ad": "İçecekler"
+        }
+      ],
+      "urunIds": [
+        "kiymali-pide",
+        "kasarli-pide",
+        "peynirli-pide",
+        "karisik-pide",
+        "kusbasili-pide",
+        "yumurtali-pide",
+        "menemen-pide",
+        "sucuklu-pide",
+        "kavurmali-pide",
+        "pastirmali-pide",
+        "lahmacun",
+        "lahmacun-cift",
+        "findik-lahmacun",
+        "ayran",
+        "salgam",
+        "kola",
+        "su",
+        "cay",
+        "limonata",
+        "salata",
+        "patates",
+        "coban-salata",
+        "mercimek-corbasi",
+        "kapali-kiymali"
+      ],
+      "varsayilanMenuIds": [
+        "kiymali-pide",
+        "kasarli-pide",
+        "peynirli-pide",
+        "karisik-pide",
+        "kusbasili-pide",
+        "yumurtali-pide",
+        "menemen-pide",
+        "sucuklu-pide"
+      ]
+    },
+    {
+      "id": "pizzaci",
+      "ad": "Pizzacı",
+      "aciklama": "Pizza, dilim, menüler",
+      "ikon": "🍕",
+      "varsayilanBoyut": "8",
+      "kategoriler": [
+        {
+          "id": "pizza",
+          "ad": "Pizzalar"
+        },
+        {
+          "id": "yan",
+          "ad": "Yan ürünler"
+        },
+        {
+          "id": "icecek",
+          "ad": "İçecekler"
+        }
+      ],
+      "urunIds": [
+        "margarita",
+        "kiymali-pizza",
+        "sucuklu-pizza",
+        "karisik-pizza",
+        "vejetaryen-pizza",
+        "tavuklu-pizza",
+        "ton-balikli",
+        "dort-peynir",
+        "acili-pizza",
+        "pizza-dilim",
+        "buyuk-karisik",
+        "kucuk-margarita",
+        "patates-kizartmasi",
+        "sogan-halkasi",
+        "sarimsakli-ekmek",
+        "salata",
+        "kola",
+        "ayran",
+        "su",
+        "limonata",
+        "milkshake",
+        "extra-peynir",
+        "extra-sucuk",
+        "menu-pizza"
+      ],
+      "varsayilanMenuIds": [
+        "margarita",
+        "kiymali-pizza",
+        "sucuklu-pizza",
+        "karisik-pizza",
+        "vejetaryen-pizza",
+        "tavuklu-pizza",
+        "ton-balikli",
+        "dort-peynir"
+      ]
+    },
+    {
+      "id": "borekci",
+      "ad": "Börekçi",
+      "aciklama": "Börek, poğaça, çay",
+      "ikon": "🥐",
+      "varsayilanBoyut": "8",
+      "kategoriler": [
+        {
+          "id": "borek",
+          "ad": "Börekler"
+        },
+        {
+          "id": "pogaca",
+          "ad": "Poğaça & simit"
+        },
+        {
+          "id": "tatli",
+          "ad": "Tatlılar"
+        },
+        {
+          "id": "icecek",
+          "ad": "İçecekler"
+        }
+      ],
+      "urunIds": [
+        "su-boregi",
+        "kiymali-borek",
+        "peynirli-borek",
+        "ispanakli-borek",
+        "patatesli-borek",
+        "talas-boregi",
+        "kol-boregi",
+        "gul-boregi",
+        "pacanga-boregi",
+        "sigara-boregi",
+        "peynirli-pogaca",
+        "zeytinli-pogaca",
+        "patatesli-pogaca",
+        "simit",
+        "acma",
+        "catal",
+        "kruvasan",
+        "sutlac",
+        "kazandibi",
+        "revani",
+        "cay",
+        "demlik-cay",
+        "turk-kahvesi",
+        "su",
+        "ayran",
+        "salep",
+        "soda",
+        "limonlu-soda"
+      ],
+      "varsayilanMenuIds": [
+        "su-boregi",
+        "kiymali-borek",
+        "peynirli-borek",
+        "ispanakli-borek",
+        "patatesli-borek",
+        "talas-boregi",
+        "kol-boregi",
+        "gul-boregi"
+      ]
+    },
+    {
+      "id": "burger",
+      "ad": "Burger / Fast food",
+      "aciklama": "Burger, patates, menüler",
+      "ikon": "🍔",
+      "varsayilanBoyut": "8",
+      "kategoriler": [
+        {
+          "id": "burger",
+          "ad": "Burgerler"
+        },
+        {
+          "id": "menu",
+          "ad": "Menüler"
+        },
+        {
+          "id": "yan",
+          "ad": "Yan ürünler"
+        },
+        {
+          "id": "icecek",
+          "ad": "İçecekler"
+        }
+      ],
+      "urunIds": [
+        "klasik-burger",
+        "cheeseburger",
+        "double-burger",
+        "tavuk-burger",
+        "vejetaryen-burger",
+        "bacon-burger",
+        "menu-klasik",
+        "menu-double",
+        "menu-tavuk",
+        "cocuk-menu",
+        "patates-kizartmasi",
+        "sogan-halkasi",
+        "nugget-6",
+        "kola",
+        "ayran",
+        "su",
+        "milkshake",
+        "limonata",
+        "extra-kofte",
+        "extra-peynir",
+        "bbq-burger",
+        "acili-burger",
+        "onion-burger",
+        "family-box"
+      ],
+      "varsayilanMenuIds": [
+        "klasik-burger",
+        "cheeseburger",
+        "double-burger",
+        "tavuk-burger",
+        "vejetaryen-burger",
+        "bacon-burger",
+        "menu-klasik",
+        "menu-double"
+      ]
+    },
+    {
+      "id": "pastane",
+      "ad": "Pastane / Tatlıcı",
+      "aciklama": "Pasta, tatlı, kahve",
+      "ikon": "🧁",
+      "varsayilanBoyut": "8",
+      "kategoriler": [
+        {
+          "id": "pasta",
+          "ad": "Pastalar"
+        },
+        {
+          "id": "tatli",
+          "ad": "Tatlılar"
+        },
+        {
+          "id": "borek",
+          "ad": "Börek & poğaça"
+        },
+        {
+          "id": "icecek",
+          "ad": "İçecekler"
+        }
+      ],
+      "urunIds": [
+        "dilims-pasta",
+        "cheesecake",
+        "profiterol",
+        "tiramisu",
+        "sutlac",
+        "kazandibi",
+        "baklava",
+        "ekler",
+        "kurabiye",
+        "pogaca",
+        "su-boregi",
+        "simit",
+        "cay",
+        "turk-kahvesi",
+        "filtre-kahve",
+        "latte",
+        "sicak-cikolata",
+        "dondurma",
+        "waffle",
+        "magnolia",
+        "brownie",
+        "kruvasan",
+        "su",
+        "meyve-suyu",
+        "soda",
+        "limonlu-soda"
+      ],
+      "varsayilanMenuIds": [
+        "dilims-pasta",
+        "cheesecake",
+        "profiterol",
+        "tiramisu",
+        "sutlac",
+        "kazandibi",
+        "baklava",
+        "ekler"
+      ]
+    },
+    {
+      "id": "kebapci",
+      "ad": "Kebapçı",
+      "aciklama": "Kebap, ızgara, pide",
+      "ikon": "🔥",
+      "varsayilanBoyut": "8",
+      "kategoriler": [
+        {
+          "id": "kebap",
+          "ad": "Kebaplar"
+        },
+        {
+          "id": "izgara",
+          "ad": "Izgaralar"
+        },
+        {
+          "id": "yan",
+          "ad": "Yan ürünler"
+        },
+        {
+          "id": "icecek",
+          "ad": "İçecekler"
+        }
+      ],
+      "urunIds": [
+        "adana-kebap",
+        "urfa-kebap",
+        "beyti",
+        "ali-nazik",
+        "sis-kebap",
+        "tavuk-sis",
+        "kofte",
+        "pirzola",
+        "karisik-izgara",
+        "ciger",
+        "mercimek-corbasi",
+        "mezze-tabagi",
+        "coban-salata",
+        "bulgur-pilavi",
+        "ayran",
+        "salgam",
+        "kola",
+        "su",
+        "cay",
+        "kunefe",
+        "lahmacun",
+        "pide",
+        "patlican-kebap",
+        "domates-kebap"
+      ],
+      "varsayilanMenuIds": [
+        "adana-kebap",
+        "urfa-kebap",
+        "beyti",
+        "ali-nazik",
+        "sis-kebap",
+        "tavuk-sis",
+        "kofte",
+        "pirzola"
+      ]
+    },
+    {
+      "id": "corbaci",
+      "ad": "Çorbacı",
+      "aciklama": "Çorba, ekmek, içecek",
+      "ikon": "🥣",
+      "varsayilanBoyut": "8",
+      "kategoriler": [
+        {
+          "id": "corba",
+          "ad": "Çorbalar"
+        },
+        {
+          "id": "yan",
+          "ad": "Yan ürünler"
+        },
+        {
+          "id": "icecek",
+          "ad": "İçecekler"
+        }
+      ],
+      "urunIds": [
+        "mercimek-corbasi",
+        "ezogelin",
+        "tarhana",
+        "iskembe",
+        "kelle-paca",
+        "tavuk-suyu",
+        "domates-corbasi",
+        "yayla-corbasi",
+        "sebze-corbasi",
+        "dugun-corbasi",
+        "gunun-corbasi",
+        "cift-porsiyon",
+        "ekmek",
+        "tereyagli-ekmek",
+        "tursu",
+        "limon",
+        "ayran",
+        "salgam",
+        "su",
+        "cay",
+        "kola",
+        "soda",
+        "menemen",
+        "pilav"
+      ],
+      "varsayilanMenuIds": [
+        "mercimek-corbasi",
+        "ezogelin",
+        "tarhana",
+        "iskembe",
+        "kelle-paca",
+        "tavuk-suyu",
+        "domates-corbasi",
+        "yayla-corbasi"
+      ]
+    },
+    {
+      "id": "cigkofteci",
+      "ad": "Çiğ köfteci",
+      "aciklama": "Çiğ köfte, dürüm, ayran",
+      "ikon": "🥗",
+      "varsayilanBoyut": "8",
+      "kategoriler": [
+        {
+          "id": "cigkofte",
+          "ad": "Çiğ köfte"
+        },
+        {
+          "id": "yan",
+          "ad": "Yan ürünler"
+        },
+        {
+          "id": "icecek",
+          "ad": "İçecekler"
+        }
+      ],
+      "urunIds": [
+        "cig-kofte-porsiyon",
+        "cig-kofte-durum",
+        "acili-durum",
+        "mega-durum",
+        "yarim-kilo",
+        "1-kilo",
+        "tabak-cig-kofte",
+        "vejetaryen-cig-kofte",
+        "cift-durum-menu",
+        "aile-paketi",
+        "extra-marul",
+        "extra-limon",
+        "nar-eksisi",
+        "tursu",
+        "ayran",
+        "buyuk-ayran",
+        "salgam",
+        "kola",
+        "su",
+        "soda",
+        "cay",
+        "ice-tea",
+        "extra-ekmek",
+        "cig-kofte-salata"
+      ],
+      "varsayilanMenuIds": [
+        "cig-kofte-porsiyon",
+        "cig-kofte-durum",
+        "acili-durum",
+        "mega-durum",
+        "yarim-kilo",
+        "1-kilo",
+        "tabak-cig-kofte",
+        "vejetaryen-cig-kofte"
+      ]
+    }
+  ],
+  "varsayilanMenuBoyut": "8"
+}

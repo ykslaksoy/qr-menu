@@ -1,0 +1,90 @@
+{
+  "baslik": "Paket servisler",
+  "aciklama": "Anlaşmalı kanallar üstte ve işaretli. Diğerleri entegrasyon / anlaşma için aday listesidir.",
+  "firmalar": [
+    {
+      "id": "yemeksepeti",
+      "ad": "Yemeksepeti",
+      "anlasildi": true,
+      "grup": "ana",
+      "not": "Anlaşma işareti (taslak) — API sonra"
+    },
+    {
+      "id": "getir",
+      "ad": "Getir Yemek",
+      "anlasildi": true,
+      "grup": "ana",
+      "not": "Anlaşma işareti (taslak) — API sonra"
+    },
+    {
+      "id": "trendyol",
+      "ad": "Trendyol Yemek",
+      "anlasildi": false,
+      "grup": "ana",
+      "not": "Aday — ana 4 kanal"
+    },
+    {
+      "id": "migros",
+      "ad": "Migros Yemek",
+      "anlasildi": false,
+      "grup": "ana",
+      "not": "Aday — ana 4 kanal"
+    },
+    {
+      "id": "fuudy",
+      "ad": "Fuudy",
+      "anlasildi": false,
+      "grup": "nis",
+      "not": "Aday — seçili / gurme odaklı"
+    },
+    {
+      "id": "restajet",
+      "ad": "Restajet",
+      "anlasildi": false,
+      "grup": "nis",
+      "not": "Aday"
+    },
+    {
+      "id": "paket-taxi",
+      "ad": "Paket Taxi",
+      "anlasildi": false,
+      "grup": "nis",
+      "not": "Aday — bölgesel paket lojistik"
+    },
+    {
+      "id": "own-kurye",
+      "ad": "Kendi kurye",
+      "anlasildi": false,
+      "grup": "sofra",
+      "not": "Aday — restoranın kendi teslimatı"
+    },
+    {
+      "id": "gel-al",
+      "ad": "Gel-al (pickup)",
+      "anlasildi": false,
+      "grup": "sofra",
+      "not": "Aday — paket, kuryesiz"
+    },
+    {
+      "id": "whatsapp-telefon",
+      "ad": "WhatsApp / telefon sipariş",
+      "anlasildi": false,
+      "grup": "sofra",
+      "not": "Aday — panele elle veya formdan"
+    },
+    {
+      "id": "sofra-online",
+      "ad": "Sofra online sipariş",
+      "anlasildi": false,
+      "grup": "sofra",
+      "not": "Aday — web/QR paket, komisyonsuz (sonra)"
+    },
+    {
+      "id": "bolgesel",
+      "ad": "Bölgesel yemek siteleri",
+      "anlasildi": false,
+      "grup": "diger",
+      "not": "Aday — şehre özel küçük platformlar"
+    }
+  ]
+}

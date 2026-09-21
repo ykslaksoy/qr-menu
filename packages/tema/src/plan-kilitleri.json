@@ -1,0 +1,100 @@
+{
+  "planSira": {
+    "ucretsiz": 0,
+    "menu": 1,
+    "menu-adisyon": 2,
+    "tam": 3
+  },
+  "ozellikler": [
+    {
+      "id": "dijitalMenu",
+      "ad": "Dijital menü + QR",
+      "minPlan": "ucretsiz",
+      "aciklama": "Temel menü ve QR kod indirme"
+    },
+    {
+      "id": "ucretsizSablon",
+      "ad": "5 ücretsiz şablon",
+      "minPlan": "ucretsiz",
+      "aciklama": "Her tarzdan 1 şablon (toplam 5)"
+    },
+    {
+      "id": "sinirliTasarim",
+      "ad": "Sınırlı tasarım (ana renk)",
+      "minPlan": "ucretsiz",
+      "aciklama": "Yalnızca ana renk değiştirilebilir"
+    },
+    {
+      "id": "filigran",
+      "ad": "Filigran / Powered by Sofra",
+      "minPlan": "ucretsiz",
+      "aciklama": "Ücretsiz planda müşteri menüsünde görünür; Menü planında kapanır"
+    },
+    {
+      "id": "tumSablonlar",
+      "ad": "25 şablon",
+      "minPlan": "menu",
+      "aciklama": "Tüm şablon kataloğu"
+    },
+    {
+      "id": "tamTasarim",
+      "ad": "Tam tasarım özelleştirme",
+      "minPlan": "menu",
+      "aciklama": "Font, renk, çerçeve, zemin, desen, köşe"
+    },
+    {
+      "id": "pdfIceAktar",
+      "ad": "PDF / metin menü içe aktarma",
+      "minPlan": "menu",
+      "aciklama": "Menüyü dosyadan veya metinden yükleme"
+    },
+    {
+      "id": "baskiPdf",
+      "ad": "Menü ve masa kartı baskı PDF",
+      "minPlan": "menu",
+      "aciklama": "A4 menü ve 100×140 mm masa kartı PDF indirme"
+    },
+    {
+      "id": "adisyonBaskiPdf",
+      "ad": "Adisyon baskı PDF",
+      "minPlan": "menu-adisyon",
+      "aciklama": "Masa adisyon fişi PDF (A5 · 148×210 mm)"
+    },
+    {
+      "id": "filigranKapali",
+      "ad": "Filigran kapalı",
+      "minPlan": "menu",
+      "aciklama": "Markanız ön planda, Sofra filigranı yok"
+    },
+    {
+      "id": "siparis",
+      "ad": "Masadan sipariş",
+      "minPlan": "menu-adisyon",
+      "aciklama": "Müşteri menüsünden sepete ekleme ve gönderme"
+    },
+    {
+      "id": "garsonMutfak",
+      "ad": "Garson + mutfak ekranı",
+      "minPlan": "menu-adisyon",
+      "aciklama": "/g ve /k adisyon akışı"
+    },
+    {
+      "id": "stok",
+      "ad": "Stok takibi",
+      "minPlan": "menu-adisyon",
+      "aciklama": "Stok düşümü, tükendi uyarısı"
+    },
+    {
+      "id": "analitik",
+      "ad": "Gelişmiş analitik",
+      "minPlan": "menu-adisyon",
+      "aciklama": "Satış / masa / kanal raporları ve CSV"
+    },
+    {
+      "id": "oncelikliDestek",
+      "ad": "Öncelikli destek + kurulum yardımı",
+      "minPlan": "tam",
+      "aciklama": "Operasyonel destek (sözleşme ile)"
+    }
+  ]
+}

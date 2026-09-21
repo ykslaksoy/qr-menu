@@ -1,0 +1,272 @@
+{
+  "superQrModel": {
+    "baslik": "SüperQr karşılaştırma",
+    "ozet": "Top 10 QR/POS uygulaması ile Sofra'yı boyut boyut karşılaştırın. SüperQr = her özellikte lig tavanı (gerçek ürün değil).",
+    "bilesik": {
+      "id": "superqr",
+      "kodAd": "SüperQr",
+      "urun": "SüperQr",
+      "arketip": "Top 10 birleşimi (teorik tavan)",
+      "renk": "#111827",
+      "ozet": "Adisyo · Menulux · KarekodGarson · Simpra · Adysso · Digimenü · QrMenum · vRest · GoPOS · MONU — her özellikte en yüksek puan. Gerçek ürün değil; lig tavanı.",
+      "imzaYetenek": "En iyi QR menü + POS + ÖKC + zincir + dil/tasarım tavanı",
+      "kryptonit": "Tek üründe yok — on rakibin en iyisini aynı anda ister",
+      "fiyatNotu": "Teorik; on ürünün üst paketlerini birleştirir",
+      "bizim": false,
+      "kaynakIds": ["adisyo", "menulux", "karekodgarson", "simpra", "adysso", "digimenu", "qrmenum", "vrest", "gopos", "monu"],
+      "stats": { "hiz": 9, "guc": 10, "zirh": 10, "ceviklik": 9, "sihir": 8, "fiyat": 10, "ordu": 9, "menu": 10 }
+    },
+    "boyutlar": [
+      { "id": "hiz", "ad": "Hız", "ikon": "⚡", "aciklama": "Kurulum ve ilk siparişe kadar geçen süre" },
+      { "id": "guc", "ad": "Güç", "ikon": "💪", "aciklama": "Modül derinliği ve operasyon kapsamı" },
+      { "id": "zirh", "ad": "Zırh", "ikon": "🛡", "aciklama": "ÖKC, e-fatura, çevrimdışı, yasal uyum" },
+      { "id": "ceviklik", "ad": "Çeviklik", "ikon": "🎯", "aciklama": "Küçük kafe/restoran için kullanım kolaylığı" },
+      { "id": "sihir", "ad": "Sihir", "ikon": "✨", "aciklama": "AI, sesli sipariş, akıllı öneri" },
+      { "id": "fiyat", "ad": "Fiyat", "ikon": "💰", "aciklama": "Giriş maliyeti ve fiyat/performans" },
+      { "id": "ordu", "ad": "Ordu", "ikon": "🏰", "aciklama": "Çok şube, platform entegrasyonları" },
+      { "id": "menu", "ad": "Menü", "ikon": "📱", "aciklama": "QR menü, tasarım, hazır şablonlar" }
+    ],
+    "kahramanlar": [
+      {
+        "id": "sofra",
+        "kodAd": "Vox",
+        "urun": "Sofra",
+        "arketip": "Sesli garson odaklı",
+        "renk": "#1f6f5b",
+        "ozet": "Garson konuşur, sistem adisyona yazar. QR okumayan müşteri için tasarlandı.",
+        "imzaYetenek": "Sesli sipariş + stok yoksa alternatif öner + tek dijital adisyon",
+        "kryptonit": "ÖKC, çok şube, platform sipariş entegrasyonu henüz yok",
+        "fiyatNotu": "699 ₺/ay Menü+Adisyon · 50 sipariş/ay ücretsiz",
+        "bizim": true,
+        "stats": { "hiz": 9, "guc": 5, "zirh": 3, "ceviklik": 9, "sihir": 9, "fiyat": 9, "ordu": 2, "menu": 8 }
+      },
+      {
+        "id": "adisyo",
+        "kodAd": "Flash POS",
+        "urun": "Adisyo",
+        "arketip": "Hızlı bulut adisyon",
+        "renk": "#2563eb",
+        "ozet": "Dakikalar içinde aç, sipariş al. Basit ve uygun.",
+        "imzaYetenek": "Hızlı kurulum, düşük bütçe, bulut POS",
+        "kryptonit": "Sesli garson, tasarım derinliği, AI alternatif",
+        "fiyatNotu": "~750 ₺/ay bandı",
+        "bizim": false,
+        "stats": { "hiz": 8, "guc": 6, "zirh": 6, "ceviklik": 9, "sihir": 4, "fiyat": 9, "ordu": 5, "menu": 6 }
+      },
+      {
+        "id": "menulux",
+        "kodAd": "Titan ÖKC",
+        "urun": "Menulux",
+        "arketip": "Zırhlı kurumsal dev",
+        "renk": "#7c3aed",
+        "ozet": "Yazarkasa, e-fatura, donanım — kurumsal restoran standardı.",
+        "imzaYetenek": "Ingenico/Pavo, e-fatura, garson el terminali, offline",
+        "kryptonit": "Pahalı, kurulum ağır, küçük işletmeye fazla",
+        "fiyatNotu": "Kurumsal fiyatlandırma",
+        "bizim": false,
+        "stats": { "hiz": 5, "guc": 9, "zirh": 10, "ceviklik": 5, "sihir": 5, "fiyat": 4, "ordu": 9, "menu": 7 }
+      },
+      {
+        "id": "karekodgarson",
+        "kodAd": "Modülord",
+        "urun": "KarekodGarson",
+        "arketip": "Modül ordusu",
+        "renk": "#dc2626",
+        "ozet": "130+ modül — personelden gamification'a her şey.",
+        "imzaYetenek": "En geniş modül seti, AI tahmin, 6 rol ekranı",
+        "kryptonit": "Küçük cafeye ağır, öğrenme eğrisi, ~1.500 ₺/ay",
+        "fiyatNotu": "~1.500 ₺/ay",
+        "bizim": false,
+        "stats": { "hiz": 7, "guc": 10, "zirh": 7, "ceviklik": 6, "sihir": 8, "fiyat": 6, "ordu": 8, "menu": 8 }
+      },
+      {
+        "id": "simpra",
+        "kodAd": "Chain Master",
+        "urun": "Simpra",
+        "arketip": "Zincir komutanı",
+        "renk": "#0891b2",
+        "ozet": "Çok şube, kiosk, reçete stok — büyüyen restoranlar.",
+        "imzaYetenek": "Merkezi yönetim, platform siparişleri, kiosk",
+        "kryptonit": "Fiyat, kurulum süresi, küçük işletme için fazla",
+        "fiyatNotu": "Kurumsal paketler",
+        "bizim": false,
+        "stats": { "hiz": 6, "guc": 9, "zirh": 9, "ceviklik": 6, "sihir": 6, "fiyat": 5, "ordu": 9, "menu": 8 }
+      },
+      {
+        "id": "adysso",
+        "kodAd": "Oracle Menu",
+        "urun": "Adysso",
+        "arketip": "AI menü kahini",
+        "renk": "#ca8a04",
+        "ozet": "Müşteriye Gemini destekli menü asistanı.",
+        "imzaYetenek": "Müşteri tarafı AI sohbet menüsü",
+        "kryptonit": "Garson sesli adisyon + stok alternatifi zayıf",
+        "fiyatNotu": "Orta segment",
+        "bizim": false,
+        "stats": { "hiz": 8, "guc": 7, "zirh": 5, "ceviklik": 7, "sihir": 8, "fiyat": 7, "ordu": 6, "menu": 8 }
+      }
+    ],
+    "arenalar": [
+      {
+        "senaryo": "5–15 masalı kafe, QR + garson, hızlı kurulum",
+        "kazanan": "sofra",
+        "kazananKodAd": "Vox",
+        "neden": "Sesli sipariş, düşük fiyat, tek dijital adisyon akışı"
+      },
+      {
+        "senaryo": "Yazarkasa / e-fatura zorunlu",
+        "kazanan": "menulux",
+        "kazananKodAd": "Titan ÖKC",
+        "neden": "ÖKC ve yasal entegrasyon derinliği"
+      },
+      {
+        "senaryo": "130 modül, personel İK, gamification",
+        "kazanan": "karekodgarson",
+        "kazananKodAd": "Modülord",
+        "neden": "Modül kapsamı"
+      },
+      {
+        "senaryo": "5+ şube, Yemeksepeti / Getir entegrasyonu",
+        "kazanan": "simpra",
+        "kazananKodAd": "Chain Master",
+        "neden": "Merkezi yönetim ve platform siparişleri"
+      },
+      {
+        "senaryo": "Minimum bütçe, sadece adisyon",
+        "kazanan": "adisyo",
+        "kazananKodAd": "Flash POS",
+        "neden": "Basitlik ve uygun fiyat"
+      },
+      {
+        "senaryo": "Müşteri tarafında AI sohbet menüsü",
+        "kazanan": "adysso",
+        "kazananKodAd": "Oracle Menu",
+        "neden": "Müşteri AI asistanı"
+      }
+    ]
+  },
+  "sadeceSofrada": [
+    {
+      "id": "sesli-siparis",
+      "baslik": "Garson sesli sipariş",
+      "aciklama": "Garson masada konuşur; sistem Türkçe metni menüyle eşleştirip adisyona ekler. Tarayıcıda, ek donanım yok.",
+      "rakiplerde": "yok",
+      "ikon": "🎤",
+      "plan": "menu-adisyon",
+      "demoYol": "/g"
+    },
+    {
+      "id": "stok-alternatif",
+      "baslik": "Stok yok → alternatif buton",
+      "aciklama": "Portakallı soda yoksa limonlu/mandalinalı önerilir; garson tek dokunuşla değiştirir.",
+      "rakiplerde": "yok",
+      "ikon": "🔄",
+      "plan": "menu-adisyon",
+      "demoYol": "/g"
+    },
+    {
+      "id": "dort-kanal-adisyon",
+      "baslik": "4 kanal → tek adisyon",
+      "aciklama": "QR, ses, yazı, menüden dokun ve serbest kalem — hepsi aynı masanın açık dijital adisyonunda birleşir.",
+      "rakiplerde": "nadir",
+      "ikon": "🔗",
+      "plan": "menu-adisyon",
+      "demoYol": "/g"
+    },
+    {
+      "id": "canli-adisyon-pdf",
+      "baslik": "Canlı adisyon PDF",
+      "aciklama": "Açık adisyondaki gerçek kalemlerle dolu A5 fiş — indir veya yazdır.",
+      "rakiplerde": "yok",
+      "ikon": "🧾",
+      "plan": "menu-adisyon",
+      "demoYol": "/g"
+    },
+    {
+      "id": "adet-alti-ucretsiz",
+      "baslik": "50 sipariş/ay ücretsiz tam özellik",
+      "aciklama": "Garson, mutfak, QR sipariş açık. Kotayı aşınca sipariş durmaz — panele uyarı düşer.",
+      "rakiplerde": "farkli",
+      "ikon": "🎁",
+      "plan": "ucretsiz",
+      "demoYol": "/panel/abonelik"
+    },
+    {
+      "id": "katalog-tik",
+      "baslik": "12 tip × 245 ürün tik havuzu",
+      "aciklama": "Kafe, döner, pastane… tipine göre hazır katalog; tik ile menüye ekle/çıkar, altına özel ürün.",
+      "rakiplerde": "yok",
+      "ikon": "☑️",
+      "plan": "menu",
+      "demoYol": "/panel/menu/hazir"
+    },
+    {
+      "id": "menu-boyut",
+      "baslik": "Menü boyut şablonları",
+      "aciklama": "Standart 8, ön–arka 8+8, 3×5 grid… boyut seçilince otomatik ürün listesi.",
+      "rakiplerde": "yok",
+      "ikon": "📐",
+      "plan": "menu",
+      "demoYol": "/panel/menu/hazir"
+    },
+    {
+      "id": "veri-dokuman-ayrim",
+      "baslik": "Veri girişi / Dökümanlar ayrımı",
+      "aciklama": "İçe aktarma ve hazır menü düzenleme ayrı; baskı PDF'leri ayrı panelde.",
+      "rakiplerde": "yok",
+      "ikon": "📂",
+      "plan": "menu",
+      "demoYol": "/panel/veri-girisi"
+    },
+    {
+      "id": "referans-qr",
+      "baslik": "Menü QR referans programı",
+      "aciklama": "Müşteri menüsünde davet linki; yıllık %15 indirim, 3 ay referans başına.",
+      "rakiplerde": "nadir",
+      "ikon": "🤝",
+      "plan": "ucretsiz",
+      "demoYol": "/fiyatlandirma"
+    },
+    {
+      "id": "komisyon-yok",
+      "baslik": "Sipariş komisyonu yok",
+      "aciklama": "Masadan ve QR siparişte platform komisyonu yok — yalnızca abonelik.",
+      "rakiplerde": "farkli",
+      "ikon": "✅",
+      "plan": "menu-adisyon",
+      "demoYol": "/fiyatlandirma"
+    },
+    {
+      "id": "tasarim-fiyat",
+      "baslik": "25 şablon + tam tasarım",
+      "aciklama": "Font, renk, çerçeve, zemin, logo — 699 ₺/ay Menü+Adisyon bandında.",
+      "rakiplerde": "farkli",
+      "ikon": "🎨",
+      "plan": "menu",
+      "demoYol": "/panel/ayarlar"
+    },
+    {
+      "id": "serbest-kalem",
+      "baslik": "Garson serbest kalem",
+      "aciklama": "Menüde olmayan ürün: ad + fiyat + adet — sesli akışla birlikte.",
+      "rakiplerde": "nadir",
+      "ikon": "✏️",
+      "plan": "menu-adisyon",
+      "demoYol": "/g"
+    },
+    {
+      "id": "admin-impersonate",
+      "baslik": "Destek impersonation",
+      "aciklama": "Platform admin işletme paneline güvenli geçiş — hızlı destek.",
+      "rakiplerde": "nadir",
+      "ikon": "🛟",
+      "plan": "tam",
+      "demoYol": "/admin"
+    }
+  ],
+  "rakiplerdeDurumEtiket": {
+    "yok": { "ad": "Rakiplerde yok", "renk": "emerald" },
+    "nadir": { "ad": "Nadir / parça parça", "renk": "amber" },
+    "farkli": { "ad": "Farklı paketlenmiş", "renk": "sky" }
+  }
+}
