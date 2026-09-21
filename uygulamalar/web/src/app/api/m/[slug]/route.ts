@@ -16,6 +16,7 @@ export async function GET(_req: Request, { params }: Params) {
     slug: isletme.slug,
     kafeAdi: isletme.kafeAdi,
     logoUrl: isletme.logoUrl ?? null,
+    kapakUrl: isletme.kapakUrl ?? null,
     kategoriler: isletme.kategoriler,
     urunler: isletme.urunler.filter((u) => u.aktif),
     masalar: isletme.masalar,

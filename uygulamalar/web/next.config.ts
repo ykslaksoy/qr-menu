@@ -1,6 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Allow 127.0.0.1 (and tunnels) to load /_next/* in dev — otherwise
+  // script tags with crossorigin get 403 and React never hydrates
+  // (category tabs / + buttons appear static).
+  allowedDevOrigins: [
+    "127.0.0.1",
+    "localhost",
+    "*.trycloudflare.com",
+  ],
   transpilePackages: ["@sofra/tema"],
   outputFileTracingIncludes: {
     "/**": [

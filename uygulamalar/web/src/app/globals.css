@@ -268,3 +268,20 @@ body {
     transform: none !important;
   }
 }
+
+
+/* Havanna / MONU kapak + kategori kartları */
+.menu-kapak {
+  min-height: 11.5rem;
+  aspect-ratio: 16 / 10;
+  max-height: 14rem;
+}
+
+.menu-kat-kart img {
+  transition: transform 0.35s ease;
+}
+
+.menu-kat-kart:active img,
+.menu-kat-kart[aria-selected="true"] img {
+  transform: scale(1.04);
+}

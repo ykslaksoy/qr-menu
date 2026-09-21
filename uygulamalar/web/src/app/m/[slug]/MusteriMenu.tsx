@@ -38,6 +38,7 @@ type MenuVeri = {
   slug: string;
   kafeAdi: string;
   logoUrl?: string | null;
+  kapakUrl?: string | null;
   kategoriler: Kategori[];
   urunler: Urun[];
   masalar: Masa[];
@@ -70,7 +71,11 @@ export default function MusteriMenuClient({
   const searchParams = useSearchParams();
   const slug = params.slug;
   const masaParam = searchParams.get("masa") ?? "1";
-  const siparisIstegi = searchParams.get("siparis") === "1" || Boolean(searchParams.get("masa"));
+  // /m/demo (no query) still uses default masa "1" for display — enable siparis
+  // unless explicitly disabled with ?siparis=0
+  const siparisIstegi =
+    searchParams.get("siparis") !== "0" &&
+    (searchParams.get("siparis") === "1" || Boolean(masaParam));
 
   const [menu, setMenu] = useState<MenuVeri | null>(baslangicMenu);
   const [hata, setHata] = useState(baslangicHata);
@@ -145,11 +150,19 @@ export default function MusteriMenuClient({
     );
   }, [siraliKategoriler]);
 
+  /** SSR + ilk boyama: effect beklemeden ilk kategori seçili olsun */
+  const seciliKategoriId =
+    (aktifKategoriId && siraliKategoriler.some((k) => k.id === aktifKategoriId)
+      ? aktifKategoriId
+      : null) ??
+    siraliKategoriler[0]?.id ??
+    null;
+
   const listeUrunler = useMemo(() => {
     if (!menu) return [];
     const q = ara.trim().toLocaleLowerCase("tr-TR");
     return menu.urunler.filter((u) => {
-      if (!q && aktifKategoriId && u.kategoriId !== aktifKategoriId) return false;
+      if (!q && seciliKategoriId && u.kategoriId !== seciliKategoriId) return false;
       if (urunAlerjenIceriyorMu(u.alerjenler, haricAlerjenler)) return false;
       if (q) {
         const ad = urunAdiGoster(u, dil).toLocaleLowerCase("tr-TR");
@@ -158,7 +171,7 @@ export default function MusteriMenuClient({
       }
       return true;
     });
-  }, [menu, aktifKategoriId, haricAlerjenler, ara, dil]);
+  }, [menu, seciliKategoriId, haricAlerjenler, ara, dil]);
 
   const listeUrunIds = useMemo(() => listeUrunler.map((u) => u.id), [listeUrunler]);
   const { canliId, gorunurlukBildir } = useSiraliFotoCanli(listeUrunIds, 3800);
@@ -343,6 +356,10 @@ export default function MusteriMenuClient({
       ? duzenParam
       : sablonDuzenId);
   const izgara = duzen === "photo-grid" || duzen === "editorial";
+  const kapakUrl =
+    menu.kapakUrl ||
+    (izgara || duzen === "photo-hero" ? "/gorseller/foto/kapak-cafe.jpg" : null);
+  const kapakModu = Boolean(kapakUrl);
   const kafeAdi = menu.kafeAdi;
   const siparisModu = siparisIstegi && Boolean(menu.siparisAcik);
   const sepetToplam = sepet.reduce((a, k) => a + k.fiyat * k.adet, 0);
@@ -374,7 +391,7 @@ export default function MusteriMenuClient({
       style={{
         background: tema.zeminRengi,
         color: tema.metinRengi,
-        paddingTop: sepetAcik ? "0.5rem" : "2rem",
+        paddingTop: sepetAcik ? "0.5rem" : kapakModu ? "0.75rem" : "2rem",
       }}
     >
       <MenuReferansKaydet slug={slug} />
@@ -551,67 +568,236 @@ export default function MusteriMenuClient({
         className={`mx-auto ${izgara ? "max-w-lg" : "max-w-md"}`}
         style={{ paddingTop: sepetAcik ? "5.75rem" : undefined }}
       >
-        <header className="relative rounded-3xl px-4 pb-5 pt-6 text-center">
-          <div
-            className="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl opacity-90"
-            style={{
-              background: `radial-gradient(ellipse at 50% 0%, ${tema.anaRenk}22 0%, transparent 70%)`,
-            }}
-            aria-hidden
-          />
-          <div className="relative z-10">
-            {menu.logoUrl ? (
-              <div className="flex justify-center">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={menu.logoUrl}
-                  alt={`${menu.kafeAdi} logosu`}
-                  className="max-h-14 max-w-[180px] object-contain drop-shadow-sm"
+        {kapakModu ? (
+          <header className="menu-kapak relative overflow-hidden rounded-[1.35rem] shadow-md">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={kapakUrl!}
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.62) 100%)",
+              }}
+              aria-hidden
+            />
+            <div className="relative z-10 flex min-h-[11.5rem] flex-col justify-between px-3.5 pb-3.5 pt-3">
+              <div className="flex justify-end">
+                <DilSecici
+                  dil={dil}
+                  onDegistir={setDil}
+                  anaRenk={tema.anaRenk}
+                  varyant="kapak"
                 />
               </div>
-            ) : null}
-            <h1
-              className={`${
-                tema.fontPaketId === "editorial" || tema.fontPaketId === "klasik"
-                  ? "font-serif"
-                  : "font-[family-name:var(--font-baslik)]"
-              } text-[1.85rem] font-semibold tracking-tight ${menu.logoUrl ? "mt-3" : ""}`}
-              style={{ color: tema.anaRenk }}
-            >
-              {menu.kafeAdi}
-            </h1>
-            <div className="mt-2 flex flex-wrap items-center justify-center gap-3 text-sm opacity-65">
-              {masa ? <p>{masaEtiket(masa.ad, dil)}</p> : null}
-              <DilSecici dil={dil} onDegistir={setDil} anaRenk={tema.anaRenk} />
-              <button
-                type="button"
-                onClick={menuPaylas}
-                className="rounded-full border px-2.5 py-1 text-[11px] font-semibold"
-                style={{ borderColor: tema.anaRenk + "55", color: tema.anaRenk }}
-              >
-                {uiMetin("paylas", dil)}
-              </button>
+              <div className="flex items-end gap-3">
+                <div
+                  className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white/95 text-2xl font-semibold shadow-sm"
+                  style={{ color: tema.anaRenk }}
+                >
+                  {menu.logoUrl ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={menu.logoUrl}
+                      alt=""
+                      className="h-10 w-10 object-contain"
+                    />
+                  ) : (
+                    <span className="font-serif">{(menu.kafeAdi || "S").trim().charAt(0).toUpperCase()}</span>
+                  )}
+                </div>
+                <div className="min-w-0 flex-1 pb-0.5 text-white">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/85">
+                    SOFRA
+                  </p>
+                  <h1 className="truncate font-serif text-[1.35rem] font-semibold leading-tight tracking-tight">
+                    {menu.kafeAdi}
+                  </h1>
+                  {masa ? (
+                    <p className="mt-0.5 text-sm text-white/85">{masaEtiket(masa.ad, dil)}</p>
+                  ) : null}
+                </div>
+                <button
+                  type="button"
+                  onClick={menuPaylas}
+                  aria-label={uiMetin("paylas", dil)}
+                  className="mb-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/92 text-sm font-semibold text-stone-700 shadow-sm"
+                >
+                  i
+                </button>
+              </div>
             </div>
+          </header>
+        ) : (
+          <header className="relative rounded-3xl px-4 pb-5 pt-6 text-center">
+            <div
+              className="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl opacity-90"
+              style={{
+                background: `radial-gradient(ellipse at 50% 0%, ${tema.anaRenk}22 0%, transparent 70%)`,
+              }}
+              aria-hidden
+            />
+            <div className="relative z-10">
+              {menu.logoUrl ? (
+                <div className="flex justify-center">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={menu.logoUrl}
+                    alt={`${menu.kafeAdi} logosu`}
+                    className="max-h-14 max-w-[180px] object-contain drop-shadow-sm"
+                  />
+                </div>
+              ) : null}
+              <h1
+                className={`${
+                  tema.fontPaketId === "editorial" || tema.fontPaketId === "klasik"
+                    ? "font-serif"
+                    : "font-[family-name:var(--font-baslik)]"
+                } text-[1.85rem] font-semibold tracking-tight ${menu.logoUrl ? "mt-3" : ""}`}
+                style={{ color: tema.anaRenk }}
+              >
+                {menu.kafeAdi}
+              </h1>
+              <div className="mt-2 flex flex-wrap items-center justify-center gap-3 text-sm opacity-65">
+                {masa ? <p>{masaEtiket(masa.ad, dil)}</p> : null}
+                <DilSecici dil={dil} onDegistir={setDil} anaRenk={tema.anaRenk} />
+                <button
+                  type="button"
+                  onClick={menuPaylas}
+                  className="rounded-full border px-2.5 py-1 text-[11px] font-semibold"
+                  style={{ borderColor: tema.anaRenk + "55", color: tema.anaRenk }}
+                >
+                  {uiMetin("paylas", dil)}
+                </button>
+              </div>
+            </div>
+          </header>
+        )}
+
+        <div className="mt-3 flex items-center gap-2">
+          <label className="relative min-w-0 flex-1">
+            <span className="sr-only">{uiMetin("ara", dil)}</span>
+            <span
+              className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm opacity-40"
+              aria-hidden
+            >
+              ⌕
+            </span>
+            <input
+              type="search"
+              value={ara}
+              onChange={(e) => setAra(e.target.value)}
+              placeholder={uiMetin("araPlaceholder", dil)}
+              className="w-full rounded-full border py-2.5 pl-9 pr-3.5 text-sm outline-none"
+              style={{
+                borderColor: tema.anaRenk + "33",
+                color: tema.metinRengi,
+                background:
+                  tema.zeminStili === "solid-dark"
+                    ? "rgba(255,255,255,0.08)"
+                    : "rgba(255,255,255,0.92)",
+              }}
+            />
+          </label>
+          <div
+            className="flex shrink-0 gap-1"
+            role="group"
+            aria-label={uiMetin("gorunum", dil)}
+          >
+            {MUSTERI_DUZENLER.map((d) => {
+              const aktif = duzen === d;
+              const etiket =
+                d === "photo-grid"
+                  ? uiMetin("duzenIzgara", dil)
+                  : d === "editorial"
+                    ? uiMetin("duzenDergi", dil)
+                    : uiMetin("duzenListe", dil);
+              const ikon =
+                d === "photo-grid" ? "▦" : d === "editorial" ? "▥" : "☰";
+              return (
+                <button
+                  key={d}
+                  type="button"
+                  aria-pressed={aktif}
+                  aria-label={etiket}
+                  title={etiket}
+                  onClick={() => setDuzenOverride(d)}
+                  className="flex h-10 w-10 items-center justify-center rounded-xl border text-sm font-semibold"
+                  style={
+                    aktif
+                      ? { background: tema.anaRenk, color: "#fff", borderColor: tema.anaRenk }
+                      : {
+                          color: tema.metinRengi,
+                          borderColor: tema.anaRenk + "33",
+                          background: "rgba(255,255,255,0.92)",
+                        }
+                  }
+                >
+                  <span aria-hidden>{ikon}</span>
+                </button>
+              );
+            })}
           </div>
-        </header>
+        </div>
 
         {siraliKategoriler.length > 0 ? (
           <div
-            className="sticky z-20 -mx-4 mt-2 border-b px-4 py-2.5 backdrop-blur-md"
-            style={{
-              top: sepetAcik ? "4.5rem" : 0,
-              background:
-                tema.zeminStili === "solid-dark"
-                  ? "rgba(0,0,0,0.72)"
-                  : "color-mix(in srgb, " + tema.zeminRengi + " 88%, transparent)",
-              borderColor: tema.anaRenk + "18",
-            }}
+            className="mt-3"
             role="tablist"
             aria-label="Kategoriler"
           >
-            <div className="flex gap-2 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="flex gap-2.5 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {siraliKategoriler.map((kat) => {
-                const aktif = kat.id === aktifKategoriId;
+                const aktif = kat.id === seciliKategoriId;
+                const katGorsel =
+                  kat.gorselUrl ||
+                  menu.urunler.find((u) => u.kategoriId === kat.id && u.gorselUrl)?.gorselUrl ||
+                  null;
+                if (kapakModu || izgara) {
+                  return (
+                    <button
+                      key={kat.id}
+                      type="button"
+                      role="tab"
+                      aria-selected={aktif}
+                      onClick={() => setAktifKategoriId(kat.id)}
+                      className="menu-kat-kart w-[6.6rem] shrink-0 overflow-hidden rounded-2xl border bg-white text-left shadow-sm transition"
+                      style={{
+                        borderColor: aktif ? tema.anaRenk : "transparent",
+                        boxShadow: aktif
+                          ? `0 0 0 2px ${tema.anaRenk}55, 0 8px 18px rgba(0,0,0,0.08)`
+                          : "0 1px 3px rgba(0,0,0,0.06)",
+                      }}
+                    >
+                      <div
+                        className="aspect-square w-full overflow-hidden"
+                        style={{ background: tema.anaRenk + "14" }}
+                      >
+                        {katGorsel ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={katGorsel}
+                            alt=""
+                            className="h-full w-full object-cover"
+                          />
+                        ) : (
+                          <span className="flex h-full items-center justify-center text-lg opacity-30">
+                            ✦
+                          </span>
+                        )}
+                      </div>
+                      <p
+                        className="truncate px-1.5 py-2 text-center text-[12px] font-semibold leading-tight"
+                        style={{ color: aktif ? tema.anaRenk : tema.metinRengi }}
+                      >
+                        {kategoriCevir(kat.ad, dil)}
+                      </p>
+                    </button>
+                  );
+                }
                 return (
                   <button
                     key={kat.id}
@@ -638,68 +824,17 @@ export default function MusteriMenuClient({
           </div>
         ) : null}
 
-        <div className="mt-3 flex items-center gap-2">
-          <label className="relative min-w-0 flex-1">
-            <span className="sr-only">{uiMetin("ara", dil)}</span>
-            <input
-              type="search"
-              value={ara}
-              onChange={(e) => setAra(e.target.value)}
-              placeholder={uiMetin("araPlaceholder", dil)}
-              className="w-full rounded-full border px-3.5 py-2 text-sm outline-none"
-              style={{
-                borderColor: tema.anaRenk + "33",
-                color: tema.metinRengi,
-                background:
-                  tema.zeminStili === "solid-dark"
-                    ? "rgba(255,255,255,0.08)"
-                    : "rgba(255,255,255,0.82)",
-              }}
-            />
-          </label>
-          <div
-            className="flex shrink-0 rounded-full border p-0.5"
-            style={{ borderColor: tema.anaRenk + "33" }}
-            role="group"
-            aria-label={uiMetin("gorunum", dil)}
-          >
-            {MUSTERI_DUZENLER.map((d) => {
-              const aktif = duzen === d;
-              const etiket =
-                d === "photo-grid"
-                  ? uiMetin("duzenIzgara", dil)
-                  : d === "editorial"
-                    ? uiMetin("duzenDergi", dil)
-                    : uiMetin("duzenListe", dil);
-              return (
-                <button
-                  key={d}
-                  type="button"
-                  aria-pressed={aktif}
-                  onClick={() => setDuzenOverride(d)}
-                  className="rounded-full px-2.5 py-1 text-[11px] font-semibold"
-                  style={
-                    aktif
-                      ? { background: tema.anaRenk, color: "#fff" }
-                      : { color: tema.metinRengi }
-                  }
-                >
-                  {etiket}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
         <div className="mt-3">
-          <p className="text-[11px] font-semibold uppercase tracking-wide opacity-50">
-            {uiMetin("alerjenHaric", dil)}
-          </p>
           <div
-            className="mt-1.5 flex gap-1.5 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="flex gap-1.5 overflow-x-auto rounded-full border px-2.5 py-1.5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            style={{ borderColor: tema.anaRenk + "28", background: "rgba(255,255,255,0.55)" }}
             role="group"
             aria-label={uiMetin("alerjenFiltre", dil)}
           >
+            <span className="inline-flex shrink-0 items-center gap-1 pr-1 text-[11px] font-semibold uppercase tracking-wide opacity-50">
+              <span aria-hidden>▸</span>
+              {uiMetin("alerjenHaric", dil)}
+            </span>
             {FILTRE_ALERJENLER.map((ad) => {
               const aktif = haricAlerjenler.includes(ad);
               const rozet = alerjenRozet(ad);
@@ -743,9 +878,18 @@ export default function MusteriMenuClient({
           </p>
         ) : null}
 
+        {seciliKategoriId ? (
+          <h2 className="mt-4 font-serif text-xl font-semibold tracking-tight">
+            {kategoriCevir(
+              siraliKategoriler.find((k) => k.id === seciliKategoriId)?.ad ?? "",
+              dil,
+            )}
+          </h2>
+        ) : null}
+
         <ul
           className={duzenListeSinifi(duzen)}
-          key={(aktifKategoriId ?? "all") + haricAlerjenler.join(",") + duzen + ara}
+          key={(seciliKategoriId ?? "all") + haricAlerjenler.join(",") + duzen + ara}
         >
           {listeUrunler.map((u, i) => (
               <MenuUrunKarti

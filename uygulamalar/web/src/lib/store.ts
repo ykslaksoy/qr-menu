@@ -8,6 +8,8 @@ export type Kategori = {
   id: string;
   ad: string;
   sira: number;
+  /** Kategori kartı fotoğrafı (Havanna / MONU satırı) */
+  gorselUrl?: string | null;
 };
 
 export type Urun = {
@@ -185,6 +187,8 @@ export type Isletme = {
   logoUrl?: string | null;
   /** Logo baskı sürümü (300 dpi PDF için) */
   logoUrlBaski?: string | null;
+  /** Müşteri menü kapak / hero fotoğrafı */
+  kapakUrl?: string | null;
   /** kafe | restoran | donerci | … */
   isletmeTipi: string | null;
   /** 8 | on-arka-8 | 3x5 | … */
@@ -220,7 +224,7 @@ export function varsayilanTema(): TemaAyar {
     cerceveId: "thin",
     kose: 12,
     desenId: "pat-none",
-    duzenId: "list",
+    duzenId: "photo-grid",
   };
 }
 
@@ -233,6 +237,7 @@ export function ornekIsletme(kafeAdi: string, slug: string, ekstra?: Partial<Isl
     slug,
     logoUrl: ekstra?.logoUrl ?? null,
     logoUrlBaski: ekstra?.logoUrlBaski ?? null,
+    kapakUrl: ekstra?.kapakUrl ?? null,
     isletmeTipi: ekstra?.isletmeTipi ?? "kafe",
     menuBoyutId: ekstra?.menuBoyutId ?? null,
     kategoriler: [

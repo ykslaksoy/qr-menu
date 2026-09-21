@@ -17,6 +17,7 @@ async function menuVerisiGetir(slug: string): Promise<MenuVeri | null> {
     slug: isletme.slug,
     kafeAdi: isletme.kafeAdi,
     logoUrl: isletme.logoUrl ?? null,
+    kapakUrl: isletme.kapakUrl ?? null,
     kategoriler: isletme.kategoriler,
     urunler: isletme.urunler.filter((u) => u.aktif).map(urunuZenginlestir),
     masalar: isletme.masalar,

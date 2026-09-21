@@ -197,7 +197,7 @@ export function MenuUrunKarti({
           onClick={onDetay ? detayAc : undefined}
           disabled={!onDetay}
           className={`min-w-0 flex-1 text-left font-semibold leading-snug ${
-            dikey ? "text-sm" : kompakt || fiyatListe ? "text-[14px]" : "text-[15px]"
+            dikey ? "font-serif text-[15px]" : kompakt || fiyatListe ? "text-[14px]" : "text-[15px]"
           } ${onDetay ? "hover:opacity-80" : ""}`}
         >
           {urun.ad}
