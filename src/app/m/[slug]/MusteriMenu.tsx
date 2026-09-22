@@ -378,9 +378,9 @@ export default function MusteriMenuClient({
     }
     try {
       await navigator.clipboard.writeText(url);
-      setMesaj(uiMetin("linkKopyalandi", dil));
+      /* sessiz kopyala — ortada toast gösterme */
     } catch {
-      setMesaj(url);
+      /* panoya yazılamadı; toast ile url göstermiyoruz */
     }
   }
 
