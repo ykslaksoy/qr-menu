@@ -42,6 +42,11 @@ export function RakipAnaliziMonuIcerik() {
         Rakip analizi: MONU
       </h1>
       <p className="mt-3 max-w-3xl text-muted">{meta.incelemeYontemi}</p>
+      {meta.ucretlendirmeNotu ? (
+        <p className="mt-3 max-w-3xl rounded-xl border border-line bg-background/80 px-4 py-3 text-sm text-muted">
+          {meta.ucretlendirmeNotu}
+        </p>
+      ) : null}
       <p className="mt-2 text-sm text-muted">
         İnceleme tarihi: <strong>{meta.incelemeTarihi}</strong> · Veri dosyası:{" "}
         <code className="rounded bg-line/50 px-1 text-xs">src/data/rakip-analizi/monu.json</code>

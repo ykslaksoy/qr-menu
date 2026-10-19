@@ -4,6 +4,8 @@
 **Kaynak:** [monu.com.tr](https://www.monu.com.tr) halka açık sayfalar + canlı demolar ([Havanna Lounge](https://havanna-lounge.monu.com.tr/havanna), [The Society](https://the-society.monu.com.tr)).  
 **Not:** MONU işletme paneli bu incelemede **doğrulanamadı** (oturum açılmadı).
 
+**Ücretlendirme notu:** Site «Free plan / ₺0» dili kullanır; iş modeli tarafında ücretsiz kullanım **yalnızca kısa süreli deneme** (kalıcı ücretsiz katman değil).
+
 Ekran görüntüleri: `public/rakip-analizi/monu/`  
 Yapılandırılmış veri: `src/data/rakip-analizi/monu.json`  
 Yönetici paneli görünümü: `/panel/rakip-analizi/monu`
@@ -12,13 +14,13 @@ Yönetici paneli görünümü: `/panel/rakip-analizi/monu`
 
 ## Tanıtım / ana sayfa
 
-- Ücretsiz Free plan, kart bilgisi yok, reklamsız vurgusu.
+- «Free plan», kart bilgisi yok, reklamsız pazarlama mesajları (deneme odaklı giriş).
 - Problem/çözüm blokları, plan önizlemesi, SSS.
 - Ekran: `01-homepage-hero.png`
 
 ## Fiyatlandırma
 
-- Free ₺0 → Enterprise ₺2.499/ay; otel paketleri ayrı.
+- Sitede Free ₺0 satırı → Enterprise ₺2.499/ay; gerçekte ücretsiz erişim kısa deneme.
 - Detaylı özellik tablosu (dil, şube, analitik, domain).
 - Ekran: `02-pricing-page.png`
 
@@ -41,8 +43,8 @@ Mobil ekranlar: `04`–`07` numaralı PNG dosyaları.
 
 ## Sofra karşılaştırması (özet)
 
-**MONU’da güçlü, Sofra’da geliştirilebilir:** Free katman pazarlaması, QR görüntülenme analitiği, TRY/USD/EUR, otel dikeyi, özel domain olgunluğu.
+**MONU’da güçlü, Sofra’da geliştirilebilir:** QR görüntülenme analitiği, TRY/USD/EUR, otel dikeyi, özel domain olgunluğu, 12 renk paleti.
 
-**Sofra’da güçlü:** Canlı sipariş + garson + mutfak + stok + adisyon PDF, sesli sipariş, PDF menü içe aktarma, 25 şablon, alerjen filtresi, adet-altı ücretsiz operasyon hediyesi.
+**Sofra’da güçlü:** Canlı sipariş + garson + mutfak + stok + adisyon PDF, sesli sipariş, PDF menü içe aktarma, 25 şablon, alerjen filtresi, **adet-altı ücretsiz operasyon hediyesi (MONU’nun kısa denemesine karşı süregelen avantaj)**.
 
 Detaylı öncelikli öneriler JSON dosyasında `karsilastirma.oneriler` altında.

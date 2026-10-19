@@ -4,6 +4,7 @@
     "rakipWeb": "https://www.monu.com.tr",
     "incelemeTarihi": "2026-10-19",
     "incelemeYontemi": "Halka açık tanıtım sayfaları, fiyat/özellik tabloları ve canlı demo menüler (Havanna Lounge, The Society). MONU işletme paneli oturumu açılmadı — panel UX doğrulanamadı.",
+    "ucretlendirmeNotu": "MONU sitesi «Free plan» ve kalıcı ₺0 katman dili kullanır; işletme tarafı bilgisine göre ücretsiz kullanım yalnızca kısa süreli deneme ile sınırlıdır (kalıcı ücretsiz paket değil). Bu rapor karşılaştırmada deneme modelini esas alır.",
     "demoMenuler": [
       {
         "ad": "Havanna Lounge",
@@ -33,13 +34,13 @@
       "ekranGoruntusu": "/rakip-analizi/monu/01-homepage-hero.png",
       "ozet": "Ürün odaklı SaaS landing: kağıt menü sorunları vs dijital çözüm, plan kartları, SSS ve kurumsal güven unsurları (KVKK, 2026 mevzuat vurgusu).",
       "icerik": [
-        "Hero: «Restoranınızın dijital menüsü bugün hazır» — Free plan, kart bilgisi yok, demo menüye doğrudan link.",
+        "Hero: «Restoranınızın dijital menüsü bugün hazır» — sitesinde «Free plan» ve kart bilgisi yok mesajı; demo menüye doğrudan link.",
         "Problem / çözüm blokları: PDF okunabilirlik, baskı maliyeti, şube yönetimi zorluğu karşısında mobil menü, anında güncelleme, marka subdomain, tek panel.",
         "Ana sayfada plan önizlemesi (Free → Enterprise) ve aylık/yıllık (%17) geçiş.",
         "Alt bölüm: MONU nedir, sektör listesi (kafe, restoran, bar, otel, nargile), FAQ."
       ],
       "ux": [
-        "Güçlü «ücretsiz ve reklamsız» mesajı; düşük giriş bariyeri.",
+        "Pazarlama dili «ücretsiz başla / reklamsız» ile düşük giriş bariyeri (gerçekte kısa süreli deneme — kalıcı ücretsiz katman değil).",
         "Canlı demo menüye tek tık — satış döngüsünü kısaltır.",
         "Plan kartlarında kota satırları (şube, ürün, kategori, görsel) net okunur."
       ]
@@ -49,9 +50,9 @@
       "baslik": "Fiyatlar / paketler",
       "url": "https://www.monu.com.tr/fiyatlandirma",
       "ekranGoruntusu": "/rakip-analizi/monu/02-pricing-page.png",
-      "ozet": "5 restoran/kafe paketi + ayrı otel paketleri; detaylı özellik karşılaştırma tablosu.",
+      "ozet": "5 restoran/kafe paketi + ayrı otel paketleri; detaylı özellik karşılaştırma tablosu. Sitede «Free ₺0» satırı var; operasyonel model kısa süreli ücretsiz deneme (kalıcı free tier değil).",
       "icerik": [
-        "Free ₺0 — 1 şube, 20 ürün, 4 kategori, 20 görsel, 1 dil (TR), reklamsız.",
+        "Tanıtımda Free ₺0 — 1 şube, 20 ürün, 4 kategori vb. kotası listelenir; ücretsiz erişim pratikte kısa süreli deneme ile sınırlıdır.",
         "Starter ₺249/ay — 50 ürün, 10 kategori, 2 dil, alerjen.",
         "Pro Single ₺699/ay — sınırsız ürün/kategori/görsel/dil, 12 renk paleti, varyant/ekstra, QR okutma & görüntülenme analitiği.",
         "Pro Multi ₺1.299/ay — 3 şube merkezi yönetim, şube bazlı menü/fiyat/tema.",
@@ -158,11 +159,6 @@
   "karsilastirma": {
     "monudaOlupSofradaEksik": [
       {
-        "madde": "Ücretsiz planda reklamsız menü ve kart bilgisi olmadan kalıcı Free katman (20 ürün kotası)",
-        "kategori": "Kurumsal",
-        "oncelik": 2
-      },
-      {
         "madde": "Marka subdomain (*.monu.com.tr) ve Enterprise özel alan adı (menu.marka.com) olgunluğu",
         "kategori": "Kurumsal",
         "oncelik": 3
@@ -220,7 +216,7 @@
         "kategori": "Müşteri & menü"
       },
       {
-        "madde": "Adet altı ücretsiz: ayda 50 siparişe kadar Menü+Adisyon özellikleri (kotayı aşınca sipariş durmaz)",
+        "madde": "Adet altı ücretsiz: ayda 50 siparişe kadar Menü+Adisyon özellikleri (kotayı aşınca sipariş durmaz) — MONU yalnızca kısa süreli deneme sunarken Sofra’da süregelen operasyon hediyesi",
         "kategori": "Kurumsal"
       },
       {
@@ -240,8 +236,8 @@
       {
         "oncelik": 1,
         "kategori": "Kurumsal",
-        "baslik": "Ücretsiz katman mesajını netleştir",
-        "detay": "MONU Free planı güçlü bir kanca; Sofra’nın adet-altı hediyesini landing ve panel kurulumda MONU Free ile yan yana anlatın (kart yok, reklamsız karşılaştırması dürüstçe)."
+        "baslik": "Adet-altı ücretsizi MONU denemesine karşı öne çıkar",
+        "detay": "MONU pazarlaması «Free plan» dese de ücretsiz kullanım kısa süreli deneme; Sofra’nın ayda 50 siparişe kadar Menü+Adisyon hediyesi (sipariş kesilmez) uzun vadeli değer sunar. Landing, kayıt ve panel kurulumda bu farkı net ve dürüst şekilde vurgulayın."
       },
       {
         "oncelik": 1,
