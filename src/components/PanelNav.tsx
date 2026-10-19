@@ -23,6 +23,7 @@ const yoneticiLinkler: {
   { href: "/panel/personel", label: "Personel" },
   { href: "/panel/abonelik", label: "Abonelik" },
   { href: "/panel/sofra-farki", label: "Sofra farkı" },
+  { href: "/panel/rakip-analizi/monu", label: "Rakip: MONU" },
 ];
 
 export function PanelNav() {

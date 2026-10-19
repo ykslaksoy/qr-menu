@@ -1,0 +1,290 @@
+{
+  "meta": {
+    "rakip": "MONU",
+    "rakipWeb": "https://www.monu.com.tr",
+    "incelemeTarihi": "2026-10-19",
+    "incelemeYontemi": "Halka açık tanıtım sayfaları, fiyat/özellik tabloları ve canlı demo menüler (Havanna Lounge, The Society). MONU işletme paneli oturumu açılmadı — panel UX doğrulanamadı.",
+    "demoMenuler": [
+      {
+        "ad": "Havanna Lounge",
+        "url": "https://havanna-lounge.monu.com.tr/havanna",
+        "not": "Kokteyl bar / lounge; tek şube menü akışı (demo sayfasında çok şube de vurgulanıyor)."
+      },
+      {
+        "ad": "The Society",
+        "url": "https://the-society.monu.com.tr",
+        "not": "Çok şubeli marka — girişte şube seçimi."
+      }
+    ],
+    "kaynaklar": [
+      { "baslik": "Ana sayfa", "url": "https://www.monu.com.tr/" },
+      { "baslik": "Fiyatlandırma", "url": "https://www.monu.com.tr/fiyatlandirma" },
+      { "baslik": "Özellikler", "url": "https://www.monu.com.tr/ozellikler" },
+      { "baslik": "Demo", "url": "https://www.monu.com.tr/demo" },
+      { "baslik": "QR menü örnekleri", "url": "https://www.monu.com.tr/qr-menu-ornekleri" },
+      { "baslik": "QR menü oluşturma rehberi", "url": "https://www.monu.com.tr/qr-menu-olusturma" }
+    ]
+  },
+  "sayfalar": [
+    {
+      "id": "ana-sayfa",
+      "baslik": "Tanıtım / ana sayfa",
+      "url": "https://www.monu.com.tr/",
+      "ekranGoruntusu": "/rakip-analizi/monu/01-homepage-hero.png",
+      "ozet": "Ürün odaklı SaaS landing: kağıt menü sorunları vs dijital çözüm, plan kartları, SSS ve kurumsal güven unsurları (KVKK, 2026 mevzuat vurgusu).",
+      "icerik": [
+        "Hero: «Restoranınızın dijital menüsü bugün hazır» — Free plan, kart bilgisi yok, demo menüye doğrudan link.",
+        "Problem / çözüm blokları: PDF okunabilirlik, baskı maliyeti, şube yönetimi zorluğu karşısında mobil menü, anında güncelleme, marka subdomain, tek panel.",
+        "Ana sayfada plan önizlemesi (Free → Enterprise) ve aylık/yıllık (%17) geçiş.",
+        "Alt bölüm: MONU nedir, sektör listesi (kafe, restoran, bar, otel, nargile), FAQ."
+      ],
+      "ux": [
+        "Güçlü «ücretsiz ve reklamsız» mesajı; düşük giriş bariyeri.",
+        "Canlı demo menüye tek tık — satış döngüsünü kısaltır.",
+        "Plan kartlarında kota satırları (şube, ürün, kategori, görsel) net okunur."
+      ]
+    },
+    {
+      "id": "fiyatlandirma",
+      "baslik": "Fiyatlar / paketler",
+      "url": "https://www.monu.com.tr/fiyatlandirma",
+      "ekranGoruntusu": "/rakip-analizi/monu/02-pricing-page.png",
+      "ozet": "5 restoran/kafe paketi + ayrı otel paketleri; detaylı özellik karşılaştırma tablosu.",
+      "icerik": [
+        "Free ₺0 — 1 şube, 20 ürün, 4 kategori, 20 görsel, 1 dil (TR), reklamsız.",
+        "Starter ₺249/ay — 50 ürün, 10 kategori, 2 dil, alerjen.",
+        "Pro Single ₺699/ay — sınırsız ürün/kategori/görsel/dil, 12 renk paleti, varyant/ekstra, QR okutma & görüntülenme analitiği.",
+        "Pro Multi ₺1.299/ay — 3 şube merkezi yönetim, şube bazlı menü/fiyat/tema.",
+        "Enterprise ₺2.499/ay — sınırsız şube, özel alan adı (menu.marka.com), CSV içe/dışa aktarma, öncelikli destek.",
+        "Tablo: subdomain, özel domain, alerjen, varyant, tema, reklamsız menü, analitik, kullanıcı sayısı, KVKK, destek kanalları.",
+        "Masaüstü QR/NFC üniteleri tüm paketlerde opsiyonel (aboneliğe dahil değil)."
+      ],
+      "ux": [
+        "Restoran / Otel sekmeli karşılaştırma — segmente göre filtre.",
+        "Yıllık ödeme avantajı sayfa genelinde tekrarlanır.",
+        "Her paket için «Bu Paketle Başla» CTA."
+      ]
+    },
+    {
+      "id": "ozellikler",
+      "baslik": "Özellikler (kurumsal tanıtım)",
+      "url": "https://www.monu.com.tr/ozellikler",
+      "ekranGoruntusu": "/rakip-analizi/monu/03-features-page.png",
+      "ozet": "Modüler özellik grid’i ve «Yayında / Geliştirmede / Planlanıyor» yol haritası.",
+      "icerik": [
+        "Yayında: çok dil (10 hazır UI dili), varyant/ekstra, 14 alerjen + kalori, 12 menü paleti, TRY/USD/EUR, rol/yetki, otel misafir portalı, özel domain (Enterprise).",
+        "Geliştirmede: masa başı sipariş akışı (tarih taahhüdü yok).",
+        "Planlanıyor: adisyon/hesap, stok, sadakat.",
+        "Canlı Havanna ürün önizlemesi gömülü."
+      ],
+      "ux": [
+        "Dürüncül yol haritası — sipariş/adisyon henüz yok mesajı net.",
+        "Özellikler paket kısıtıyla birlikte anlatılıyor (Starter 2 dil vb.)."
+      ]
+    }
+  ],
+  "musteriMenu": {
+    "ozet": "Uygulama indirme yok; subdomain üzerinde mobil öncelikli menü. İncelenen demolar: Havanna (kategori grid + ürün detay modalı), The Society (şube seçici).",
+    "ekranGoruntuleri": [
+      {
+        "dosya": "/rakip-analizi/monu/04-havanna-menu-home-mobile.png",
+        "aciklama": "Kapak görseli, arama çubuğu, kategori kartları (ör. Burgerler, Ana Yemek)."
+      },
+      {
+        "dosya": "/rakip-analizi/monu/05-product-detail-mobile.png",
+        "aciklama": "Ürün detayı: fiyat, açıklama, besin/alerjen, varyant seçenekleri."
+      },
+      {
+        "dosya": "/rakip-analizi/monu/06-havanna-categories-language-mobile.png",
+        "aciklama": "Kategori içi ürün listesi; sağ üstte dil göstergesi (TR)."
+      },
+      {
+        "dosya": "/rakip-analizi/monu/07-society-demo-mobile.png",
+        "aciklama": "Çok şube girişi — «Şube Seçiniz» dropdown."
+      }
+    ],
+    "gozlemler": [
+      {
+        "konu": "Ana sayfa / navigasyon",
+        "detay": "Hero kapak + kategori kırılımı; arama alanı üst bölümde. Kategoriler görsel kartlarla sunuluyor.",
+        "dogrulama": "doğrulandı (Havanna demo)"
+      },
+      {
+        "konu": "Ürün detayı",
+        "detay": "Tam ekran veya modal detay; fiyat vurgulu; alerjen ve özelleştirme (varyant) aynı akışta.",
+        "dogrulama": "doğrulandı (Meksika Burgeri örneği)"
+      },
+      {
+        "konu": "Sepet / sipariş",
+        "detay": "MONU özellik sayfasında sipariş «geliştirmede»; demo menüde sepet/checkout akışı test edilmedi — halka açık menüde görünür sipariş butonu doğrulanamadı.",
+        "dogrulama": "doğrulanamadı"
+      },
+      {
+        "konu": "Dil",
+        "detay": "UI dil seçici görünür (TR rozeti). Çoklu dil içerik sunumu paketle sınırlı; demoda yalnızca TR rozeti gözlemlendi.",
+        "dogrulama": "kısmen doğrulandı"
+      },
+      {
+        "konu": "Para birimi",
+        "detay": "Özellik sayfasında TRY/USD/EUR yayını belirtiliyor; demoda yalnızca TRY (₺) fiyat görüldü.",
+        "dogrulama": "kısmen doğrulandı"
+      },
+      {
+        "konu": "Animasyon / performans",
+        "detay": "Tanıtımda ~2 sn ilk açılış iddiası; gözle görülür ağır animasyon yok, modal geçişleri akıcı.",
+        "dogrulama": "kısmen doğrulandı"
+      },
+      {
+        "konu": "Alerjen filtresi",
+        "detay": "Ürün kartında alerjen ikonları; Sofra’daki gibi menü geneli alerjen filtresi demoda doğrulanamadı.",
+        "dogrulama": "doğrulanamadı"
+      }
+    ]
+  },
+  "yonetimPaneli": {
+    "dogrulama": "doğrulanamadı",
+    "not": "Panel ekranları halka açık değil. Aşağıdaki maddeler yalnızca monu.com.tr tanıtım, fiyat tablosu ve kurulum rehberinden derlenmiştir.",
+    "ozellikler": [
+      "Menü › Kategoriler — sürükle-bırak sıralama (rehberde belirtiliyor).",
+      "Menü › Ürünler — görsel, fiyat, alerjen, varyant/ekstra tek ekranda.",
+      "Menü Ayarları › QR Kod — PNG/SVG/PDF indirme.",
+      "Çok şube: merkezi panel, şube bazlı menü/fiyat/tema (Pro Multi+).",
+      "Kullanıcı/rol yönetimi, e-posta daveti (Pro Single+).",
+      "Analitik: QR okutma ve görüntülenme (Pro Single+); CSV içe/dışa aktarma (Enterprise).",
+      "KVKK çerez/aydınlatma şablonları.",
+      "Otel paketleri: misafir portalı, oda servisi, WiFi/TV kartları (ayrı fiyatlandırma)."
+    ]
+  },
+  "karsilastirma": {
+    "monudaOlupSofradaEksik": [
+      {
+        "madde": "Ücretsiz planda reklamsız menü ve kart bilgisi olmadan kalıcı Free katman (20 ürün kotası)",
+        "kategori": "Kurumsal",
+        "oncelik": 2
+      },
+      {
+        "madde": "Marka subdomain (*.monu.com.tr) ve Enterprise özel alan adı (menu.marka.com) olgunluğu",
+        "kategori": "Kurumsal",
+        "oncelik": 3
+      },
+      {
+        "madde": "QR okutma / menü görüntülenme analitiği (Sofra’da satış/masa odaklı analitik var; QR scan metrikleri ayrı değil)",
+        "kategori": "Operasyon",
+        "oncelik": 2
+      },
+      {
+        "madde": "Menü para birimi seçimi (TRY / USD / EUR)",
+        "kategori": "Müşteri & menü",
+        "oncelik": 3
+      },
+      {
+        "madde": "Otel misafir portalı ve sektörel paketler",
+        "kategori": "Kurumsal",
+        "oncelik": 4
+      },
+      {
+        "madde": "Hazır 12 renk paleti (8 açık + 4 koyu) — bar/lounge için koyu tema vurgusu",
+        "kategori": "Müşteri & menü",
+        "oncelik": 3
+      },
+      {
+        "madde": "KVKK şablonları ve Türk fatura vurgusu (kurumsal satış)",
+        "kategori": "Kurumsal",
+        "oncelik": 4
+      },
+      {
+        "madde": "Masaüstü QR/NFC fiziksel ünite satış kanalı",
+        "kategori": "Kurumsal",
+        "oncelik": 5
+      }
+    ],
+    "sofradaOne": [
+      {
+        "madde": "Masadan sipariş + garson (/g) + mutfak KDS (/k) + adisyon PDF — MONU’da sipariş «geliştirmede», adisyon/stok «planlanıyor»",
+        "kategori": "Operasyon"
+      },
+      {
+        "madde": "Stok takibi ve tükendi durumu (menu-adisyon planı)",
+        "kategori": "Operasyon"
+      },
+      {
+        "madde": "Sesli sipariş parse (garson ekranı) — MONU’da karşılığı yok",
+        "kategori": "Operasyon"
+      },
+      {
+        "madde": "PDF/metin menü içe aktarma ve hazır menü kataloğu",
+        "kategori": "Operasyon"
+      },
+      {
+        "madde": "25 şablon + font/çerçeve/zemin tam tasarım (MONU: 12 arka plan paleti, Pro+)",
+        "kategori": "Müşteri & menü"
+      },
+      {
+        "madde": "Adet altı ücretsiz: ayda 50 siparişe kadar Menü+Adisyon özellikleri (kotayı aşınca sipariş durmaz)",
+        "kategori": "Kurumsal"
+      },
+      {
+        "madde": "Müşteri menüsünde alerjen hariç tutma filtresi",
+        "kategori": "Müşteri & menü"
+      },
+      {
+        "madde": "Menü düzeni seçenekleri (liste/kart vb.) ve canlı foto sıralama",
+        "kategori": "Müşteri & menü"
+      },
+      {
+        "madde": "Komisyon yok mesajı ve düşük Tam paket fiyatı (Sofra Tam ₺899 vs MONU Enterprise ₺2.499 — farklı kapsam)",
+        "kategori": "Kurumsal"
+      }
+    ],
+    "oneriler": [
+      {
+        "oncelik": 1,
+        "kategori": "Kurumsal",
+        "baslik": "Ücretsiz katman mesajını netleştir",
+        "detay": "MONU Free planı güçlü bir kanca; Sofra’nın adet-altı hediyesini landing ve panel kurulumda MONU Free ile yan yana anlatın (kart yok, reklamsız karşılaştırması dürüstçe)."
+      },
+      {
+        "oncelik": 1,
+        "kategori": "Operasyon",
+        "baslik": "Operasyon üstünlüğünü öne çıkar",
+        "detay": "Rakip sipariş/adisyon/stok yol haritasında; Sofra panelinde «canlı operasyon» demosu (garson→mutfak→rapor) tek akışta gösterilsin."
+      },
+      {
+        "oncelik": 2,
+        "kategori": "Müşteri & menü",
+        "baslik": "QR görüntülenme metrikleri",
+        "detay": "Menü açılış / QR scan sayacı eklenmesi MONU fiyat tablosundaki boşluğu kapatır; mevcut satış analitiğine tamamlayıcı olur."
+      },
+      {
+        "oncelik": 2,
+        "kategori": "Müşteri & menü",
+        "baslik": "Koyu tema / lounge paleti",
+        "detay": "Havanna demosundaki koyu kontrast ihtiyacı için hazır koyu şablon seti (MONU 4 koyu palet karşılığı)."
+      },
+      {
+        "oncelik": 3,
+        "kategori": "Müşteri & menü",
+        "baslik": "Çok para birimi",
+        "detay": "Turistik bölgeler için menü para birimi seçimi (TRY + EUR/USD) planlanabilir."
+      },
+      {
+        "oncelik": 3,
+        "kategori": "Kurumsal",
+        "baslik": "KVKK / mevzuat paketi",
+        "detay": "Çerez ve aydınlatma metni şablonları + 2026 fiyat etiketi notu (MONU ana sayfa SEO’sunda vurgulanıyor)."
+      },
+      {
+        "oncelik": 4,
+        "kategori": "Kurumsal",
+        "baslik": "Özel alan adı",
+        "detay": "Enterprise benzeri menu.isletme.com bağlama (MONU Enterprise farkı)."
+      },
+      {
+        "oncelik": 5,
+        "kategori": "Kurumsal",
+        "baslik": "Otel dikeyi",
+        "detay": "Otel misafir portalı ayrı ürün hattı gerektirir; kısa vadede restoran odaklı kalınabilir."
+      }
+    ]
+  }
+}
