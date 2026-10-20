@@ -5,9 +5,24 @@ export type PdfUrun = {
   ad: string;
   fiyat: number;
   aciklama?: string;
+  kategoriAd?: string;
 };
 
-/** PDF/metin satırlarından basit menü çıkarımı (AI yok — kural tabanlı). */
+const KATEGORI_BASLIK_RE =
+  /^(içecekler?|icecekler?|yemekler?|tatlılar?|tatlilar?|atıştırmalık|atistirmalik|kahvaltı|kahvalti|salatalar|pizzalar|burgerler|ana yemek|başlangıç|baslangic|sıcak|sicak|soğuk|soguk)\s*[:\-]?\s*$/i;
+
+function kategoriBasligiMi(satir: string) {
+  const s = satir.trim();
+  if (s.length < 3 || s.length > 48) return false;
+  if (KATEGORI_BASLIK_RE.test(s)) return true;
+  if (/^\p{Lu}[\p{L}\s&'’-]{2,40}$/u.test(s) && !/\d/.test(s) && !/[₺$]/.test(s)) {
+    const kelime = s.split(/\s+/).length;
+    if (kelime <= 5) return true;
+  }
+  return false;
+}
+
+/** PDF/metin satırlarından menü çıkarımı (kural tabanlı + isteğe bağlı AI). */
 export function menuMetniParse(metin: string): PdfUrun[] {
   const satirlar = metin
     .split(/\r?\n/)
@@ -18,9 +33,15 @@ export function menuMetniParse(metin: string): PdfUrun[] {
   const fiyatRe = /(\d{1,4}(?:[.,]\d{1,2})?)\s*(?:₺|TL|tl)?\s*$/;
   const noktaRe = /[\.\·…\-–—]{2,}\s*(\d{1,4}(?:[.,]\d{1,2})?)\s*(?:₺|TL|tl)?\s*$/;
 
+  let aktifKategori: string | undefined;
+
   for (const satir of satirlar) {
     if (satir.length < 3) continue;
-    if (/^(kategori|category|menü|menu|içecek|yemek|tatlı)/i.test(satir) && satir.length < 40) {
+    if (kategoriBasligiMi(satir)) {
+      aktifKategori = satir.replace(/[:\-]\s*$/, "").trim();
+      continue;
+    }
+    if (/^(kategori|category|menü|menu)\b/i.test(satir) && satir.length < 40) {
       continue;
     }
 
@@ -40,7 +61,7 @@ export function menuMetniParse(metin: string): PdfUrun[] {
     }
 
     if (fiyat > 0 && ad.length >= 2 && fiyat < 10000) {
-      urunler.push({ ad, fiyat, aciklama: "" });
+      urunler.push({ ad, fiyat, aciklama: "", kategoriAd: aktifKategori });
     }
   }
 
@@ -48,14 +69,19 @@ export function menuMetniParse(metin: string): PdfUrun[] {
 }
 
 export function pdfUrunleriIsletmeyeEkle(
-  mevcutKategoriId: string,
+  varsayilanKategoriId: string,
   urunler: PdfUrun[],
+  kategoriIdleri?: Map<string, string>,
 ) {
   return urunler.map((u) => {
     const oneri = urunGorselOner(u.ad);
+    let kategoriId = varsayilanKategoriId;
+    if (u.kategoriAd && kategoriIdleri?.has(u.kategoriAd.toLowerCase())) {
+      kategoriId = kategoriIdleri.get(u.kategoriAd.toLowerCase())!;
+    }
     return {
       id: idUret("urun"),
-      kategoriId: mevcutKategoriId,
+      kategoriId,
       ad: u.ad,
       fiyat: u.fiyat,
       aciklama: u.aciklama ?? "",

@@ -11,9 +11,14 @@ function vercelMi() {
   return Boolean(process.env.VERCEL || process.env.VERCEL_ENV);
 }
 
+function postgresMi() {
+  const url = process.env.DATABASE_URL ?? "";
+  return url.startsWith("postgresql://") || url.startsWith("postgres://");
+}
+
 /** Serverless'ta kalıcı disk yok; seed'i /tmp'ye kopyala. */
 function vercelSqliteHazirla() {
-  if (!vercelMi() || globalForPrisma.sofraDbHazir) return;
+  if (postgresMi() || !vercelMi() || globalForPrisma.sofraDbHazir) return;
 
   const hedef = "/tmp/sofra.db";
   const cwd = process.cwd();
