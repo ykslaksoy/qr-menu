@@ -6,6 +6,7 @@ import { PlanKilit } from "@/components/PlanKilit";
 import { useIsletme } from "@/lib/useIsletme";
 import { formatTl } from "@/lib/abonelik";
 import { efektifPlanId, ozellikAcikMiIsletme } from "@/lib/plan-kilit";
+import { PanelMenuGoruntulenme } from "@/components/PanelMenuGoruntulenme";
 import {
   kanalEtiket,
   kanalSirasi,
@@ -215,6 +216,8 @@ export default function PanelRaporPage() {
           )}
         </section>
       </div>
+
+      <PanelMenuGoruntulenme isletme={isletme} />
 
       <p className="mt-6 text-sm">
         <Link href="/panel" className="text-brand underline">

@@ -121,6 +121,22 @@ export default function MusteriMenuClient({
     yukle();
   }, [yukle]);
 
+  useEffect(() => {
+    if (!menu || hata) return;
+    const oturumAnahtari = `sofra-menu-goruntulenme-${slug}`;
+    try {
+      if (sessionStorage.getItem(oturumAnahtari)) return;
+      sessionStorage.setItem(oturumAnahtari, "1");
+    } catch {
+      /* özel mod / storage kapalı */
+    }
+    void fetch(`/api/m/${slug}/goruntulenme`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ masa: masaParam }),
+    });
+  }, [slug, masaParam, menu, hata]);
+
   const siraliKategoriler = useMemo(() => {
     if (!menu) return [];
     const dolu = menu.kategoriler

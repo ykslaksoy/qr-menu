@@ -385,6 +385,7 @@ export function isletmeVeriParse(ham: string): Isletme {
       secenekler: u.secenekler ?? null,
     })),
     baskiTalepleri: isletme.baskiTalepleri ?? [],
+    menuGoruntulenme: isletme.menuGoruntulenme ?? [],
   };
 }
 

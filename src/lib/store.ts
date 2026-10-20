@@ -180,6 +180,14 @@ export type BaskiTalep = {
   durum: "bekliyor";
 };
 
+/** Menü açılışı / QR okutma — masa + gün bazlı özet (YYYY-MM-DD, Europe/Istanbul). */
+export type MenuGoruntulenmeKayit = {
+  gun: string;
+  masaId: string;
+  masaAd: string;
+  adet: number;
+};
+
 export type Isletme = {
   kafeAdi: string;
   slug: string;
@@ -203,6 +211,8 @@ export type Isletme = {
   stokHareketleri?: StokHareket[];
   abonelik: Abonelik;
   olusturulma: number;
+  /** QR / menü görüntülenme istatistikleri */
+  menuGoruntulenme?: MenuGoruntulenmeKayit[];
 };
 
 const STORAGE_KEY = "sofra-isletme-v2";
