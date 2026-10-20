@@ -197,6 +197,14 @@ export function KayitForm() {
 
         {hata ? <p className="text-sm text-red-700">{hata}</p> : null}
 
+        <p className="text-xs text-muted">
+          Kayıt olarak{" "}
+          <Link href="/kullanim-sartlari" className="text-brand underline hover:text-brand-dark">
+            Kullanım Şartları
+          </Link>
+          &apos;nı kabul edersiniz.
+        </p>
+
         <button
           type="submit"
           disabled={!slug || yukleniyor}
