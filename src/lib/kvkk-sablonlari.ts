@@ -26,3 +26,14 @@ export function varsayilanKvkk(): KvkkAyarlari {
     yayinda: false,
   };
 }
+
+/** Kayıtta metin yoksa hazır şablonu doldurur; yayın varsayılan kapalı. */
+export function kvkkBirlestir(k?: KvkkAyarlari | null): KvkkAyarlari {
+  const temel = varsayilanKvkk();
+  if (!k) return temel;
+  return {
+    yayinda: k.yayinda ?? false,
+    aydinlatmaMetni: k.aydinlatmaMetni?.trim() ? k.aydinlatmaMetni : temel.aydinlatmaMetni,
+    cerezMetni: k.cerezMetni?.trim() ? k.cerezMetni : temel.cerezMetni,
+  };
+}

@@ -1,12 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import type { Isletme } from "@/lib/store";
-import {
-  VARSAYILAN_AYDINLATMA,
-  VARSAYILAN_CEREZ,
-  varsayilanKvkk,
-  type KvkkAyarlari,
-} from "@/lib/kvkk-sablonlari";
+import { kvkkBirlestir, type KvkkAyarlari } from "@/lib/kvkk-sablonlari";
 
 type Props = {
   isletme: Isletme;
@@ -14,7 +10,8 @@ type Props = {
 };
 
 export function PanelKvkkAyarlari({ isletme, onKaydet }: Props) {
-  const kvkk: KvkkAyarlari = isletme.kvkk ?? varsayilanKvkk();
+  const kvkk: KvkkAyarlari = kvkkBirlestir(isletme.kvkk);
+  const [duzenle, setDuzenle] = useState(false);
 
   function patch(p: Partial<KvkkAyarlari>) {
     onKaydet({ ...isletme, kvkk: { ...kvkk, ...p } });
@@ -22,52 +19,51 @@ export function PanelKvkkAyarlari({ isletme, onKaydet }: Props) {
 
   return (
     <section className="rounded-2xl border border-line bg-card p-5">
-      <h2 className="font-semibold">KVKK ve çerez metinleri</h2>
+      <h2 className="font-semibold">Yasal metinler (KVKK)</h2>
       <p className="mt-1 text-sm text-muted">
-        Şablon metinleri düzenleyin; yayına alınca müşteri menüsü altında link olarak görünür.
+        Hazır Türkçe metin dolu. Açtığınızda müşteri menüsünün altında iki küçük link görünür.
       </p>
-      <label className="mt-4 flex items-center gap-2 text-sm">
+      <label className="mt-4 flex cursor-pointer items-start gap-3 rounded-xl border border-emerald-200/80 bg-emerald-50/40 p-4">
         <input
           type="checkbox"
+          className="mt-1"
           checked={kvkk.yayinda}
           onChange={(e) => patch({ yayinda: e.target.checked })}
         />
-        Menüde göster
+        <span className="text-sm">
+          <strong>Menüde göster</strong>
+          <span className="mt-1 block text-muted">Kapalıysa müşteri bu metinleri görmez.</span>
+        </span>
       </label>
-      <div className="mt-4 space-y-4">
-        <label className="block text-sm">
-          Aydınlatma metni
-          <textarea
-            rows={8}
-            className="mt-1 w-full rounded-xl border border-line px-3 py-2 font-mono text-xs"
-            value={kvkk.aydinlatmaMetni}
-            onChange={(e) => patch({ aydinlatmaMetni: e.target.value })}
-          />
-          <button
-            type="button"
-            className="mt-1 text-xs text-brand underline"
-            onClick={() => patch({ aydinlatmaMetni: VARSAYILAN_AYDINLATMA })}
-          >
-            Şablonu yükle
-          </button>
-        </label>
-        <label className="block text-sm">
-          Çerez metni
-          <textarea
-            rows={6}
-            className="mt-1 w-full rounded-xl border border-line px-3 py-2 font-mono text-xs"
-            value={kvkk.cerezMetni}
-            onChange={(e) => patch({ cerezMetni: e.target.value })}
-          />
-          <button
-            type="button"
-            className="mt-1 text-xs text-brand underline"
-            onClick={() => patch({ cerezMetni: VARSAYILAN_CEREZ })}
-          >
-            Şablonu yükle
-          </button>
-        </label>
-      </div>
+      <button
+        type="button"
+        className="mt-3 text-sm text-brand underline"
+        onClick={() => setDuzenle((d) => !d)}
+      >
+        {duzenle ? "Düzenlemeyi gizle" : "Metni avukatınızla değiştirmek isterseniz düzenleyin"}
+      </button>
+      {duzenle ? (
+        <div className="mt-3 space-y-3">
+          <label className="block text-sm">
+            Aydınlatma metni
+            <textarea
+              rows={6}
+              className="mt-1 w-full rounded-xl border border-line px-3 py-2 text-sm"
+              value={kvkk.aydinlatmaMetni}
+              onChange={(e) => patch({ aydinlatmaMetni: e.target.value })}
+            />
+          </label>
+          <label className="block text-sm">
+            Çerez metni
+            <textarea
+              rows={4}
+              className="mt-1 w-full rounded-xl border border-line px-3 py-2 text-sm"
+              value={kvkk.cerezMetni}
+              onChange={(e) => patch({ cerezMetni: e.target.value })}
+            />
+          </label>
+        </div>
+      ) : null}
     </section>
   );
 }

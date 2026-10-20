@@ -146,38 +146,41 @@ export function SubelerPaneli({
 
       {subeler.length >= 2 ? (
         <section className="mt-8 rounded-2xl border border-line bg-card p-5">
-          <h2 className="font-semibold">Müşteri menü girişi (şube seçimi)</h2>
+          <h2 className="font-semibold">Tek QR, birden fazla şube</h2>
           <p className="mt-1 text-sm text-muted">
-            Tek QR ile açılan adres; müşteri önce şube seçer. Şube menüleri (/m/demo vb.) aynen çalışır.
+            Müşteri önce şubenizi seçer, sonra o şubenin menüsü açılır. Her şubenin kendi menü linki de
+            çalışmaya devam eder.
           </p>
-          <div className="mt-4 flex flex-wrap items-end gap-3">
-            <label className="block text-sm">
-              Menü adresi
-              <span className="mt-1 flex items-center gap-1 text-muted">
-                /m/
-                <input
-                  type="text"
-                  value={menuAdres}
-                  onChange={(e) => setMenuAdres(e.target.value)}
-                  placeholder="cafe-ada"
-                  className="w-40 rounded-lg border border-line px-2 py-1.5 text-foreground"
-                />
-              </span>
+          <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-end">
+            <label className="flex-1 text-sm">
+              Ortak menü linki (sadece kısa ad)
+              <input
+                type="text"
+                value={menuAdres}
+                onChange={(e) => setMenuAdres(e.target.value)}
+                placeholder="örnek: cafe-ada"
+                className="mt-1 w-full rounded-xl border border-line px-3 py-2"
+              />
             </label>
             <button
               type="button"
               disabled={menuKayit}
               onClick={menuSlugKaydet}
-              className="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white disabled:opacity-60"
+              className="rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white disabled:opacity-60"
             >
               {menuKayit ? "Kaydediliyor…" : "Kaydet"}
             </button>
           </div>
           {menuSlug ? (
-            <p className="mt-2 text-sm text-brand">
-              Aktif: <a href={`/m/${menuSlug}`} className="underline">/m/{menuSlug}</a>
+            <p className="mt-3 text-sm">
+              Linkiniz:{" "}
+              <a href={`/m/${menuSlug}`} className="font-medium text-brand underline">
+                …/m/{menuSlug}
+              </a>
             </p>
-          ) : null}
+          ) : (
+            <p className="mt-2 text-xs text-muted">Örnek: cafe-ada (3 şube için seed&apos;de hazır)</p>
+          )}
           {menuMesaj ? <p className="mt-2 text-sm text-muted">{menuMesaj}</p> : null}
         </section>
       ) : null}

@@ -8,8 +8,7 @@ import { MenuReferansKaydet } from "@/components/MenuReferansKaydet";
 import { UrunSecenekModal } from "@/components/UrunSecenekModal";
 import { UrunDetayModal } from "@/components/UrunDetayModal";
 import { HesapOdemeModal } from "@/components/HesapOdemeModal";
-import { DilSecici } from "@/components/DilSecici";
-import { ParaBirimiSecici } from "@/components/ParaBirimiSecici";
+import { MenuTercihCubugu } from "@/components/MenuTercihCubugu";
 import { formatTl } from "@/lib/abonelik";
 import {
   menuFiyatFormatla,
@@ -620,21 +619,15 @@ export default function MusteriMenuClient({
             />
             <div className="relative z-10 flex min-h-[11.5rem] flex-col justify-between px-3.5 pb-3.5 pt-3">
               <div className="flex justify-end">
-                <div className="flex flex-wrap justify-end gap-2">
-                  <ParaBirimiSecici
-                    birim={paraBirimi}
-                    onDegistir={setParaBirimi}
-                    ayar={paraAyar}
-                    anaRenk={tema.anaRenk}
-                    varyant="kapak"
-                  />
-                  <DilSecici
-                    dil={dil}
-                    onDegistir={setDil}
-                    anaRenk={tema.anaRenk}
-                    varyant="kapak"
-                  />
-                </div>
+                <MenuTercihCubugu
+                  dil={dil}
+                  onDil={setDil}
+                  paraBirimi={paraBirimi}
+                  onPara={setParaBirimi}
+                  paraAyar={paraAyar}
+                  anaRenk={tema.anaRenk}
+                  varyant="kapak"
+                />
               </div>
               <div className="flex items-end gap-3">
                 <div
@@ -704,15 +697,17 @@ export default function MusteriMenuClient({
               >
                 {menu.kafeAdi}
               </h1>
-              <div className="mt-2 flex flex-wrap items-center justify-center gap-3 text-sm opacity-65">
-                {masa ? <p>{masaEtiket(masa.ad, dil)}</p> : null}
-                <ParaBirimiSecici
-                  birim={paraBirimi}
-                  onDegistir={setParaBirimi}
-                  ayar={paraAyar}
+              <div className="mt-2 flex flex-wrap items-center justify-center gap-2 text-sm">
+                {masa ? <p className="opacity-65">{masaEtiket(masa.ad, dil)}</p> : null}
+                <MenuTercihCubugu
+                  dil={dil}
+                  onDil={setDil}
+                  paraBirimi={paraBirimi}
+                  onPara={setParaBirimi}
+                  paraAyar={paraAyar}
                   anaRenk={tema.anaRenk}
+                  varyant="normal"
                 />
-                <DilSecici dil={dil} onDegistir={setDil} anaRenk={tema.anaRenk} />
                 <button
                   type="button"
                   onClick={menuPaylas}
@@ -1047,21 +1042,13 @@ export default function MusteriMenuClient({
         ) : null}
       </div>
       {menu.kvkk ? (
-        <footer className="mx-auto mt-8 max-w-lg px-4 pb-8 text-center text-xs text-muted">
-          <button
-            type="button"
-            className="underline hover:text-foreground"
-            onClick={() => setKvkkModal("aydinlatma")}
-          >
-            KVKK aydınlatma metni
+        <footer className="mx-auto mt-6 max-w-lg px-4 pb-6 text-center text-[10px] leading-relaxed text-muted/80">
+          <button type="button" className="underline" onClick={() => setKvkkModal("aydinlatma")}>
+            KVKK
           </button>
-          <span className="mx-2">·</span>
-          <button
-            type="button"
-            className="underline hover:text-foreground"
-            onClick={() => setKvkkModal("cerez")}
-          >
-            Çerez bilgilendirmesi
+          <span className="mx-1.5">·</span>
+          <button type="button" className="underline" onClick={() => setKvkkModal("cerez")}>
+            Çerezler
           </button>
         </footer>
       ) : null}

@@ -12,8 +12,8 @@ import {
 
 const ARALIKLAR: { id: GoruntulenmeAralik; etiket: string }[] = [
   { id: "bugun", etiket: "Bugün" },
-  { id: "7g", etiket: "7 gün" },
-  { id: "30g", etiket: "30 gün" },
+  { id: "7g", etiket: "Son 7 gün" },
+  { id: "30g", etiket: "Son 30 gün" },
 ];
 
 type Props = {
@@ -33,9 +33,9 @@ export function PanelMenuGoruntulenme({ isletme }: Props) {
     <section className="mt-10 rounded-2xl border border-line bg-card p-5">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h2 className="font-semibold">Menü görüntülenme / QR</h2>
+          <h2 className="font-semibold">Menü kaç kez açıldı?</h2>
           <p className="mt-1 text-sm text-muted">
-            Müşteri menüsü açılışları — masa ve gün bazlı (oturumda bir kez sayılır).
+            QR okutulunca veya menü linkine girildiğinde sayılır (aynı telefonda günde bir kez).
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -56,53 +56,47 @@ export function PanelMenuGoruntulenme({ isletme }: Props) {
         </div>
       </div>
 
-      <p className="mt-4 text-2xl font-semibold tabular-nums">{toplam}</p>
-      <p className="text-xs text-muted">toplam görüntülenme</p>
+      <p className="mt-4 text-3xl font-semibold tabular-nums">{toplam}</p>
+      <p className="text-sm text-muted">açılış</p>
 
       {gunluk.length === 0 ? (
-        <p className="mt-6 text-sm text-muted">Bu aralıkta kayıt yok.</p>
+        <p className="mt-6 text-sm text-muted">Henüz veri yok — müşteri menüsünü bir kez açın.</p>
       ) : (
         <>
           <div className="mt-6">
-            <h3 className="text-sm font-medium">Günlük</h3>
-            <div className="mt-3 flex h-28 items-end gap-1 overflow-x-auto">
+            <h3 className="text-sm font-medium text-muted">Günlük</h3>
+            <div className="mt-3 flex h-24 items-end gap-1 overflow-x-auto">
               {gunluk.map((g) => (
                 <div
                   key={g.gun}
-                  className="flex min-w-[28px] flex-1 flex-col items-center justify-end gap-1"
+                  className="flex min-w-[24px] flex-1 flex-col items-center justify-end gap-1"
                 >
                   <div
-                    className="w-full max-w-[20px] rounded-t bg-brand/70"
+                    className="w-full max-w-[16px] rounded-t bg-brand/70"
                     style={{
                       height: `${Math.max(g.adet > 0 ? 10 : 4, Math.round((g.adet / maxGun) * 100))}%`,
                     }}
                     title={`${g.gun} · ${g.adet}`}
                   />
-                  <span className="text-[9px] text-muted">{g.gun.slice(5)}</span>
+                  <span className="text-[9px] text-muted">{g.gun.slice(8)}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="mt-6 overflow-x-auto">
-            <h3 className="text-sm font-medium">Masa bazlı</h3>
-            <table className="mt-2 w-full min-w-[320px] text-left text-sm">
-              <thead className="text-xs uppercase text-muted">
-                <tr>
-                  <th className="py-2 pr-4">Masa</th>
-                  <th className="py-2 pr-4">Görüntülenme</th>
-                </tr>
-              </thead>
-              <tbody>
-                {masalar.map((m) => (
-                  <tr key={m.masaId} className="border-t border-line/60">
-                    <td className="py-2 pr-4">{m.masaAd}</td>
-                    <td className="py-2 pr-4 tabular-nums">{m.adet}</td>
-                  </tr>
+          {masalar.length > 0 ? (
+            <div className="mt-6">
+              <h3 className="text-sm font-medium text-muted">Hangi masa?</h3>
+              <ul className="mt-2 space-y-1.5 text-sm">
+                {masalar.slice(0, 8).map((m) => (
+                  <li key={m.masaId} className="flex justify-between gap-2 border-b border-line/50 py-1.5">
+                    <span>{m.masaAd}</span>
+                    <span className="tabular-nums text-muted">{m.adet}</span>
+                  </li>
                 ))}
-              </tbody>
-            </table>
-          </div>
+              </ul>
+            </div>
+          ) : null}
         </>
       )}
     </section>

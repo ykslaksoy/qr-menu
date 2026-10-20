@@ -14,15 +14,10 @@ export function MenuSubeSecimi({ giris, masaQuery }: Props) {
   return (
     <div className="sofra-mesh flex min-h-full flex-col items-center justify-center px-4 py-12">
       <div className="w-full max-w-md rounded-2xl border border-line bg-card p-6 shadow-sm">
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-          Şube seçin
-        </p>
-        <h1 className="mt-2 text-center font-[family-name:var(--font-baslik)] text-2xl font-semibold">
+        <h1 className="text-center font-[family-name:var(--font-baslik)] text-2xl font-semibold">
           {giris.markaAd}
         </h1>
-        <p className="mt-2 text-center text-sm text-muted">
-          Devam etmek için şubenizi seçin.
-        </p>
+        <p className="mt-2 text-center text-sm text-muted">Hangi şubedesiniz?</p>
         <ul className="mt-8 space-y-2">
           {giris.subeler.map((s) => (
             <li key={s.slug}>

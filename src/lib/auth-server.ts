@@ -3,6 +3,7 @@ import type { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { prisma } from "@/lib/prisma";
 import type { Isletme } from "@/lib/store";
+import { kvkkBirlestir } from "@/lib/kvkk-sablonlari";
 import {
   MOD_COOKIE,
   MOD_ANA_YOL,
@@ -387,7 +388,7 @@ export function isletmeVeriParse(ham: string): Isletme {
     baskiTalepleri: isletme.baskiTalepleri ?? [],
     menuGoruntulenme: isletme.menuGoruntulenme ?? [],
     paraBirimi: isletme.paraBirimi,
-    kvkk: isletme.kvkk,
+    kvkk: isletme.kvkk ? kvkkBirlestir(isletme.kvkk) : undefined,
   };
 }
 

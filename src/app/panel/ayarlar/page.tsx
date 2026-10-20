@@ -8,8 +8,8 @@ import { IsletmeMarkaAyarlari } from "@/components/IsletmeMarkaAyarlari";
 import { PanelKvkkAyarlari } from "@/components/PanelKvkkAyarlari";
 import { useIsletme } from "@/lib/useIsletme";
 import { efektifPlanId, ozellikAcikMi, sablonAcikMi } from "@/lib/plan-kilit";
-import { varsayilanParaBirimiAyarlari } from "@/lib/para-birimi";
-import { TEMA_PALETLERI, paletUygula } from "@/lib/tema-paletleri";
+import { PanelParaBirimiAyarlari } from "@/components/PanelParaBirimiAyarlari";
+import { PanelTemaPaletleri } from "@/components/PanelTemaPaletleri";
 
 export default function PanelAyarlarPage() {
   const { isletme, kaydet } = useIsletme();
@@ -20,15 +20,6 @@ export default function PanelAyarlarPage() {
   const tamTasarim = ozellikAcikMi(planId, "tamTasarim");
   const tema = isletme.tema;
   const sablon = katalog.sablonlar.find((s) => s.id === tema.sablonId);
-  const para = isletme.paraBirimi ?? varsayilanParaBirimiAyarlari();
-
-  function paraKaydet(patch: Partial<typeof para>) {
-    kaydet({
-      ...isletme!,
-      paraBirimi: { ...para, ...patch },
-    });
-  }
-
   function patch(p: Partial<typeof tema>) {
     kaydet({ ...isletme!, tema: { ...isletme!.tema, ...p } });
   }
@@ -77,94 +68,15 @@ export default function PanelAyarlarPage() {
         </div>
       </section>
 
+      <PanelTemaPaletleri
+        isletme={isletme}
+        tamTasarim={tamTasarim}
+        onKaydet={(sonraki) => kaydet(sonraki)}
+      />
+
+      <PanelParaBirimiAyarlari isletme={isletme} onKaydet={(sonraki) => kaydet(sonraki)} />
+
       <PanelKvkkAyarlari isletme={isletme} onKaydet={(sonraki) => kaydet(sonraki)} />
-
-      <section className="rounded-2xl border border-line bg-card p-5">
-        <h2 className="font-semibold">Para birimi</h2>
-        <p className="mt-1 text-sm text-muted">
-          Ürün fiyatları TL olarak girilir. USD/EUR gösteriminde kur elle güncellenir.
-        </p>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          <label className="flex items-center gap-2 text-sm sm:col-span-2">
-            <input
-              type="checkbox"
-              checked={para.usdAktif}
-              onChange={(e) => paraKaydet({ usdAktif: e.target.checked })}
-            />
-            USD gösterimi (müşteri menüsünde seçilebilir)
-          </label>
-          <label className="block text-sm">
-            1 USD = ? TRY
-            <input
-              type="number"
-              min={0.01}
-              step={0.01}
-              className="mt-1 w-full rounded-xl border border-line px-3 py-2"
-              value={para.usdKur}
-              disabled={!para.usdAktif}
-              onChange={(e) => paraKaydet({ usdKur: Number(e.target.value) || 0 })}
-            />
-          </label>
-          <label className="flex items-center gap-2 text-sm sm:col-span-2">
-            <input
-              type="checkbox"
-              checked={para.eurAktif}
-              onChange={(e) => paraKaydet({ eurAktif: e.target.checked })}
-            />
-            EUR gösterimi
-          </label>
-          <label className="block text-sm">
-            1 EUR = ? TRY
-            <input
-              type="number"
-              min={0.01}
-              step={0.01}
-              className="mt-1 w-full rounded-xl border border-line px-3 py-2"
-              value={para.eurKur}
-              disabled={!para.eurAktif}
-              onChange={(e) => paraKaydet({ eurKur: Number(e.target.value) || 0 })}
-            />
-          </label>
-        </div>
-      </section>
-
-      <section className="rounded-2xl border border-line bg-card p-5">
-        <h2 className="font-semibold">Hazır renk paletleri</h2>
-        <p className="mt-1 text-sm text-muted">
-          Şablonunuzu korur; yalnızca ana renk, zemin ve metin tonlarını günceller.
-        </p>
-        <div className="mt-4 grid gap-3 sm:grid-cols-2">
-          {TEMA_PALETLERI.map((p) => {
-            const secili = (tema.paletId ?? "varsayilan") === p.id || (!tema.paletId && p.id === "varsayilan");
-            const ornek = p.patch.zeminRengi ?? tema.zeminRengi;
-            const vurgu = p.patch.anaRenk ?? tema.anaRenk;
-            return (
-              <button
-                key={p.id}
-                type="button"
-                disabled={!tamTasarim && p.id !== "varsayilan"}
-                onClick={() => kaydet({ ...isletme!, tema: paletUygula(tema, p.id) })}
-                className={`rounded-xl border p-3 text-left transition ${
-                  secili ? "border-brand ring-1 ring-brand/30" : "border-line hover:border-brand/40"
-                } disabled:opacity-50`}
-              >
-                <div className="flex gap-3">
-                  <div
-                    className="h-12 w-12 shrink-0 rounded-lg border border-black/10"
-                    style={{
-                      background: `linear-gradient(135deg, ${ornek} 50%, ${vurgu} 50%)`,
-                    }}
-                  />
-                  <div>
-                    <p className="font-medium text-sm">{p.ad}</p>
-                    <p className="mt-0.5 text-xs text-muted">{p.aciklama}</p>
-                  </div>
-                </div>
-              </button>
-            );
-          })}
-        </div>
-      </section>
 
       <section className="rounded-2xl border border-line bg-card p-5">
         <h2 className="font-semibold">Şablon seçimi</h2>

@@ -4,6 +4,7 @@ export type TemaPalet = {
   id: string;
   ad: string;
   aciklama: string;
+  kisaAciklama?: string;
   patch: Partial<Pick<TemaAyar, "anaRenk" | "vurguRengi" | "metinRengi" | "zeminRengi" | "zeminStili">>;
 };
 
@@ -19,6 +20,7 @@ export const TEMA_PALETLERI: TemaPalet[] = [
     id: "yesil-kafe",
     ad: "Yeşil kafe",
     aciklama: "Açık zemin, Sofra yeşili — klasik kafe.",
+    kisaAciklama: "Klasik kafe",
     patch: {
       anaRenk: "#1f6f5b",
       vurguRengi: "#c45c26",
@@ -29,8 +31,9 @@ export const TEMA_PALETLERI: TemaPalet[] = [
   },
   {
     id: "deniz-mavi",
-    ad: "Deniz mavisi",
+    ad: "Deniz",
     aciklama: "Serin, açık arka plan.",
+    kisaAciklama: "Açık mavi",
     patch: {
       anaRenk: "#0e7490",
       vurguRengi: "#f59e0b",
@@ -41,8 +44,9 @@ export const TEMA_PALETLERI: TemaPalet[] = [
   },
   {
     id: "lounge-koyu",
-    ad: "Lounge koyu",
-    aciklama: "Düşük ışık mekanlar için koyu zemin ve açık metin (MONU bar paleti benzeri).",
+    ad: "Lounge",
+    aciklama: "Düşük ışık mekanlar için koyu zemin ve açık metin.",
+    kisaAciklama: "Koyu bar",
     patch: {
       anaRenk: "#d4a574",
       vurguRengi: "#e8c49a",
@@ -53,8 +57,9 @@ export const TEMA_PALETLERI: TemaPalet[] = [
   },
   {
     id: "minimal-gri",
-    ad: "Minimal gri",
+    ad: "Gri",
     aciklama: "Nötr gri tonlar, sade menü.",
+    kisaAciklama: "Sade",
     patch: {
       anaRenk: "#374151",
       vurguRengi: "#6b7280",
