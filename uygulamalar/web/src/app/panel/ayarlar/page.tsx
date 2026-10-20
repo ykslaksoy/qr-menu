@@ -277,6 +277,23 @@ export default function PanelAyarlarPage() {
           geçin.
         </p>
       ) : null}
+
+      <section className="rounded-2xl border border-line bg-card p-5">
+        <h2 className="font-semibold">Yasal</h2>
+        <p className="mt-1 text-sm text-muted">Platform kullanım şartları</p>
+        <ul className="mt-3 flex flex-wrap gap-4 text-sm">
+          <li>
+            <Link href="/kullanim-sartlari" className="text-brand underline hover:text-brand-dark">
+              Kullanım Şartları
+            </Link>
+          </li>
+          <li>
+            <Link href="/terms-of-use" className="text-brand underline hover:text-brand-dark">
+              Terms of Use
+            </Link>
+          </li>
+        </ul>
+      </section>
     </div>
   );
 }

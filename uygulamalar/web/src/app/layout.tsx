@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Fraunces } from "next/font/google";
 import { Providers } from "@/components/Providers";
+import { ConditionalSiteFooter } from "@/components/ConditionalSiteFooter";
 import "./globals.css";
 
 const govde = DM_Sans({
@@ -27,7 +28,10 @@ export default function RootLayout({
   return (
     <html lang="tr" className={`${govde.variable} ${baslik.variable} h-full`}>
       <body className="min-h-full flex flex-col antialiased">
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <ConditionalSiteFooter />
+        </Providers>
       </body>
     </html>
   );
