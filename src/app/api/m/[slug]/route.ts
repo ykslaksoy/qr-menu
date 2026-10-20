@@ -28,5 +28,11 @@ export async function GET(_req: Request, { params }: Params) {
     siparisAcik: plan.siparisAcik,
     adetAlti: plan.adetAlti,
     paraBirimi: isletme.paraBirimi ?? varsayilanParaBirimiAyarlari(),
+    kvkk: isletme.kvkk?.yayinda
+      ? {
+          aydinlatmaMetni: isletme.kvkk.aydinlatmaMetni,
+          cerezMetni: isletme.kvkk.cerezMetni,
+        }
+      : null,
   });
 }

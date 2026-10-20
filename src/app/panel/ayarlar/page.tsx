@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MENU_DUZENLER, katalog, kategorileriGetir, sablonlariGetir } from "@sofra/tema";
 import { PlanUyariBanner } from "@/components/PlanKilit";
 import { IsletmeMarkaAyarlari } from "@/components/IsletmeMarkaAyarlari";
+import { PanelKvkkAyarlari } from "@/components/PanelKvkkAyarlari";
 import { useIsletme } from "@/lib/useIsletme";
 import { efektifPlanId, ozellikAcikMi, sablonAcikMi } from "@/lib/plan-kilit";
 import { varsayilanParaBirimiAyarlari } from "@/lib/para-birimi";
@@ -75,6 +76,8 @@ export default function PanelAyarlarPage() {
           <IsletmeMarkaAyarlari isletme={isletme} onKaydet={(sonraki) => kaydet(sonraki)} />
         </div>
       </section>
+
+      <PanelKvkkAyarlari isletme={isletme} onKaydet={(sonraki) => kaydet(sonraki)} />
 
       <section className="rounded-2xl border border-line bg-card p-5">
         <h2 className="font-semibold">Para birimi</h2>

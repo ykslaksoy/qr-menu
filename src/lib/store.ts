@@ -1,6 +1,7 @@
 /** Sofra işletme verisi — MVP localStorage; API gelince aynı tipler kullanılır. */
 
 import type { ParaBirimiAyarlari } from "@/lib/para-birimi";
+import type { KvkkAyarlari } from "@/lib/kvkk-sablonlari";
 
 export type PlanId = "ucretsiz" | "menu" | "menu-adisyon" | "tam";
 export type OdemeTipi = "aylik" | "yillik";
@@ -219,6 +220,7 @@ export type Isletme = {
   menuGoruntulenme?: MenuGoruntulenmeKayit[];
   /** Müşteri menüsü çoklu para birimi (fiyatlar TL bazlı) */
   paraBirimi?: ParaBirimiAyarlari;
+  kvkk?: KvkkAyarlari;
 };
 
 const STORAGE_KEY = "sofra-isletme-v2";

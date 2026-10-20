@@ -30,6 +30,12 @@ async function menuVerisiGetir(slug: string): Promise<MenuVeri | null> {
     siparisAcik: plan.siparisAcik,
     adetAlti: plan.adetAlti,
     paraBirimi: isletme.paraBirimi ?? varsayilanParaBirimiAyarlari(),
+    kvkk: isletme.kvkk?.yayinda
+      ? {
+          aydinlatmaMetni: isletme.kvkk.aydinlatmaMetni,
+          cerezMetni: isletme.kvkk.cerezMetni,
+        }
+      : null,
   };
 }
 

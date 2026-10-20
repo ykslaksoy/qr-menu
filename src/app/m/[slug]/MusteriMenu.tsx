@@ -18,6 +18,7 @@ import {
   type ParaBirimiAyarlari,
 } from "@/lib/para-birimi";
 import { MenuFiligran } from "@/components/MenuFiligran";
+import { MenuKvkkModal } from "@/components/MenuKvkkModal";
 import { urunuZenginlestir } from "@/lib/urun-secenekleri";
 import { useSiraliFotoCanli } from "@/lib/use-sirali-foto-canli";
 import { FILTRE_ALERJENLER, urunAlerjenIceriyorMu, alerjenRozet } from "@/lib/alerjen-etiketleri";
@@ -62,6 +63,7 @@ type MenuVeri = {
     hediyeAcik: boolean;
   };
   paraBirimi?: ParaBirimiAyarlari;
+  kvkk?: { aydinlatmaMetni: string; cerezMetni: string } | null;
 };
 
 export type { MenuVeri };
@@ -101,6 +103,7 @@ export default function MusteriMenuClient({
   const [ara, setAra] = useState("");
   const [duzenOverride, setDuzenOverride] = useState<MenuDuzen | null>(null);
   const [paraBirimi, setParaBirimi] = useState<MenuParaBirimi>("TRY");
+  const [kvkkModal, setKvkkModal] = useState<"aydinlatma" | "cerez" | null>(null);
 
   const paraAyar = menu?.paraBirimi ?? varsayilanParaBirimiAyarlari();
   const fiyatGoster = useCallback(
@@ -1043,6 +1046,36 @@ export default function MusteriMenuClient({
           </p>
         ) : null}
       </div>
+      {menu.kvkk ? (
+        <footer className="mx-auto mt-8 max-w-lg px-4 pb-8 text-center text-xs text-muted">
+          <button
+            type="button"
+            className="underline hover:text-foreground"
+            onClick={() => setKvkkModal("aydinlatma")}
+          >
+            KVKK aydınlatma metni
+          </button>
+          <span className="mx-2">·</span>
+          <button
+            type="button"
+            className="underline hover:text-foreground"
+            onClick={() => setKvkkModal("cerez")}
+          >
+            Çerez bilgilendirmesi
+          </button>
+        </footer>
+      ) : null}
+
+      {kvkkModal && menu.kvkk ? (
+        <MenuKvkkModal
+          baslik={kvkkModal === "aydinlatma" ? "KVKK aydınlatma metni" : "Çerez bilgilendirmesi"}
+          metin={
+            kvkkModal === "aydinlatma" ? menu.kvkk.aydinlatmaMetni : menu.kvkk.cerezMetni
+          }
+          onKapat={() => setKvkkModal(null)}
+        />
+      ) : null}
+
       {menu.filigran ? <MenuFiligran /> : null}
 
       {secenekUrun ? (
