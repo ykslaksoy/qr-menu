@@ -125,6 +125,7 @@ export default async function SubelerPage() {
       <main className="mx-auto max-w-6xl px-4 py-8">
         <SubelerPaneli
           zincirAd={user.zincir.ad}
+          menuSlug={user.zincir.menuSlug}
           subeler={subeler}
           ozet={{
             bekleyenAdet: bekleyen.length,

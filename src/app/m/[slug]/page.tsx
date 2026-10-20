@@ -2,7 +2,9 @@ import { Suspense } from "react";
 import { isletmeSlugIleGetir } from "@/lib/auth-server";
 import { menuPlanBilgi } from "@/lib/plan-kilit";
 import { varsayilanParaBirimiAyarlari } from "@/lib/para-birimi";
+import { zincirMenuGirisGetir } from "@/lib/zincir-menu";
 import { urunuZenginlestir } from "@/lib/urun-secenekleri";
+import { MenuSubeSecimi } from "@/components/MenuSubeSecimi";
 import MusteriMenuClient, { type MenuVeri } from "./MusteriMenu";
 
 type Props = {
@@ -31,8 +33,18 @@ async function menuVerisiGetir(slug: string): Promise<MenuVeri | null> {
   };
 }
 
-export default async function IsletmeMenuPage({ params }: Props) {
+type MenuPageProps = Props & {
+  searchParams: Promise<{ masa?: string }>;
+};
+
+export default async function IsletmeMenuPage({ params, searchParams }: MenuPageProps) {
   const { slug } = await params;
+  const sp = await searchParams;
+  const zincirGiris = await zincirMenuGirisGetir(slug);
+  if (zincirGiris) {
+    return <MenuSubeSecimi giris={zincirGiris} masaQuery={sp.masa} />;
+  }
+
   const baslangic = await menuVerisiGetir(slug);
 
   return (

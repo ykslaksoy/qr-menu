@@ -195,6 +195,10 @@ async function main() {
     include: { zincir: true },
   });
   const zincirId = zincirUser.zincir!.id;
+  await prisma.zincir.update({
+    where: { id: zincirId },
+    data: { menuSlug: "cafe-ada" },
+  });
 
   const isletmeVeri = havannaDemoMenusu(menu(kafeAdi, slug, 0));
   const subeUser = await prisma.user.create({

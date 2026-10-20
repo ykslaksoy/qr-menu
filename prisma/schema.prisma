@@ -39,6 +39,8 @@ model Session {
 model Zincir {
   id        String    @id @default(cuid())
   ad        String
+  /** Halka açık menü girişi — /m/{menuSlug} şube seçim ekranı */
+  menuSlug  String?   @unique
   userId    String    @unique
   user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   subeler   Isletme[]

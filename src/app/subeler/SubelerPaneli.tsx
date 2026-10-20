@@ -52,12 +52,14 @@ function saat(ms: number) {
 
 export function SubelerPaneli({
   zincirAd,
+  menuSlug,
   subeler,
   ozet,
   bekleyen,
   odenen,
 }: {
   zincirAd: string;
+  menuSlug: string | null;
   subeler: SubeOzet[];
   ozet: Ozet;
   bekleyen: ZincirSiparisSatir[];
@@ -66,6 +68,28 @@ export function SubelerPaneli({
   const router = useRouter();
   const [yukleniyor, setYukleniyor] = useState<string | null>(null);
   const [sekme, setSekme] = useState<"bekleyen" | "odenen" | "toplam">("bekleyen");
+  const [menuAdres, setMenuAdres] = useState(menuSlug ?? "");
+  const [menuMesaj, setMenuMesaj] = useState("");
+  const [menuKayit, setMenuKayit] = useState(false);
+
+  async function menuSlugKaydet() {
+    setMenuKayit(true);
+    setMenuMesaj("");
+    const yanit = await fetch("/api/subeler", {
+      method: "PATCH",
+      credentials: "include",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ menuSlug: menuAdres.trim() || null }),
+    });
+    const veri = (await yanit.json()) as { hata?: string; menuUrl?: string | null };
+    setMenuKayit(false);
+    if (!yanit.ok) {
+      setMenuMesaj(veri.hata ?? "Kaydedilemedi");
+      return;
+    }
+    setMenuMesaj(veri.menuUrl ? `Menü girişi: ${veri.menuUrl}` : "Menü giriş adresi kaldırıldı");
+    router.refresh();
+  }
 
   const toplamListe = useMemo(
     () => [...bekleyen, ...odenen].sort((a, b) => b.olusturulma - a.olusturulma),
@@ -119,6 +143,44 @@ export function SubelerPaneli({
           Çıkış
         </button>
       </div>
+
+      {subeler.length >= 2 ? (
+        <section className="mt-8 rounded-2xl border border-line bg-card p-5">
+          <h2 className="font-semibold">Müşteri menü girişi (şube seçimi)</h2>
+          <p className="mt-1 text-sm text-muted">
+            Tek QR ile açılan adres; müşteri önce şube seçer. Şube menüleri (/m/demo vb.) aynen çalışır.
+          </p>
+          <div className="mt-4 flex flex-wrap items-end gap-3">
+            <label className="block text-sm">
+              Menü adresi
+              <span className="mt-1 flex items-center gap-1 text-muted">
+                /m/
+                <input
+                  type="text"
+                  value={menuAdres}
+                  onChange={(e) => setMenuAdres(e.target.value)}
+                  placeholder="cafe-ada"
+                  className="w-40 rounded-lg border border-line px-2 py-1.5 text-foreground"
+                />
+              </span>
+            </label>
+            <button
+              type="button"
+              disabled={menuKayit}
+              onClick={menuSlugKaydet}
+              className="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white disabled:opacity-60"
+            >
+              {menuKayit ? "Kaydediliyor…" : "Kaydet"}
+            </button>
+          </div>
+          {menuSlug ? (
+            <p className="mt-2 text-sm text-brand">
+              Aktif: <a href={`/m/${menuSlug}`} className="underline">/m/{menuSlug}</a>
+            </p>
+          ) : null}
+          {menuMesaj ? <p className="mt-2 text-sm text-muted">{menuMesaj}</p> : null}
+        </section>
+      ) : null}
 
       <div className="mt-8 grid gap-4 sm:grid-cols-3">
         <button
