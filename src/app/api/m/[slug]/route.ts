@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { isletmeSlugIleGetir } from "@/lib/auth-server";
 import { menuPlanBilgi } from "@/lib/plan-kilit";
+import { varsayilanParaBirimiAyarlari } from "@/lib/para-birimi";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -26,5 +27,6 @@ export async function GET(_req: Request, { params }: Params) {
     filigran: plan.filigran,
     siparisAcik: plan.siparisAcik,
     adetAlti: plan.adetAlti,
+    paraBirimi: isletme.paraBirimi ?? varsayilanParaBirimiAyarlari(),
   });
 }

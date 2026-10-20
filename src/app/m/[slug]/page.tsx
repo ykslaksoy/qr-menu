@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { isletmeSlugIleGetir } from "@/lib/auth-server";
 import { menuPlanBilgi } from "@/lib/plan-kilit";
+import { varsayilanParaBirimiAyarlari } from "@/lib/para-birimi";
 import { urunuZenginlestir } from "@/lib/urun-secenekleri";
 import MusteriMenuClient, { type MenuVeri } from "./MusteriMenu";
 
@@ -26,6 +27,7 @@ async function menuVerisiGetir(slug: string): Promise<MenuVeri | null> {
     filigran: plan.filigran,
     siparisAcik: plan.siparisAcik,
     adetAlti: plan.adetAlti,
+    paraBirimi: isletme.paraBirimi ?? varsayilanParaBirimiAyarlari(),
   };
 }
 

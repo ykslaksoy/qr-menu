@@ -13,6 +13,7 @@ type Props = {
   dil?: MenuDil;
   onKapat: () => void;
   onOnayla: (secilen: { ids: string[]; ozet: string; fiyat: number }) => void;
+  fiyatFormatla?: (tl: number) => string;
 };
 
 export function UrunSecenekModal({
@@ -22,7 +23,9 @@ export function UrunSecenekModal({
   dil = "tr",
   onKapat,
   onOnayla,
+  fiyatFormatla,
 }: Props) {
+  const fiyat = fiyatFormatla ?? formatTl;
   const gruplar = urun.secenekler ?? [];
   const [secili, setSecili] = useState<Record<string, string[]>>(() => {
     const baslangic: Record<string, string[]> = {};
@@ -126,7 +129,7 @@ export function UrunSecenekModal({
                         </span>
                         <span className="text-stone-500">
                           {s.fiyatEk > 0
-                            ? `+${formatTl(s.fiyatEk)}`
+                            ? `+${fiyat(s.fiyatEk)}`
                             : uiMetin("secenekDahil", dil)}
                         </span>
                       </button>
@@ -167,7 +170,7 @@ export function UrunSecenekModal({
             className="flex-[1.4] rounded-full py-2.5 text-sm font-semibold text-white disabled:opacity-40"
             style={{ background: vurguRengi }}
           >
-            {uiMetin("sepete", dil)} · {formatTl(toplam)}
+            {uiMetin("sepete", dil)} · {fiyat(toplam)}
           </button>
         </div>
       </div>

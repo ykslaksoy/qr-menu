@@ -9,7 +9,14 @@ import { UrunSecenekModal } from "@/components/UrunSecenekModal";
 import { UrunDetayModal } from "@/components/UrunDetayModal";
 import { HesapOdemeModal } from "@/components/HesapOdemeModal";
 import { DilSecici } from "@/components/DilSecici";
+import { ParaBirimiSecici } from "@/components/ParaBirimiSecici";
 import { formatTl } from "@/lib/abonelik";
+import {
+  menuFiyatFormatla,
+  varsayilanParaBirimiAyarlari,
+  type MenuParaBirimi,
+  type ParaBirimiAyarlari,
+} from "@/lib/para-birimi";
 import { MenuFiligran } from "@/components/MenuFiligran";
 import { urunuZenginlestir } from "@/lib/urun-secenekleri";
 import { useSiraliFotoCanli } from "@/lib/use-sirali-foto-canli";
@@ -54,6 +61,7 @@ type MenuVeri = {
     limitAsildi: boolean;
     hediyeAcik: boolean;
   };
+  paraBirimi?: ParaBirimiAyarlari;
 };
 
 export type { MenuVeri };
@@ -92,6 +100,13 @@ export default function MusteriMenuClient({
   const [haricAlerjenler, setHaricAlerjenler] = useState<string[]>([]);
   const [ara, setAra] = useState("");
   const [duzenOverride, setDuzenOverride] = useState<MenuDuzen | null>(null);
+  const [paraBirimi, setParaBirimi] = useState<MenuParaBirimi>("TRY");
+
+  const paraAyar = menu?.paraBirimi ?? varsayilanParaBirimiAyarlari();
+  const fiyatGoster = useCallback(
+    (tl: number) => menuFiyatFormatla(tl, paraBirimi, paraAyar),
+    [paraBirimi, paraAyar],
+  );
 
   const yukle = useCallback(async () => {
     try {
@@ -461,7 +476,7 @@ export default function MusteriMenuClient({
             </ul>
             <div className="mt-2 flex items-center gap-2">
               <p className="min-w-0 flex-1 truncate text-sm">
-                <span className="font-semibold">{formatTl(sepetToplam)}</span>
+                <span className="font-semibold">{fiyatGoster(sepetToplam)}</span>
                 <span className="opacity-60"> · {sepetAdetToplam} ürün</span>
               </p>
               <button
@@ -506,7 +521,7 @@ export default function MusteriMenuClient({
                       <p className="truncate text-xs opacity-70">{k.secenekOzet}</p>
                     ) : null}
                     <p className="text-xs opacity-60">
-                      {k.adet} × {formatTl(k.fiyat)}
+                      {k.adet} × {fiyatGoster(k.fiyat)}
                     </p>
                   </div>
                   <div className="flex shrink-0 items-center gap-1">
@@ -540,7 +555,7 @@ export default function MusteriMenuClient({
                 </li>
               ))}
             </ul>
-            <p className="mt-3 text-lg font-semibold">{formatTl(sepetToplam)}</p>
+            <p className="mt-3 text-lg font-semibold">{fiyatGoster(sepetToplam)}</p>
             {mesaj ? <p className="mt-2 text-sm text-red-700">{mesaj}</p> : null}
             <div className="mt-4 flex gap-2">
               <button
@@ -602,12 +617,21 @@ export default function MusteriMenuClient({
             />
             <div className="relative z-10 flex min-h-[11.5rem] flex-col justify-between px-3.5 pb-3.5 pt-3">
               <div className="flex justify-end">
-                <DilSecici
-                  dil={dil}
-                  onDegistir={setDil}
-                  anaRenk={tema.anaRenk}
-                  varyant="kapak"
-                />
+                <div className="flex flex-wrap justify-end gap-2">
+                  <ParaBirimiSecici
+                    birim={paraBirimi}
+                    onDegistir={setParaBirimi}
+                    ayar={paraAyar}
+                    anaRenk={tema.anaRenk}
+                    varyant="kapak"
+                  />
+                  <DilSecici
+                    dil={dil}
+                    onDegistir={setDil}
+                    anaRenk={tema.anaRenk}
+                    varyant="kapak"
+                  />
+                </div>
               </div>
               <div className="flex items-end gap-3">
                 <div
@@ -679,6 +703,12 @@ export default function MusteriMenuClient({
               </h1>
               <div className="mt-2 flex flex-wrap items-center justify-center gap-3 text-sm opacity-65">
                 {masa ? <p>{masaEtiket(masa.ad, dil)}</p> : null}
+                <ParaBirimiSecici
+                  birim={paraBirimi}
+                  onDegistir={setParaBirimi}
+                  ayar={paraAyar}
+                  anaRenk={tema.anaRenk}
+                />
                 <DilSecici dil={dil} onDegistir={setDil} anaRenk={tema.anaRenk} />
                 <button
                   type="button"
@@ -918,7 +948,7 @@ export default function MusteriMenuClient({
                 urun={{
                   id: u.id,
                   ad: urunAdiGoster(u, dil),
-                  fiyat: formatTl(u.fiyat),
+                  fiyat: fiyatGoster(u.fiyat),
                   aciklama: urunAciklamaGoster(u, dil),
                   gorselUrl: u.gorselUrl,
                   tukendi: urunTukendiMi(u),
@@ -1021,6 +1051,7 @@ export default function MusteriMenuClient({
           anaRenk={tema.anaRenk}
           vurguRengi={tema.vurguRengi}
           dil={dil}
+          fiyatFormatla={fiyatGoster}
           onKapat={() => setSecenekUrun(null)}
           onOnayla={({ ids, ozet, fiyat }) => {
             sepeteKalemEkle({
@@ -1047,6 +1078,7 @@ export default function MusteriMenuClient({
           tukendi={urunTukendiMi(detayUrun)}
           siparisModu={siparisModu}
           dil={dil}
+          fiyatFormatla={fiyatGoster}
           onKapat={() => setDetayUrun(null)}
           onSepete={() => sepeteEkle(detayUrun.id)}
         />

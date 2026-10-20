@@ -18,6 +18,7 @@ type Props = {
   dil?: MenuDil;
   onKapat: () => void;
   onSepete?: () => void;
+  fiyatFormatla?: (tl: number) => string;
 };
 
 export function UrunDetayModal({
@@ -32,7 +33,9 @@ export function UrunDetayModal({
   dil = "tr",
   onKapat,
   onSepete,
+  fiyatFormatla,
 }: Props) {
+  const fiyat = fiyatFormatla ?? formatTl;
   const gorsel = gorselEkranUrl(urun.gorselUrl);
   const besin = urun.besin;
   const kalori = besin?.kalori ?? urun.kalori;
@@ -75,7 +78,7 @@ export function UrunDetayModal({
               {adGoster}
             </h2>
             <span className="shrink-0 text-xl font-semibold tabular-nums" style={{ color: vurguRengi }}>
-              {formatTl(urun.fiyat)}
+              {fiyat(urun.fiyat)}
             </span>
           </div>
           {aciklamaGoster ? (
