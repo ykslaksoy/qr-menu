@@ -92,6 +92,8 @@ export type TemaAyar = {
   desenId: string;
   /** list | compact-list | price-list | photo-grid | photo-hero | editorial */
   duzenId?: string;
+  /** Hazır renk paleti (şablon ayrı kalır) */
+  paletId?: string | null;
 };
 
 /** Kalemin geldiği kanal — çok kanal → tek adisyon */

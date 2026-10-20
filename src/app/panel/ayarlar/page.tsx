@@ -8,6 +8,7 @@ import { IsletmeMarkaAyarlari } from "@/components/IsletmeMarkaAyarlari";
 import { useIsletme } from "@/lib/useIsletme";
 import { efektifPlanId, ozellikAcikMi, sablonAcikMi } from "@/lib/plan-kilit";
 import { varsayilanParaBirimiAyarlari } from "@/lib/para-birimi";
+import { TEMA_PALETLERI, paletUygula } from "@/lib/tema-paletleri";
 
 export default function PanelAyarlarPage() {
   const { isletme, kaydet } = useIsletme();
@@ -121,6 +122,44 @@ export default function PanelAyarlarPage() {
               onChange={(e) => paraKaydet({ eurKur: Number(e.target.value) || 0 })}
             />
           </label>
+        </div>
+      </section>
+
+      <section className="rounded-2xl border border-line bg-card p-5">
+        <h2 className="font-semibold">Hazır renk paletleri</h2>
+        <p className="mt-1 text-sm text-muted">
+          Şablonunuzu korur; yalnızca ana renk, zemin ve metin tonlarını günceller.
+        </p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          {TEMA_PALETLERI.map((p) => {
+            const secili = (tema.paletId ?? "varsayilan") === p.id || (!tema.paletId && p.id === "varsayilan");
+            const ornek = p.patch.zeminRengi ?? tema.zeminRengi;
+            const vurgu = p.patch.anaRenk ?? tema.anaRenk;
+            return (
+              <button
+                key={p.id}
+                type="button"
+                disabled={!tamTasarim && p.id !== "varsayilan"}
+                onClick={() => kaydet({ ...isletme!, tema: paletUygula(tema, p.id) })}
+                className={`rounded-xl border p-3 text-left transition ${
+                  secili ? "border-brand ring-1 ring-brand/30" : "border-line hover:border-brand/40"
+                } disabled:opacity-50`}
+              >
+                <div className="flex gap-3">
+                  <div
+                    className="h-12 w-12 shrink-0 rounded-lg border border-black/10"
+                    style={{
+                      background: `linear-gradient(135deg, ${ornek} 50%, ${vurgu} 50%)`,
+                    }}
+                  />
+                  <div>
+                    <p className="font-medium text-sm">{p.ad}</p>
+                    <p className="mt-0.5 text-xs text-muted">{p.aciklama}</p>
+                  </div>
+                </div>
+              </button>
+            );
+          })}
         </div>
       </section>
 
