@@ -4,6 +4,7 @@
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
 import { readFileSync } from "fs";
+import path from "path";
 import { idUret, varsayilanTema, type Isletme, type Kategori, type Urun } from "../src/lib/store";
 
 const prisma = new PrismaClient();
@@ -95,9 +96,12 @@ function buildIsletme(seed: SeedFile, logoUrl: string | null): Isletme {
   return isletme;
 }
 
+const REPO_KOK = path.join(__dirname, "..");
+
 async function main() {
-  const seedPath = process.env.NESE_SEED ?? "/workspace/nese-cay-evi-rize-sofra-seed.json";
-  const logoPath = process.env.NESE_LOGO ?? "/workspace/nese-cay-logo.png";
+  const seedPath =
+    process.env.NESE_SEED ?? path.join(REPO_KOK, "nese-cay-evi-rize-sofra-seed.json");
+  const logoPath = process.env.NESE_LOGO ?? path.join(REPO_KOK, "nese-cay-logo.png");
 
   const seed = JSON.parse(readFileSync(seedPath, "utf8")) as SeedFile;
   // Force branch to Rize (correct Rory typo in older seed copies)

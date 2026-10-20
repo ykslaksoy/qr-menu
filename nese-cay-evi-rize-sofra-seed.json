@@ -1,0 +1,1329 @@
+{
+  "isletme": "Neşe Çay Evi",
+  "sube": "Rize",
+  "slug": "nese-cay-evi-rize",
+  "tip": "kafe",
+  "kaynak": "https://qr-menu.nesecay.com.tr/0W7W5S/rize/menu",
+  "yonetici": {
+    "email": "nese-rize@demo.sofra.app",
+    "sifre": "demo1234",
+    "ad": "Neşe Rize Yönetici"
+  },
+  "kategoriler": [
+    {
+      "ad": "SİYAH ÇAY",
+      "urunler": [
+        {
+          "ad": "SİYAH ÇAY",
+          "fiyat": 40.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SİYAH ÇAY FİNCAN",
+          "fiyat": 65.0,
+          "aciklama": null
+        },
+        {
+          "ad": "BERGAMOT AROMALI ÇAY",
+          "fiyat": 50.0,
+          "aciklama": null
+        },
+        {
+          "ad": "BERGAMOT AROMALI FİNCAN ÇAY",
+          "fiyat": 70.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ORALET",
+          "fiyat": 40.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KİVİ",
+          "fiyat": 40.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "BİTKİ MEYVE ÇAYLARI",
+      "urunler": [
+        {
+          "ad": "YEŞİL ÇAY",
+          "fiyat": 140.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ADAÇAYI",
+          "fiyat": 140.0,
+          "aciklama": null
+        },
+        {
+          "ad": "IHLAMUR",
+          "fiyat": 180.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MELİSALI",
+          "fiyat": 140.0,
+          "aciklama": null
+        },
+        {
+          "ad": "NANE LİMON",
+          "fiyat": 140.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ORMAN MEYVELİ",
+          "fiyat": 140.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KUŞBURNU",
+          "fiyat": 140.0,
+          "aciklama": null
+        },
+        {
+          "ad": "PAPATYA ÇAYI",
+          "fiyat": 140.0,
+          "aciklama": null
+        },
+        {
+          "ad": "PORTAKAL ÇAY",
+          "fiyat": 140.0,
+          "aciklama": null
+        },
+        {
+          "ad": "YASEMİNLİ ÇAY",
+          "fiyat": 140.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MATCHA ÇAYI",
+          "fiyat": 150.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MATCHA LATTE",
+          "fiyat": 200.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SÜTLÜ MATCHA TEA",
+          "fiyat": 200.0,
+          "aciklama": null
+        },
+        {
+          "ad": "BEYAZ ÇAY",
+          "fiyat": 250.0,
+          "aciklama": null
+        },
+        {
+          "ad": "BİTKİSEL KIŞ ÇAYI",
+          "fiyat": 150.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "KAHVALTI",
+      "urunler": [
+        {
+          "ad": "TABAK KAHVALTI",
+          "fiyat": 350.0,
+          "aciklama": "Kaymak, Tereyağı, Minci, Siyah Zeytin, Yeşil Zeytin, Bal, Reçel, Haşlanmış Yumurta, Salatalık, Domates, Mevsim Yeşilliği, Ceviz, Kayısı, Kel Simit, Fincan Çay"
+        },
+        {
+          "ad": "SERPME KAHVALTI",
+          "fiyat": 950.0,
+          "aciklama": "Siyah Zeytin, Yeşil Zeytin, Tereyağı, Kaymak, Minci, Ezme, Salatalık, Domates, Beyaz Peynir, Eski Kaşar, Tel Peynir, Kaşar Peynir, Ezine Peynir, Salam, Bal, Reçel, Çikolata, Kayısı, Ceviz, Göz Yumurta, Patates, Sosis, Börek, Yumurtalı Ekmek, Menemen ve Termos Çay"
+        },
+        {
+          "ad": "SİNİ KÖY KAHVALTI",
+          "fiyat": 750.0,
+          "aciklama": "Siyah Zeytin, Beyaz Peynir, Tel Peynir, Kavurma, Minci, Kaymak, Tereyağı, Eski Kaşar, Bal, Helva, Salatalık, Domates, Pişi, Muhlama, Pulama"
+        },
+        {
+          "ad": "MENEMEN",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "MENEMEN (küçük)",
+          "fiyat": 170.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MENEMEN (büyük)",
+          "fiyat": 200.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MUHLAMA",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "MUHLAMA (küçük)",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MUHLAMA (büyük)",
+          "fiyat": 280.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SAHANDA YUMURTA",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "SAHANDA YUMURTA (küçük)",
+          "fiyat": 100.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SAHANDA YUMURTA (büyük)",
+          "fiyat": 140.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SUCUKLU YUMURTA",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "SUCUKLU YUMURTA (küçük)",
+          "fiyat": 180.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SUCUKLU YUMURTA (büyük)",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KAVURMALI YUMURTA",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "KAVURMALI YUMURTA (küçük)",
+          "fiyat": 300.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KAVURMALI YUMURTA (büyük)",
+          "fiyat": 350.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "ANA YEMEKLER",
+      "urunler": [
+        {
+          "ad": "GÜNÜN ÇORBASI",
+          "fiyat": 100.0,
+          "aciklama": null
+        },
+        {
+          "ad": "IZGARA KÖFTE",
+          "fiyat": 370.0,
+          "aciklama": null
+        },
+        {
+          "ad": "TAVUK PİRZOLA",
+          "fiyat": 350.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "TAVA YEMEKLERİ",
+      "urunler": [
+        {
+          "ad": "KÖRİ SOSLU TAVUK",
+          "fiyat": 360.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SOYA SOSLU TAVUK",
+          "fiyat": 350.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MANTAR SOSLU TAVUK",
+          "fiyat": 360.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "GÖZLEMELER VE TOSTLAR",
+      "urunler": [
+        {
+          "ad": "PEYNİRLİ GÖZLEME",
+          "fiyat": 240.0,
+          "aciklama": "Patates kızartması ve salata ile servis edilir."
+        },
+        {
+          "ad": "PATATESLİ GÖZLEME",
+          "fiyat": 230.0,
+          "aciklama": "Patates kızartması ve salata ile servis edilir."
+        },
+        {
+          "ad": "KAVURMALI GÖZLEME",
+          "fiyat": 340.0,
+          "aciklama": null
+        },
+        {
+          "ad": "TOST",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "KAŞAR PEYNİRLİ TOST",
+          "fiyat": 200.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SUCUKLU TOST",
+          "fiyat": 200.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KARIŞIK TOST",
+          "fiyat": 230.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KAVURMALI TOST",
+          "fiyat": 280.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KAVURMALI KAŞARLI TOST",
+          "fiyat": 300.0,
+          "aciklama": null
+        },
+        {
+          "ad": "BAZLAMA TOST",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "PEYNİRLİ BAZLAMA TOST",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SUCUKLU BAZLAMA TOST",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KARIŞIK BAZLAMA TOST",
+          "fiyat": 280.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KAVURMALI BAZLAMA TOST",
+          "fiyat": 300.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KAVURMALI KAŞARLI BAZLAMA TOST",
+          "fiyat": 350.0,
+          "aciklama": null
+        },
+        {
+          "ad": "NEŞELİ BAZLAMA TOST",
+          "fiyat": 300.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "APARATİF YİYECEK",
+      "urunler": [
+        {
+          "ad": "PATATES SEPETİ",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "PATATES SEPETİ",
+          "fiyat": 180.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KARIŞIK SICAK SEPET",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "KARIŞIK SICAK SEPET",
+          "fiyat": 340.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇITIR TAVUK SEPETİ",
+          "fiyat": null,
+          "aciklama": "Çıtır Tavuk, Patates"
+        },
+        {
+          "ad": "ÇITIR TAVUK SEPETİ",
+          "fiyat": 340.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SİGARA BÖREĞİ",
+          "fiyat": 240.0,
+          "aciklama": null
+        },
+        {
+          "ad": "BÖREK TABAĞI",
+          "fiyat": 350.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "BURGERLER",
+      "urunler": [
+        {
+          "ad": "HAMBURGER",
+          "fiyat": 350.0,
+          "aciklama": null
+        },
+        {
+          "ad": "CHEESEBURGER",
+          "fiyat": 370.0,
+          "aciklama": null
+        },
+        {
+          "ad": "TAVUK BURGER",
+          "fiyat": 300.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "MANTI VE SALATALAR",
+      "urunler": [
+        {
+          "ad": "EV YAPIMI MANTI",
+          "fiyat": 350.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇITIR MANTI",
+          "fiyat": 320.0,
+          "aciklama": null
+        },
+        {
+          "ad": "AKDENİZ SALATA",
+          "fiyat": 250.0,
+          "aciklama": null
+        },
+        {
+          "ad": "TON BALIKLI SALATA",
+          "fiyat": 310.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SEZAR SALATA",
+          "fiyat": 310.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇITIR TAVUK SALATA",
+          "fiyat": 310.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇOBAN SALATA",
+          "fiyat": 150.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "WAFFLELAR",
+      "urunler": [
+        {
+          "ad": "CLASSIC WAFFLE",
+          "fiyat": 300.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "TATLILAR",
+      "urunler": [
+        {
+          "ad": "SÜTLAÇ",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "FIRIN SÜTLAÇ",
+          "fiyat": 150.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇİLEKLİ SÜTLAÇ",
+          "fiyat": 200.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MUZLU SÜTLAÇ",
+          "fiyat": 200.0,
+          "aciklama": null
+        },
+        {
+          "ad": "TAHİNLİ SÜTLAÇ",
+          "fiyat": 200.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MAGNOLYA",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇİLEKLİ MAGNOLYA",
+          "fiyat": 250.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MUZLU MAGNOLYA",
+          "fiyat": 250.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇİKOLATALI MAGNOLYA",
+          "fiyat": 250.0,
+          "aciklama": null
+        },
+        {
+          "ad": "CHEESECAKE",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "LİMONLU CHEESECAKE",
+          "fiyat": 240.0,
+          "aciklama": null
+        },
+        {
+          "ad": "FRAMBUAZLI CHEESECAKE",
+          "fiyat": 240.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MATCHALI CHEESECAKE",
+          "fiyat": 230.0,
+          "aciklama": null
+        },
+        {
+          "ad": "LOTUSLU CHEESECAKE",
+          "fiyat": 210.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇİLEKLİ CHEESECAKE",
+          "fiyat": 210.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SUPANGLE",
+          "fiyat": 240.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MARLENKA",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "BALLI CEVİZLİ MARLENKA",
+          "fiyat": 300.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇİKOLATALI MARLENKA",
+          "fiyat": 300.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MARLENKA",
+          "fiyat": 300.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SAN SEBASTİAN",
+          "fiyat": 280.0,
+          "aciklama": null
+        },
+        {
+          "ad": "PASTALAR",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "BELÇİKA ÇİKOLATALI PASTA",
+          "fiyat": 250.0,
+          "aciklama": null
+        },
+        {
+          "ad": "PROFİTEROLLÜ PASTA",
+          "fiyat": 250.0,
+          "aciklama": null
+        },
+        {
+          "ad": "TİRAMİSU",
+          "fiyat": 250.0,
+          "aciklama": null
+        },
+        {
+          "ad": "FISTIK RÜYASI",
+          "fiyat": 270.0,
+          "aciklama": null
+        },
+        {
+          "ad": "TRİLİÇE",
+          "fiyat": 250.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SUFLE",
+          "fiyat": 250.0,
+          "aciklama": null
+        },
+        {
+          "ad": "PROFİTEROL",
+          "fiyat": 240.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KURABİYE TABAĞI",
+          "fiyat": 120.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MEYVE TABAĞI",
+          "fiyat": 250.0,
+          "aciklama": null
+        },
+        {
+          "ad": "DONDURMA",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "DORDURMA TOP",
+          "fiyat": 50.0,
+          "aciklama": null
+        },
+        {
+          "ad": "DONDURMA PORSİYON",
+          "fiyat": 200.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "ESPRESSO KAHVELER",
+      "urunler": [
+        {
+          "ad": "SÜTLÜ FİLTRE KAHVE",
+          "fiyat": 160.0,
+          "aciklama": null
+        },
+        {
+          "ad": "CARAMEL MACCHIATO",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "ESPRESSO BAZLI KAHVELER",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "ESPRESSO",
+          "fiyat": 120.0,
+          "aciklama": null
+        },
+        {
+          "ad": "DOUBLE ESPRESSO",
+          "fiyat": 140.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ESPRESSO MACCHIATO",
+          "fiyat": 180.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KARAMEL MACCHIATO",
+          "fiyat": 180.0,
+          "aciklama": null
+        },
+        {
+          "ad": "LATTE",
+          "fiyat": 160.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KARAMEL LATTE",
+          "fiyat": 180.0,
+          "aciklama": null
+        },
+        {
+          "ad": "FINDIK LATTE",
+          "fiyat": 180.0,
+          "aciklama": null
+        },
+        {
+          "ad": "CHOCOLATE LATTE",
+          "fiyat": 180.0,
+          "aciklama": null
+        },
+        {
+          "ad": "VANİLYALI LATTE",
+          "fiyat": 180.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MOCHA",
+          "fiyat": 160.0,
+          "aciklama": null
+        },
+        {
+          "ad": "COFFEE MOCHA",
+          "fiyat": 160.0,
+          "aciklama": null
+        },
+        {
+          "ad": "WHITE MOCHA",
+          "fiyat": 160.0,
+          "aciklama": null
+        },
+        {
+          "ad": "HAZIR KAHVE",
+          "fiyat": 140.0,
+          "aciklama": null
+        },
+        {
+          "ad": "HAZIR KAHVE SÜTLÜ",
+          "fiyat": 140.0,
+          "aciklama": null
+        },
+        {
+          "ad": "AMERICANO",
+          "fiyat": 140.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇİKOLATALI AMERİCANO",
+          "fiyat": 170.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KARAMELLİ AMERİCANO",
+          "fiyat": 170.0,
+          "aciklama": null
+        },
+        {
+          "ad": "VANİLYALI AMERİCANO",
+          "fiyat": 170.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SÜTLÜ AMERİCANO",
+          "fiyat": 160.0,
+          "aciklama": null
+        },
+        {
+          "ad": "CAPPUCCINO",
+          "fiyat": 160.0,
+          "aciklama": null
+        },
+        {
+          "ad": "FINDIKLI CAPPUCCINO",
+          "fiyat": 180.0,
+          "aciklama": null
+        },
+        {
+          "ad": "VANİLYALI CAPPUCCINO",
+          "fiyat": 170.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇİKOLATALI CAPPUCCINO",
+          "fiyat": 180.0,
+          "aciklama": null
+        },
+        {
+          "ad": "TÜRK KAHVELERİ",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "TÜRK KAHVESİ",
+          "fiyat": 140.0,
+          "aciklama": null
+        },
+        {
+          "ad": "DAMLA SAKIZLI TÜRK KAHVESİ",
+          "fiyat": 150.0,
+          "aciklama": null
+        },
+        {
+          "ad": "DİBEK KAHVESİ",
+          "fiyat": 150.0,
+          "aciklama": null
+        },
+        {
+          "ad": "DAMLA SAKIZLI DİBEK KAHVESİ",
+          "fiyat": 150.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MENENGİÇ KAVESİ",
+          "fiyat": 150.0,
+          "aciklama": null
+        },
+        {
+          "ad": "NEŞELİ TÜRK KAHVESİ",
+          "fiyat": 130.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SÜTLÜ TÜRK KAHVESİ",
+          "fiyat": 150.0,
+          "aciklama": null
+        },
+        {
+          "ad": "DOUBLE TÜRK KAHVESİ",
+          "fiyat": 180.0,
+          "aciklama": null
+        },
+        {
+          "ad": "LATTE MACHITO",
+          "fiyat": 180.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KARAMELLİ LATTE MACHITO",
+          "fiyat": 180.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇİKOLATALI LATTE MACHITO",
+          "fiyat": 170.0,
+          "aciklama": null
+        },
+        {
+          "ad": "VANİLYALI LATTE MACHITO",
+          "fiyat": 180.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ICED WHİTE CHOCOLATE MOCHA",
+          "fiyat": 200.0,
+          "aciklama": null
+        },
+        {
+          "ad": "FINDIKLI LATTE",
+          "fiyat": 190.0,
+          "aciklama": null
+        },
+        {
+          "ad": "VANİLYALI LATTE",
+          "fiyat": 190.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇİKOLATALI LATTE",
+          "fiyat": 200.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "SICAK İÇECEKLER",
+      "urunler": [
+        {
+          "ad": "SICAK ÇİKOLATA",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "SICAK ÇİKOLATA",
+          "fiyat": 160.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MUZLU SICAK ÇİKOLATA",
+          "fiyat": 170.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇİLEKLİ SICAK ÇİKOLATA",
+          "fiyat": 170.0,
+          "aciklama": null
+        },
+        {
+          "ad": "FINDIKLI SICAK ÇİKOLATA",
+          "fiyat": 170.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KARAMELLİ SICAK ÇİKOLATA",
+          "fiyat": 170.0,
+          "aciklama": null
+        },
+        {
+          "ad": "DAĞ ÇİLEKLİ SICAK ÇİKOLATA",
+          "fiyat": 170.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SALEP",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "SALEP",
+          "fiyat": 150.0,
+          "aciklama": null
+        },
+        {
+          "ad": "DAMLA SAKIZLI SALEP",
+          "fiyat": 160.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "SOĞUK İÇECEKLER",
+      "urunler": [
+        {
+          "ad": "LİMONATA",
+          "fiyat": 130.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "SOĞUK İÇECEK",
+      "urunler": [
+        {
+          "ad": "FRAPPE",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "MOCHA FRAPPE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "WHITE MOCHA FRAPPE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "FINDIK FRAPPE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KARAMEL FRAPPE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "NERO FRAPPE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "FROZEN",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇİLEKLİ FROZEN",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ŞEFTALİLİ FROZEN",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "NEŞELİ FROZEN",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MUZLU FROZEN",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "TROPICOANO FROZEN",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MEŞRUBAT",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "KOLA",
+          "fiyat": 80.0,
+          "aciklama": null
+        },
+        {
+          "ad": "FANTA",
+          "fiyat": 80.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SPRITE",
+          "fiyat": 80.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SADE SODA",
+          "fiyat": 50.0,
+          "aciklama": null
+        },
+        {
+          "ad": "LİMONLU SODA",
+          "fiyat": 60.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ELMALI SODA",
+          "fiyat": 60.0,
+          "aciklama": null
+        },
+        {
+          "ad": "CHURCHILL",
+          "fiyat": 90.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SOĞUK ÇAY",
+          "fiyat": 80.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ŞEFTALİ MEYVE SUYU",
+          "fiyat": 80.0,
+          "aciklama": null
+        },
+        {
+          "ad": "VİŞNELİ MEYVE SUYU",
+          "fiyat": 80.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KARIŞIK MEYVE SUYU",
+          "fiyat": 80.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SU",
+          "fiyat": 20.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MILKSHAKELER",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇİKOLATALI MİLKSHAKE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇİLEKLİ MİLKSHAKE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MUZLU MİLKSHAKE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KARAMELLİ MİLKSHAKE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "LİMONLU MİLKSHAKE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "VANİLYA MİLKSHAKE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KARADUT MİLKSHAKE (soda ile sunulur)",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "NEŞELİ MİLKSHAKE",
+          "fiyat": 220.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "FİLİTRE KAHVELER",
+      "urunler": [
+        {
+          "ad": "FİLTRE KAHVE",
+          "fiyat": 140.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SÜTLÜ FİLTRE KAHVE",
+          "fiyat": 160.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "FRAPPELER",
+      "urunler": [
+        {
+          "ad": "ÇİKOLATALI PRAPPE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "SADE FRAPPE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KARAMELLİ FRAPPE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "FINDIKLI FRAPPE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "NERO FRAPPE",
+          "fiyat": 230.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "FROZENLER",
+      "urunler": [
+        {
+          "ad": "ÇİLEKLİ FROZEN",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ŞEFTALİ FROZEN",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MUZLU FROZEN",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ELMA FROZEN",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "LİMON FROZEN",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "BÖĞÜRTLEN FROZEN",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KARADUT FROZEN",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MANGO FROZEN",
+          "fiyat": 220.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "BUZLU KAHVELER",
+      "urunler": [
+        {
+          "ad": "ICE CARAMEL MACHIATO",
+          "fiyat": 160.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ICE AMERICANO",
+          "fiyat": 160.0,
+          "aciklama": null
+        },
+        {
+          "ad": "VANİLYALI ICE LATTE",
+          "fiyat": 200.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KARAMELLİ ICE LATTE",
+          "fiyat": 200.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ICE LATTE",
+          "fiyat": 180.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ICE WHITE MOCHA",
+          "fiyat": 200.0,
+          "aciklama": null
+        },
+        {
+          "ad": "FINDIKLI ICE LATTE",
+          "fiyat": 200.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ICE MOCHA",
+          "fiyat": 200.0,
+          "aciklama": null
+        },
+        {
+          "ad": "MATCHALI İÇECEKLER",
+          "fiyat": null,
+          "aciklama": null
+        },
+        {
+          "ad": "ICE MATCHA LATTE",
+          "fiyat": 200.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ICE MATCHA LATTE (ÇİLEKLİ)",
+          "fiyat": 220.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "LİMONATALAR",
+      "urunler": [
+        {
+          "ad": "LİMONATA",
+          "fiyat": 130.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "MILKSHAKE",
+      "urunler": [
+        {
+          "ad": "BROWNİ MILKSHAKE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "NERO MILKSHAKE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇİLEKLİ MILKSHAKE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "ÇİKOLATALI MILKSHAKE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "KARAMELLİ MILKSHAKE",
+          "fiyat": 220.0,
+          "aciklama": null
+        },
+        {
+          "ad": "VANİLYALI MILKSHAKE",
+          "fiyat": 220.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "NARGİLE",
+      "urunler": [
+        {
+          "ad": "SMOGMOON PREMIUM NARGİLE",
+          "fiyat": null,
+          "aciklama": "Sipariş için lütfen nargile görevlisini çağırınız."
+        },
+        {
+          "ad": "NARGİLE",
+          "fiyat": 500.0,
+          "aciklama": null
+        },
+        {
+          "ad": "LÜLE DEĞİŞİMİ ÜCRETİ",
+          "fiyat": 200.0,
+          "aciklama": null
+        },
+        {
+          "ad": "Al Fakher Nargile",
+          "fiyat": 650.0,
+          "aciklama": null
+        }
+      ]
+    },
+    {
+      "ad": "BUZLU ÇAYLAR",
+      "urunler": [
+        {
+          "ad": "ICE MATCHA",
+          "fiyat": null,
+          "aciklama": null
+        }
+      ]
+    }
+  ]
+}
