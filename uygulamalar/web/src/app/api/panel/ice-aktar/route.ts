@@ -1,8 +1,9 @@
 import { NextResponse } from "next/server";
 import { isletmeKaydet, yoneticiModKontrol } from "@/lib/auth-server";
 import { ozellikAcikMiIsletme } from "@/lib/plan-kilit";
+import { menuMetniAiParse } from "@/lib/menu-ai-parse";
 import { menuMetniParse, pdfUrunleriIsletmeyeEkle } from "@/lib/pdf-menu-parser";
-import type { Isletme } from "@/lib/store";
+import { idUret, type Isletme } from "@/lib/store";
 
 export async function POST(req: Request) {
   const yetki = await yoneticiModKontrol();
@@ -38,7 +39,8 @@ export async function POST(req: Request) {
     return NextResponse.json({ hata: "Metin veya dosya gerekli" }, { status: 400 });
   }
 
-  const bulunan = menuMetniParse(metin);
+  const aiUrunler = await menuMetniAiParse(metin);
+  const bulunan = aiUrunler?.length ? aiUrunler : menuMetniParse(metin);
   if (!bulunan.length) {
     return NextResponse.json(
       { hata: "Ürün bulunamadı. Satır sonunda fiyat olmalı (ör. 90 TL)." },
@@ -58,7 +60,20 @@ export async function POST(req: Request) {
     return NextResponse.json({ hata: "Önce kategori ekleyin" }, { status: 400 });
   }
 
-  const yeniUrunler = pdfUrunleriIsletmeyeEkle(katId, bulunan);
+  const kategoriIdleri = new Map(
+    isletme.kategoriler.map((k) => [k.ad.toLowerCase(), k.id]),
+  );
+  for (const u of bulunan) {
+    if (!u.kategoriAd) continue;
+    const key = u.kategoriAd.toLowerCase();
+    if (!kategoriIdleri.has(key)) {
+      const yeni = { id: idUret("kat"), ad: u.kategoriAd, sira: isletme.kategoriler.length + 1 };
+      isletme.kategoriler.push(yeni);
+      kategoriIdleri.set(key, yeni.id);
+    }
+  }
+
+  const yeniUrunler = pdfUrunleriIsletmeyeEkle(katId, bulunan, kategoriIdleri);
   isletme.urunler = [...isletme.urunler, ...yeniUrunler];
   await isletmeKaydet(efektif.kayit.userId, isletme);
 
@@ -67,5 +82,7 @@ export async function POST(req: Request) {
     eklenen: yeniUrunler.length,
     urunler: yeniUrunler,
     hamSatir: metin.split("\n").length,
+    ai: Boolean(aiUrunler?.length),
+    kategoriSayisi: isletme.kategoriler.length,
   });
 }

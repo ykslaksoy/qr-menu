@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import { havannaDemoMenusu } from "../src/lib/havanna-demo";
 import { hazirMenuIlgiliUrunlerle } from "../src/lib/hazir-menu";
 import { ornekIsletme, type Isletme } from "../src/lib/store";
 
@@ -12,13 +13,13 @@ async function guncelle(slug: string, ad: string) {
   }
   const mevcut = JSON.parse(kayit.veri) as Isletme;
   const taze = hazirMenuIlgiliUrunlerle(ornekIsletme(ad, slug), "kafe", { gazliLimit: 6 });
-  const guncel: Isletme = {
+  const guncel: Isletme = havannaDemoMenusu({
     ...mevcut,
     kafeAdi: ad,
     kategoriler: taze.kategoriler,
     urunler: taze.urunler,
     isletmeTipi: taze.isletmeTipi,
-  };
+  });
   const adToId = new Map(guncel.urunler.map((u) => [u.ad, u.id]));
   guncel.siparisler = (mevcut.siparisler ?? []).map((s) => ({
     ...s,

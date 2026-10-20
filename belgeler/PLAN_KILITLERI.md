@@ -74,4 +74,4 @@ Her tarzdan bir tane — `katalog.json` içinde `"ucretsiz": true` olanlar.
 
 - Plan değişince (özellikle düşürünce) tema otomatik uyumlanır: kilitli şablon → ücretsiz şablona, tam tasarım alanları sıfırlanır.
 - Canlı ödeme anahtarları olmadan abonelik simülasyonla açılır; kilitleme plan kaydına göre çalışır.
-- Logo yükleme henüz yok; ücretsiz “logo” maddesi metin olarak fiyatlandırmada kalır.
+- Logo yükleme: `/panel/ayarlar` → işletme adı ve logo (PNG/JPG, data URL — menüde gösterilir).
