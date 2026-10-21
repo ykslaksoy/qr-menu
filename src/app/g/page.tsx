@@ -21,6 +21,7 @@ import {
 } from "@/lib/garson-istasyon";
 import { efektifPlanId, ozellikAcikMiIsletme } from "@/lib/plan-kilit";
 import { siparisBipCal } from "@/lib/siparis-bip";
+import { masaGuvenlikAl } from "@/lib/masa-guvenlik";
 import { adisyonKalan, siparisAktifMi, type Siparis } from "@/lib/store";
 import { usePersonelCanli } from "@/lib/use-personel-canli";
 
@@ -43,6 +44,22 @@ export default function GarsonPage() {
   const [islemId, setIslemId] = useState<string | null>(null);
   const [toast, setToast] = useState<string | null>(null);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const masaGuvenlik = isletme ? masaGuvenlikAl(isletme).aktif : false;
+
+  const masaQrAc = useCallback(
+    async (masaId: string) => {
+      if (!isletme) return;
+      await fetch(`/api/m/${isletme.slug}/masa-guvenlik`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ islem: "garson-ac", masaId }),
+      });
+      setToast("Masa QR siparişe açıldı");
+      await yenile();
+    },
+    [isletme, yenile],
+  );
 
   const yukle = useCallback(async () => {
     if (!isletme) return;
@@ -332,6 +349,14 @@ export default function GarsonPage() {
                               {m.adisyonlar.length} adisyon · {m.kalemSayisi} kalem
                             </p>
                           </>
+                        ) : masaGuvenlik ? (
+                          <button
+                            type="button"
+                            onClick={() => masaQrAc(m.masa.id)}
+                            className="rounded-full bg-brand px-3 py-2 text-xs font-semibold text-white"
+                          >
+                            QR aç
+                          </button>
                         ) : (
                           <Link href={`/g/masa/${m.masa.id}`} className="text-xs font-semibold text-brand underline">
                             Aç
