@@ -9,6 +9,7 @@ import { PanelKvkkAyarlari } from "@/components/PanelKvkkAyarlari";
 import { useIsletme } from "@/lib/useIsletme";
 import { efektifPlanId, ozellikAcikMi, sablonAcikMi } from "@/lib/plan-kilit";
 import { PanelParaBirimiAyarlari } from "@/components/PanelParaBirimiAyarlari";
+import { PanelMasaGuvenlikAyarlari } from "@/components/PanelMasaGuvenlikAyarlari";
 import { PanelTemaPaletleri } from "@/components/PanelTemaPaletleri";
 
 export default function PanelAyarlarPage() {
@@ -76,7 +77,13 @@ export default function PanelAyarlarPage() {
 
       <PanelParaBirimiAyarlari isletme={isletme} onKaydet={(sonraki) => kaydet(sonraki)} />
 
+      <PanelMasaGuvenlikAyarlari isletme={isletme} onKaydet={(sonraki) => kaydet(sonraki)} />
       <PanelKvkkAyarlari isletme={isletme} onKaydet={(sonraki) => kaydet(sonraki)} />
+      <p className="text-sm text-muted">
+        <Link href="/kullanim-sartlari" className="text-brand underline hover:text-brand-dark">
+          Kullanım Şartları
+        </Link>
+      </p>
 
       <section className="rounded-2xl border border-line bg-card p-5">
         <h2 className="font-semibold">Şablon seçimi</h2>

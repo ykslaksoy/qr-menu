@@ -7,6 +7,7 @@ import {
 import { canliYayin } from "@/lib/canli-bus";
 import { GARSON_DURUMLAR, MUTFAK_DURUMLAR, siparisApiModu } from "@/lib/mod";
 import { siparisKabulEdilirMi } from "@/lib/plan-kilit";
+import { masaCihazBagla, masaCihazKontrol, masaGuvenlikAl } from "@/lib/masa-guvenlik";
 import {
   adisyonaKalemEkle,
   adisyonaSerbestKalemEkle,
@@ -49,6 +50,7 @@ export async function POST(req: Request, { params }: Params) {
       istasyon?: "bar" | "mutfak" | "tatli";
     };
     cagri?: "garson" | "hesap";
+    cihazId?: string;
   };
 
   const personelIslem = Boolean(body.adisyonaEkle || body.serbestKalem);
@@ -116,6 +118,16 @@ export async function POST(req: Request, { params }: Params) {
     return NextResponse.json({ hata: "Sipariş boş" }, { status: 400 });
   }
 
+  if (masaGuvenlikAl(mevcut.isletme).aktif && body.cihazId) {
+    const kontrol = masaCihazKontrol(mevcut.isletme, body.masaId, body.cihazId);
+    if (kontrol.durum === "reddedildi") {
+      return NextResponse.json({ hata: kontrol.mesaj }, { status: 403 });
+    }
+    if (kontrol.durum === "beklemede") {
+      return NextResponse.json({ hata: kontrol.mesaj, kod: "CIHAZ_ONAY" }, { status: 403 });
+    }
+  }
+
   for (const k of body.kalemler) {
     const u = mevcut.isletme.urunler.find((x) => x.id === k.urunId);
     if (!u) continue;
@@ -141,7 +153,11 @@ export async function POST(req: Request, { params }: Params) {
         }
       }
       // QR + garson + ses → aynı açık adisyona birleşir
-      return adisyonaKalemEkle(isletme, body.masaId, kalemler, body.siparisId);
+      let guncel = isletme;
+      if (body.cihazId && masaGuvenlikAl(isletme).aktif) {
+        guncel = masaCihazBagla(guncel, body.masaId, body.cihazId);
+      }
+      return adisyonaKalemEkle(guncel, body.masaId, kalemler, body.siparisId);
     });
     if (!kayit) return NextResponse.json({ hata: "İşletme bulunamadı" }, { status: 404 });
     const acik = masaAcikAdisyon(kayit.isletme, body.masaId);

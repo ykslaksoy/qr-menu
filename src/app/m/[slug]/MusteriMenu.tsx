@@ -1050,6 +1050,10 @@ export default function MusteriMenuClient({
           <button type="button" className="underline" onClick={() => setKvkkModal("cerez")}>
             Çerezler
           </button>
+          <span className="mx-1.5">·</span>
+          <a href="/kullanim-sartlari" className="underline">
+            Kullanım Şartları
+          </a>
         </footer>
       ) : null}
 

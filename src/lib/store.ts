@@ -221,6 +221,8 @@ export type Isletme = {
   /** Müşteri menüsü çoklu para birimi (fiyatlar TL bazlı) */
   paraBirimi?: ParaBirimiAyarlari;
   kvkk?: KvkkAyarlari;
+  /** Masa QR siparişi: garson açar, ilk cihaz bağlanır, yabancı cihaz onay bekler */
+  masaGuvenlik?: import("@/lib/masa-guvenlik").MasaGuvenlikAyarlari;
 };
 
 const STORAGE_KEY = "sofra-isletme-v2";

@@ -13,6 +13,7 @@ function vercelMi() {
 
 /** Serverless'ta kalıcı disk yok; seed'i /tmp'ye kopyala. */
 function vercelSqliteHazirla() {
+  if (process.env.DATABASE_URL?.startsWith("postgresql://")) return;
   if (!vercelMi() || globalForPrisma.sofraDbHazir) return;
 
   const hedef = "/tmp/sofra.db";

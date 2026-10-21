@@ -8,8 +8,10 @@
     "start": "next start",
     "lint": "eslint",
     "db:push": "prisma db push",
+    "db:postgres:push": "prisma db push --schema=prisma/schema.postgres.prisma",
     "db:seed": "tsx prisma/seed.ts",
     "db:seed:all": "tsx prisma/seed.ts && tsx prisma/seed-nese.ts",
+    "db:seed:ship": "DATABASE_URL=file:./dev.db prisma db push --skip-generate && DATABASE_URL=file:./dev.db tsx prisma/seed.ts && DATABASE_URL=file:./dev.db tsx prisma/seed-nese.ts && cp prisma/dev.db prisma/seed.db",
     "postinstall": "prisma generate"
   },
   "dependencies": {

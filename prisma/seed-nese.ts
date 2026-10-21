@@ -5,6 +5,7 @@ import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
 import { readFileSync } from "fs";
 import path from "path";
+import { neseHavannaMenusu } from "../src/lib/havanna-demo";
 import { idUret, varsayilanTema, type Isletme, type Kategori, type Urun } from "../src/lib/store";
 
 const prisma = new PrismaClient();
@@ -123,7 +124,7 @@ async function main() {
     console.warn("Logo missing, continuing without:", e);
   }
 
-  const veri = buildIsletme(seed, logoUrl);
+  const veri = neseHavannaMenusu(buildIsletme(seed, logoUrl));
   // Embed sube note into kafeAdi display if useful — keep brand name clean
   // Optionally show "Neşe Çay Evi · Rize"
   veri.kafeAdi = seed.isletme;
