@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { urunGorselleriniGetir } from "@sofra/tema";
+import { BaglantiUyari } from "@/components/BaglantiUyari";
 import { gorselYukle } from "@/lib/gorsel";
 
 type Props = {
@@ -41,6 +42,7 @@ export function UrunGorselSecici({ gorselUrl, onSec, urunAdi }: Props) {
     <div className="space-y-3 sm:col-span-2">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <p className="text-sm font-medium">Ürün görseli</p>
+        <BaglantiUyari konu="Kalıcı görsel depolama (Vercel Blob)" />
         <div className="flex flex-wrap gap-2">
           <button
             type="button"

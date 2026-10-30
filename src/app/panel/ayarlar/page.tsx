@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MENU_DUZENLER, katalog, kategorileriGetir, sablonlariGetir } from "@sofra/tema";
 import { PlanUyariBanner } from "@/components/PlanKilit";
 import { IsletmeMarkaAyarlari } from "@/components/IsletmeMarkaAyarlari";
+import { PanelBaglantiAyarlari } from "@/components/PanelBaglantiAyarlari";
 import { PanelKvkkAyarlari } from "@/components/PanelKvkkAyarlari";
 import { useIsletme } from "@/lib/useIsletme";
 import { efektifPlanId, ozellikAcikMi, sablonAcikMi } from "@/lib/plan-kilit";
@@ -79,6 +80,7 @@ export default function PanelAyarlarPage() {
 
       <PanelMasaGuvenlikAyarlari isletme={isletme} onKaydet={(sonraki) => kaydet(sonraki)} />
       <PanelKvkkAyarlari isletme={isletme} onKaydet={(sonraki) => kaydet(sonraki)} />
+      <PanelBaglantiAyarlari />
       <p className="text-sm text-muted">
         <Link href="/kullanim-sartlari" className="text-brand underline hover:text-brand-dark">
           Kullanım Şartları

@@ -1,5 +1,6 @@
 "use client";
 
+import { BaglantiUyari } from "@/components/BaglantiUyari";
 import { useMemo, useState } from "react";
 import { fiyatlar, referans } from "@sofra/tema";
 import { useIsletme } from "@/lib/useIsletme";
@@ -108,6 +109,7 @@ export default function PanelAbonelikPage() {
 
   return (
     <div className="space-y-8">
+      <BaglantiUyari konu="Ödeme (Iyzico / PayTR)" />
       <div>
         <h1 className="font-[family-name:var(--font-baslik)] text-3xl font-semibold">Abonelik</h1>
         <p className="mt-1 text-muted">
