@@ -1,4 +1,9 @@
 import { abonelikOdenecek } from "@/lib/abonelik";
+import {
+  iyzicoOdemeFormBaslat,
+  paytrOdemeTokenAl,
+  paytrSepetBase64,
+} from "@/lib/odeme-saglayici";
 import type { Abonelik, PlanId, OdemeTipi } from "@/lib/store";
 
 export type OdemeSonuc = {
@@ -7,6 +12,8 @@ export type OdemeSonuc = {
   saglayici: "iyzico" | "paytr";
   islemId: string;
   mesaj: string;
+  odemeUrl?: string;
+  paytrToken?: string;
 };
 
 export function odemeSaglayiciHazir(saglayici: "iyzico" | "paytr") {
@@ -30,7 +37,7 @@ export function masaOdemeSaglayici(): "iyzico" | "paytr" {
 /** Masada hesap ödemesi (kart). Anahtar yoksa simülasyon başarılı döner. */
 export async function masaOdemeBaslat(
   tutarTl: number,
-  opts?: { saglayici?: "iyzico" | "paytr"; email?: string; referans?: string },
+  opts?: { saglayici?: "iyzico" | "paytr"; email?: string; referans?: string; userIp?: string },
 ): Promise<OdemeSonuc> {
   const saglayici = opts?.saglayici ?? masaOdemeSaglayici();
   const islemId = opts?.referans ?? `masa-${Date.now()}`;
@@ -47,7 +54,6 @@ export async function masaOdemeBaslat(
   }
 
   if (!odemeSaglayiciHazir(saglayici)) {
-    // Demo / geliştirme — gerçek POS yoksa anında onay
     await new Promise((r) => setTimeout(r, 650));
     return {
       basarili: true,
@@ -58,52 +64,36 @@ export async function masaOdemeBaslat(
     };
   }
 
-  try {
-    const endpoint =
-      saglayici === "iyzico"
-        ? "https://api.iyzipay.com/payment/auth"
-        : "https://www.paytr.com/odeme/api/get-token";
+  const email = opts?.email ?? "musteri@sofra.app";
 
-    const yanit = await fetch(endpoint, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        merchantId: process.env.PAYTR_MERCHANT_ID,
-        apiKey: process.env.IYZICO_API_KEY,
-        amount: tutar,
-        currency: "TRY",
-        email: opts?.email ?? "musteri@sofra.app",
-        referenceId: islemId,
-        basketId: islemId,
-      }),
+  if (saglayici === "paytr") {
+    const basket = paytrSepetBase64([{ ad: "Hesap", fiyatTl: tutar, adet: 1 }]);
+    const sonuc = await paytrOdemeTokenAl({
+      merchantOid: islemId,
+      email,
+      paymentAmountKurus: Math.round(tutar * 100),
+      userIp: opts?.userIp ?? "127.0.0.1",
+      userBasket: basket,
     });
-
-    if (!yanit.ok) {
-      return {
-        basarili: false,
-        mod: "canli",
-        saglayici,
-        islemId,
-        mesaj: `Ödeme sağlayıcı hatası (${yanit.status})`,
-      };
-    }
-
     return {
-      basarili: true,
+      basarili: sonuc.ok,
       mod: "canli",
       saglayici,
       islemId,
-      mesaj: "Ödeme alındı",
-    };
-  } catch (e) {
-    return {
-      basarili: false,
-      mod: "canli",
-      saglayici,
-      islemId,
-      mesaj: e instanceof Error ? e.message : "Ödeme hatası",
+      mesaj: sonuc.mesaj,
+      paytrToken: sonuc.token,
     };
   }
+
+  const sonuc = await iyzicoOdemeFormBaslat({ tutarTl: tutar, email, referans: islemId });
+  return {
+    basarili: sonuc.ok,
+    mod: "canli",
+    saglayici,
+    islemId,
+    mesaj: sonuc.mesaj,
+    odemeUrl: sonuc.odemeUrl,
+  };
 }
 
 export async function odemeBaslat(
@@ -112,6 +102,7 @@ export async function odemeBaslat(
   planId: PlanId,
   odemeTipi: OdemeTipi,
   email: string,
+  opts?: { userIp?: string },
 ): Promise<OdemeSonuc> {
   const hesap = abonelikOdenecek(abonelik, planId, odemeTipi);
   const islemId = `sofra-${Date.now()}`;
@@ -126,50 +117,38 @@ export async function odemeBaslat(
     };
   }
 
-  // Canlı entegrasyon iskeleti — gerçek API çağrısı buraya bağlanır
-  try {
-    const endpoint =
-      saglayici === "iyzico"
-        ? "https://api.iyzipay.com/v2/subscription/initialize"
-        : "https://www.paytr.com/odeme/api/get-token";
-
-    const yanit = await fetch(endpoint, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        merchantId: process.env.PAYTR_MERCHANT_ID,
-        apiKey: process.env.IYZICO_API_KEY,
-        amount: hesap.odenecek,
-        currency: "TRY",
-        email,
-        referenceId: islemId,
-      }),
+  if (saglayici === "paytr") {
+    const basket = paytrSepetBase64([
+      { ad: `Sofra ${planId}`, fiyatTl: hesap.odenecek, adet: 1 },
+    ]);
+    const sonuc = await paytrOdemeTokenAl({
+      merchantOid: islemId,
+      email,
+      paymentAmountKurus: Math.round(hesap.odenecek * 100),
+      userIp: opts?.userIp ?? "127.0.0.1",
+      userBasket: basket,
     });
-
-    if (!yanit.ok) {
-      return {
-        basarili: false,
-        mod: "canli",
-        saglayici,
-        islemId,
-        mesaj: `Ödeme sağlayıcı hatası (${yanit.status})`,
-      };
-    }
-
     return {
-      basarili: true,
+      basarili: sonuc.ok,
       mod: "canli",
       saglayici,
       islemId,
-      mesaj: "Ödeme başlatıldı",
-    };
-  } catch (e) {
-    return {
-      basarili: false,
-      mod: "canli",
-      saglayici,
-      islemId,
-      mesaj: e instanceof Error ? e.message : "Ödeme hatası",
+      mesaj: sonuc.mesaj,
+      paytrToken: sonuc.token,
     };
   }
+
+  const sonuc = await iyzicoOdemeFormBaslat({
+    tutarTl: hesap.odenecek,
+    email,
+    referans: islemId,
+  });
+  return {
+    basarili: sonuc.ok,
+    mod: "canli",
+    saglayici,
+    islemId,
+    mesaj: sonuc.mesaj,
+    odemeUrl: sonuc.odemeUrl,
+  };
 }
