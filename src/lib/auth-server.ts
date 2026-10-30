@@ -1,3 +1,4 @@
+import { createHmac, timingSafeEqual } from "node:crypto";
 import { cookies } from "next/headers";
 import type { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
@@ -64,9 +65,43 @@ export function platformAdminMi(user: { platformAdmin?: boolean } | null) {
   return Boolean(user?.platformAdmin);
 }
 
+/**
+ * İmzalı (stateless) oturum token'ı. Vercel'de SQLite her fonksiyon örneğinde
+ * ayrı /tmp kopyası olduğu için DB'deki Session satırı başka örnekte bulunmaz;
+ * imzalı token her örnekte doğrulanabilir.
+ */
+function oturumSecret() {
+  return process.env.SOFRA_SESSION_SECRET || process.env.AUTH_SECRET || "";
+}
+
+function imzala(veri: string) {
+  return createHmac("sha256", oturumSecret()).update(veri).digest("base64url");
+}
+
+function imzaliTokenUret(userId: string, expiresAt: Date) {
+  const veri = `s1.${Buffer.from(userId).toString("base64url")}.${expiresAt.getTime()}`;
+  return `${veri}.${imzala(veri)}`;
+}
+
+function imzaliTokenCoz(token: string): string | null {
+  if (!oturumSecret() || !token.startsWith("s1.")) return null;
+  const parcalar = token.split(".");
+  if (parcalar.length !== 4) return null;
+  const veri = parcalar.slice(0, 3).join(".");
+  const beklenen = Buffer.from(imzala(veri));
+  const gelen = Buffer.from(parcalar[3]);
+  if (beklenen.length !== gelen.length || !timingSafeEqual(beklenen, gelen)) return null;
+  if (Number(parcalar[2]) < Date.now()) return null;
+  try {
+    return Buffer.from(parcalar[1], "base64url").toString();
+  } catch {
+    return null;
+  }
+}
+
 export async function oturumTokenOlustur(userId: string) {
-  const token = tokenUret();
   const expiresAt = new Date(Date.now() + GUN * 86400000);
+  const token = oturumSecret() ? imzaliTokenUret(userId, expiresAt) : tokenUret();
   await prisma.session.create({ data: { token, userId, expiresAt } });
   return { token, expiresAt };
 }
@@ -117,6 +152,14 @@ export async function mevcutKullanici() {
   const jar = await cookies();
   const token = jar.get(COOKIE)?.value;
   if (!token) return null;
+
+  const imzaliUserId = imzaliTokenCoz(token);
+  if (imzaliUserId) {
+    return prisma.user.findUnique({
+      where: { id: imzaliUserId },
+      include: kullaniciInclude,
+    });
+  }
 
   const oturum = await prisma.session.findUnique({
     where: { token },
